@@ -537,8 +537,11 @@
       heroVideo.controls = false;
 
       heroVideoPlayBtn.addEventListener("click", () => {
+        heroVideo.hidden = false;
         heroVideo.play().catch((error) => {
           console.error("Unable to play the hero video:", error);
+          heroVideo.hidden = true;
+          heroVideoOverlay.hidden = false;
         });
       });
 
@@ -554,10 +557,14 @@
       });
 
       heroVideo.addEventListener("pause", () => {
+        heroVideo.currentTime = 0;
+        heroVideo.hidden = true;
         heroVideoOverlay.hidden = false;
       });
 
       heroVideo.addEventListener("ended", () => {
+        heroVideo.currentTime = 0;
+        heroVideo.hidden = true;
         heroVideoOverlay.hidden = false;
       });
     }

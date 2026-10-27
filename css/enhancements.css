@@ -446,6 +446,10 @@ body.nav-open .scl-floating-dock {
   display: none !important;
 }
 
+#hero-team-video[hidden] {
+  display: none !important;
+}
+
 /* Interactive Floating Hero Badges (Continuous Float + Scroll/Cursor Parallax + Rich Hover) */
 @keyframes heroBadgeFloatLeft {
   0%, 100% {
