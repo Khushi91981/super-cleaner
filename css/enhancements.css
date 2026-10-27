@@ -442,6 +442,10 @@ body.nav-open .scl-floating-dock {
     linear-gradient(180deg, rgba(0, 18, 41, 0.82) 0%, rgba(2, 6, 23, 0.68) 48%, rgba(0, 18, 41, 0.94) 100%);
 }
 
+#hero-video-overlay[hidden] {
+  display: none !important;
+}
+
 /* Interactive Floating Hero Badges (Continuous Float + Scroll/Cursor Parallax + Rich Hover) */
 @keyframes heroBadgeFloatLeft {
   0%, 100% {
