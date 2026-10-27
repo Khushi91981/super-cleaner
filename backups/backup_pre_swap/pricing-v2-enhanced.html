@@ -1,0 +1,962 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#4a5f7f", "tertiary": "#2e0004", "on-primary-container": "#798fb1", "on-error": "#ffffff", "on-secondary-fixed-variant": "#00458d", "surface-variant": "#dbe4e8", "on-error-container": "#93000a", "primary": "#001229", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface": "#f2fbff", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#324866", "surface-container-low": "#ecf5f9", "on-secondary-container": "#004083", "surface-dim": "#d2dbdf", "secondary-fixed": "#d6e3ff", "tertiary-fixed-dim": "#ffb3b1", "outline-variant": "#c4c6ce", "surface-container": "#e6eff3", "tertiary-container": "#55000c", "on-tertiary-fixed-variant": "#92001c", "inverse-primary": "#b2c8ed", "on-primary-fixed": "#021c39", "surface-container-highest": "#dbe4e8", "secondary-container": "#80aefe", "primary-fixed": "#d4e3ff", "on-tertiary-container": "#fe4b55", "primary-fixed-dim": "#b2c8ed", "error-container": "#ffdad6", "on-tertiary-fixed": "#410007", "surface-bright": "#f2fbff", "inverse-on-surface": "#e9f2f6", "on-surface": "#141d20", "on-background": "#141d20", "on-secondary-fixed": "#001b3e", "surface-container-lowest": "#ffffff", "on-surface-variant": "#44474d", "outline": "#74777e", "primary-container": "#0f2744", "surface-container-high": "#e1eaee", "background": "#f2fbff", "inverse-surface": "#293235", "tertiary-fixed": "#ffdad8", "secondary-fixed-dim": "#aac7ff", "secondary": "#295ea8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "display-hero": [ "Playfair Display" ], "display-hero-mobile": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-md-mobile": [ "Playfair Display" ], "label-caps": [ "Inter" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ], "label-md": [ "Inter" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "30px", { "lineHeight": "38px", "fontWeight": "500" } ], "headline-md-mobile": [ "24px", { "lineHeight": "32px", "fontWeight": "500" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "700" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "fontWeight": "600" } ], "label-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ] } } } };</script><link href="./css/enhancements.css" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface antialiased">
+  <!-- Skip Link -->
+  <a class="scl-skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Top Navigation App Bar (Global V2 Header) -->
+  <header class="scl-header fixed top-0 left-0 right-0 z-50 h-20 flex items-center" id="site-header">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-4">
+      <!-- Brand Logo Lockup -->
+      <a aria-label="Super Cleaners London Home" class="flex items-center group" href="v2-enhanced.html">
+        <img
+          alt="Super Cleaners London - Residential &amp; Commercial"
+          class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+        />
+      </a>
+
+      <!-- Center Navigation Links (Desktop) -->
+      <nav aria-label="Primary navigation" class="hidden xl:flex items-center gap-6">
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface hover:text-primary" href="v2-enhanced.html">Home</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="domestic-v2-enhanced.html">Domestic</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="commercial-v2-enhanced.html">Commercial</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="v2-enhanced.html#service-carpet">Specialized</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="v2-enhanced.html#about">About</a>
+        <a class="scl-nav-link is-active font-label-md text-label-md text-on-surface-variant hover:text-primary" href="pricing-v2-enhanced.html">Prices</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="area-v2-enhanced.html">Areas</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="v2-enhanced.html#faqs">FAQ</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="contact-v2-enhanced.html">Contact</a>
+      </nav>
+
+      <!-- Right Action Area -->
+      <div class="flex items-center gap-3">
+        <!-- Phone Contact -->
+        <a class="hidden md:flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-primary font-label-md text-label-md" href="tel:02036649304">
+          <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span>
+          <span>020 3664 9304</span>
+        </a>
+
+        <!-- Primary CTA -->
+        <a class="scl-btn scl-btn-primary hidden sm:inline-flex items-center justify-center bg-error text-on-error font-label-md text-label-md px-5 py-2.5 rounded-lg" href="#calculator">
+          <span>Book Online</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          aria-controls="mobile-nav-drawer"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+          class="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container transition-colors"
+          id="mobile-menu-toggle"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Backdrop & Drawer (Global V2) -->
+  <div aria-hidden="true" class="scl-mobile-backdrop" id="mobile-nav-backdrop"></div>
+  <aside aria-label="Mobile navigation" class="scl-mobile-drawer" id="mobile-nav-drawer">
+    <div class="p-5 border-b border-outline-variant/25 flex items-center justify-between">
+      <a class="flex items-center" href="v2-enhanced.html">
+        <img
+          alt="Super Cleaners London"
+          class="h-10 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+        />
+      </a>
+      <button
+        aria-label="Close navigation menu"
+        class="w-10 h-10 rounded-xl bg-surface-container-low text-primary flex items-center justify-center hover:bg-surface-container"
+        id="mobile-menu-close"
+        type="button"
+      >
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <nav class="p-5 flex-1 flex flex-col gap-1">
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-primary hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html">Home</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="domestic-v2-enhanced.html">Domestic Cleaning</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="commercial-v2-enhanced.html">Commercial Cleaning</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html#service-carpet">Specialized Services</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html#about">About &amp; Standards</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary font-bold bg-surface-container-low transition-colors" data-mobile-nav-link href="pricing-v2-enhanced.html">Transparent Pricing</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="area-v2-enhanced.html">London Areas</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html#faqs">FAQs</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="contact-v2-enhanced.html">Contact &amp; Quote</a>
+    </nav>
+    <div class="p-5 border-t border-outline-variant/25 flex flex-col gap-3 bg-surface-container-low/60">
+      <a class="w-full py-3 px-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-primary font-label-md text-label-md flex items-center justify-center gap-2" href="tel:02036649304">
+        <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span>
+        <span>020 3664 9304</span>
+      </a>
+      <a class="scl-btn scl-btn-primary w-full py-3.5 px-5 rounded-xl bg-error text-on-error font-label-md text-label-md flex items-center justify-center gap-2" data-mobile-nav-link href="#calculator">
+        <span>Book Online Now</span>
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Fixed Right-Side Social & Quick Contact Bar (Global V2 Sticky Social Icons) -->
+  <aside aria-label="Quick Contact &amp; Social Media" class="scl-floating-dock fixed right-3 sm:right-5 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2.5">
+    <!-- Phone Call -->
+    <a aria-label="Call 020 3664 9304" class="group relative w-11 h-11 rounded-full bg-primary text-on-primary shadow-ambient flex items-center justify-center hover:bg-secondary transition-all duration-200" href="tel:02036649304" title="Call 020 3664 9304">
+      <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-primary px-3 py-1.5 font-label-sm text-label-sm text-on-primary opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">020 3664 9304</span>
+    </a>
+    <!-- WhatsApp -->
+    <a aria-label="WhatsApp 07786 282887" class="group relative w-11 h-11 rounded-full bg-[#25D366] text-white shadow-ambient flex items-center justify-center hover:brightness-105 transition-all duration-200" href="https://wa.me/447786282887" rel="noopener" target="_blank" title="WhatsApp 07786 282887">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.625.846 5.059 2.284 7.033l-1.492 5.448 5.601-1.469c1.908 1.261 4.192 1.988 6.607 1.988 6.627 0 12-5.373 12-12s-5.373-12-12-12z"></path></svg>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-[#128C7E] px-3 py-1.5 font-label-sm text-label-sm text-white opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">WhatsApp Us</span>
+    </a>
+    <!-- Instagram -->
+    <a aria-label="Follow us on Instagram" class="group relative w-11 h-11 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-ambient flex items-center justify-center hover:brightness-110 transition-all duration-200" href="https://www.instagram.com" rel="noopener" target="_blank" title="Instagram">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-primary px-3 py-1.5 font-label-sm text-label-sm text-on-primary opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">Instagram</span>
+    </a>
+    <!-- Facebook -->
+    <a aria-label="Follow us on Facebook" class="group relative w-11 h-11 rounded-full bg-[#1877F2] text-white shadow-ambient flex items-center justify-center hover:brightness-110 transition-all duration-200" href="https://www.facebook.com" rel="noopener" target="_blank" title="Facebook">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-[#1877F2] px-3 py-1.5 font-label-sm text-label-sm text-white opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">Facebook</span>
+    </a>
+    <!-- Email Quote -->
+    <a aria-label="Email info@supercleanerslondon.co.uk" class="group relative w-11 h-11 rounded-full bg-error text-on-error shadow-ambient flex items-center justify-center hover:brightness-110 transition-all duration-200" href="mailto:info@supercleanerslondon.co.uk" title="Email info@supercleanerslondon.co.uk">
+      <span class="material-symbols-outlined text-[20px]">mail</span>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-error px-3 py-1.5 font-label-sm text-label-sm text-on-error opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">Email Us</span>
+    </a>
+  </aside>
+
+  <main class="w-full pt-20 bg-background" id="main-content"><div class="flex flex-col w-full">
+<!-- Trust Credentials Ribbon -->
+<section class="w-full bg-surface-container-low py-space-sm border-b-0">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-wrap items-center justify-between gap-y-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<span class="inline-flex items-center gap-1.5 font-semibold text-primary">
+<span class="material-symbols-outlined text-[17px] text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+          London Living Wage Accredited
+        </span>
+<span class="hidden sm:inline opacity-30">•</span>
+<span class="inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-secondary">gavel</span>
+          100% Letting Inventory Guarantee
+        </span>
+<span class="hidden md:inline opacity-30">•</span>
+<span class="inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-secondary">eco</span>
+          Non-Toxic Eco-Cert Solutions
+        </span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="font-bold font-headline-sm text-sm">4.9 / 5.0</span>
+<span class="inline-flex text-[#F59E0B]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</span>
+<span class="text-xs text-on-surface-variant">(1,480+ Central London Reviews)</span>
+</span>
+</div>
+</div>
+</section>
+<!-- Editorial Hero Section -->
+<section class="w-full bg-surface-bright pt-space-xl pb-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-end">
+<div class="lg:col-span-8 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Rates Standard • 2026 Schedule
+          </div>
+<h1 class="font-headline-lg text-headline-lg lg:text-[46px] lg:leading-[52px] text-primary tracking-tight">
+            Transparent Pricing &amp; Tailored Packages — No Hidden Fees, Just Spotless Results.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Delivering Mayfair, Chelsea, and City-grade domestic stewardship and tenancy handovers since 2006. Every quotation carries fixed-scope clarity, Enhanced DBS-checked personnel, and £10M public liability protection.
+          </p>
+</div>
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Immediate Inquiries</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Teams On Duty
+            </span>
+</div>
+<div class="space-y-1">
+<div class="text-xs text-on-surface-variant">Central London Hotline</div>
+<a class="block font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors font-bold tracking-tight" href="tel:02036649304">
+              020 3664 9304
+            </a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Same-day priority allocation across Zones 1–3. Zero cancellation charges before 24h notice.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Four Pricing Cards Section -->
+<section class="w-full bg-background pb-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-sm">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-1">Tier Breakdown</span>
+<h2 class="font-headline-md text-headline-md text-primary">Standardized London Tariffs</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Simple fixed and hourly agreements without retaining lock-ins. All cleaning detergents, micro-filtration vacuums, and consumables supplied upon request.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Tier 1: Regular Domestic -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Residential</span>
+<span class="p-1 rounded bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">home</span>
+</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Regular Domestic</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ongoing weekly or fortnightly residence upkeep.</p>
+</div>
+<div class="py-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">From</span>
+<span class="font-display-hero text-[34px] leading-none text-primary font-semibold">£19.50</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ hr</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Min. 2.5 hours per appointment</span>
+</div>
+<ul class="space-y-2.5 pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Dedicated, consistent vetted cleaner</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Ironing &amp; bed linen turnaround</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Pause or cancel anytime with 24h notice</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Key holding security protocol included</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-lg">
+<a class="w-full inline-flex items-center justify-center font-label-md text-label-md py-space-sm px-space-md rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#calculator">
+              Configure Domestic
+            </a>
+</div>
+</div>
+<!-- Tier 2: Deep & Spring Clean (Highlighted) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md flex flex-col justify-between relative overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-secondary"></div>
+<div class="space-y-space-md pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">Most Popular</span>
+<span class="p-1 rounded bg-secondary-fixed text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">clean_hands</span>
+</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Deep &amp; Spring Clean</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Full architectural property revival and sanitary scrub.</p>
+</div>
+<div class="py-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">From</span>
+<span class="font-display-hero text-[34px] leading-none text-primary font-semibold">£160</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">fixed</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">or flexible £24.00 / hour per operative</span>
+</div>
+<ul class="space-y-2.5 pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Full interior cupboards &amp; skirting boards</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Heavy limescale &amp; hard water descaling</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Optional oven &amp; fridge valeting package</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">All pro machinery &amp; chemicals included</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-lg">
+<a class="w-full inline-flex items-center justify-center font-label-md text-label-md py-space-sm px-space-md rounded-lg bg-primary text-on-primary hover:bg-secondary transition-colors" href="#calculator">
+              Book Deep Refresh
+            </a>
+</div>
+</div>
+<!-- Tier 3: End of Tenancy -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Deposit Recovery</span>
+<span class="p-1 rounded bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">vpn_key</span>
+</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">End of Tenancy</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Rigorous inventory sign-off clean for tenants &amp; landlords.</p>
+</div>
+<div class="py-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">From</span>
+<span class="font-display-hero text-[34px] leading-none text-primary font-semibold">£195</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">fixed</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Free 72-Hour Re-Clean Guarantee</span>
+</div>
+<ul class="space-y-2.5 pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">100% deposit retrieval guarantee</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Foxtons, Savills &amp; Knight Frank compliant</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Complete appliance degrease included</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Full pictorial report for managing agent</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-lg">
+<a class="w-full inline-flex items-center justify-center font-label-md text-label-md py-space-sm px-space-md rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" href="#calculator">
+              Schedule Tenancy Clean
+            </a>
+</div>
+</div>
+<!-- Tier 4: Commercial & Office -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between transition-transform duration-200 hover:-translate-y-1">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Commercial</span>
+<span class="p-1 rounded bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[18px]">corporate_fare</span>
+</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Commercial &amp; Office</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Discreet corporate facilities and practice management.</p>
+</div>
+<div class="py-space-xs">
+<div class="flex items-baseline gap-1">
+<span class="font-display-hero text-[34px] leading-none text-primary font-semibold">Custom</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bespoke SLA monthly retained agreements</span>
+</div>
+<ul class="space-y-2.5 pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Out-of-hours keyholder &amp; alarm response</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">COSHH and RAMS statutory documentation</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Assigned central account superintendent</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="">Washroom replenishment &amp; deep sanitising</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-lg">
+<a class="w-full inline-flex items-center justify-center font-label-md text-label-md py-space-sm px-space-md rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors" href="tel:02036649304">
+              Speak to Corporate Desk
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Price Calculator Section -->
+<section class="w-full bg-surface-container-low py-space-2xl" id="calculator">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-xl space-y-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Instant Quotation Engine</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Calculate Your Service Estimate</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Select your home configuration and required specifications to generate a confirmed price. Guaranteed against unexpected arrival surcharges.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<!-- Interactive Controls (Left 8 Cols) -->
+<div class="lg:col-span-8 p-space-lg sm:p-space-xl space-y-space-xl">
+<!-- Step 1: Property Size -->
+<div class="space-y-space-sm">
+<label class="font-headline-sm text-headline-sm text-primary flex items-center justify-between">
+<span class="">1. Property Size</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Approximate floor layout</span>
+</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm" id="prop-size-group">
+<button class="size-btn py-space-md px-space-sm rounded-xl text-center transition-all bg-primary text-on-primary shadow-sm font-label-md text-label-md" data-base="78" data-size="studio" type="button">
+<span class="block text-lg font-bold">Studio</span>
+<span class="text-xs opacity-75">Up to 400 sq ft</span>
+</button>
+<button class="size-btn py-space-md px-space-sm rounded-xl text-center transition-all bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md" data-base="110" data-size="1bed" type="button">
+<span class="block text-lg font-bold">1 Bedroom</span>
+<span class="text-xs opacity-75">1 Bath / Living</span>
+</button>
+<button class="size-btn py-space-md px-space-sm rounded-xl text-center transition-all bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md" data-base="150" data-size="2bed" type="button">
+<span class="block text-lg font-bold">2 Bedroom</span>
+<span class="text-xs opacity-75">1-2 Bath / Living</span>
+</button>
+<button class="size-btn py-space-md px-space-sm rounded-xl text-center transition-all bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md" data-base="195" data-size="3bed" type="button">
+<span class="block text-lg font-bold">3+ Bed</span>
+<span class="text-xs opacity-75">Townhouse / Flat</span>
+</button>
+</div>
+</div>
+<!-- Step 2: Cadence / Nature of Clean -->
+<div class="space-y-space-sm">
+<label class="font-headline-sm text-headline-sm text-primary flex items-center justify-between">
+<span class="">2. Service Intensity</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Select cadence or depth</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" id="service-type-group">
+<button class="type-btn p-space-md rounded-xl text-left transition-all bg-primary text-on-primary shadow-sm" data-mult="1.0" data-type="weekly" type="button">
+<div class="font-label-md text-label-md font-bold">Weekly Domestic</div>
+<div class="text-xs opacity-80 mt-1">Routine cleaning, £19.50/hr basis (4 hrs)</div>
+</button>
+<button class="type-btn p-space-md rounded-xl text-left transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-mult="1.6" data-type="deep" type="button">
+<div class="font-label-md text-label-md font-bold">Deep One-Off Reset</div>
+<div class="text-xs opacity-80 mt-1">Intensive descaling &amp; high-detail scour</div>
+</button>
+<button class="type-btn p-space-md rounded-xl text-left transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-mult="2.2" data-type="tenancy" type="button">
+<div class="font-label-md text-label-md font-bold">End of Tenancy</div>
+<div class="text-xs opacity-80 mt-1">Full deposit return guaranteed check</div>
+</button>
+</div>
+</div>
+<!-- Step 3: Optional Add-ons -->
+<div class="space-y-space-sm">
+<label class="font-headline-sm text-headline-sm text-primary flex items-center justify-between">
+<span class="">3. Specialized Add-ons</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Optional valeting add-ons</span>
+</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<label class="cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-xs">
+<input class="addon-check w-4 h-4 rounded text-secondary focus:ring-0" data-price="45" id="addon-oven" type="checkbox">
+<span class="font-label-md text-label-md text-on-surface">Oven Valet</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-secondary">+£45</span>
+</label>
+<label class="cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-xs">
+<input class="addon-check w-4 h-4 rounded text-secondary focus:ring-0" data-price="60" id="addon-carpet" type="checkbox">
+<span class="font-label-md text-label-md text-on-surface">Carpet Steam</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-secondary">+£60</span>
+</label>
+<label class="cursor-pointer flex items-center justify-between p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center gap-space-xs">
+<input class="addon-check w-4 h-4 rounded text-secondary focus:ring-0" data-price="35" id="addon-window" type="checkbox">
+<span class="font-label-md text-label-md text-on-surface">Inside Windows</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-secondary">+£35</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Quote Summary Panel (Right 4 Cols) -->
+<div class="lg:col-span-4 bg-primary text-on-primary p-space-lg sm:p-space-xl flex flex-col justify-between">
+<div class="space-y-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-secondary-container uppercase tracking-wider">Estimate Summary</span>
+<h3 class="font-headline-md text-headline-md text-on-primary mt-1">Confirmed Quotation</h3>
+</div>
+<div class="space-y-space-xs py-space-sm text-on-primary-container font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="">Selected Property:</span>
+<span class="text-on-primary font-medium" id="summary-size">Studio</span>
+</div>
+<div class="flex justify-between">
+<span class="">Cleaning Standard:</span>
+<span class="text-on-primary font-medium" id="summary-type">Weekly Domestic</span>
+</div>
+<div class="flex justify-between">
+<span class="">Selected Extras:</span>
+<span class="text-on-primary font-medium" id="summary-addons">None</span>
+</div>
+<div class="flex justify-between">
+<span class="">VAT &amp; Insurance:</span>
+<span class="text-on-primary font-medium">Included</span>
+</div>
+</div>
+<div class="pt-space-md">
+<div class="text-xs text-on-primary-container uppercase font-label-caps text-label-caps">Payable Estimate</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-display-hero font-bold text-on-primary tracking-tight leading-none" id="calc-total">£78</span>
+<span class="font-body-sm text-body-sm text-on-primary-container" id="calc-freq-unit">/ visit</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary-container mt-2">
+                Guaranteed quote locked for 14 days. Zero upfront card commitment required.
+              </p>
+</div>
+</div>
+<div class="space-y-space-sm pt-space-lg">
+<button class="w-full py-3.5 px-space-md bg-secondary text-on-secondary rounded-lg font-label-md text-label-md font-semibold hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm text-center" id="lock-price-btn" type="button">
+              Lock In Price &amp; Select Date
+            </button>
+<div class="text-center font-body-sm text-body-sm text-on-primary-container flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">lock</span>
+<span class="">Direct Phone Booking: <a class="underline hover:text-on-primary" href="tel:02036649304">020 3664 9304</a></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Comparative Matrix Table -->
+<section class="w-full bg-background py-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<div class="max-w-2xl mb-space-xl space-y-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Scope Transparency</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Comprehensive Specification Matrix</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Review precisely what our operatives complete on each service visit.</p>
+</div>
+<div class="overflow-x-auto bg-surface-container-lowest rounded-xl shadow-sm">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-primary font-headline-sm text-sm">
+<th class="py-space-md px-space-lg font-bold">Service Deliverables</th>
+<th class="py-space-md px-space-md text-center font-semibold">Regular Domestic</th>
+<th class="py-space-md px-space-md text-center font-semibold bg-secondary-fixed/40">Deep &amp; Spring Clean</th>
+<th class="py-space-md px-space-md text-center font-semibold">End of Tenancy</th>
+<th class="py-space-md px-space-md text-center font-semibold">Commercial</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-medium text-primary">
+                Kitchen Degreasing (Hobs, Extractor, Splashbacks)
+              </td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant">Surface level</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary bg-secondary-fixed/20">Heavy degrease</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">Full Dip-Tank Ready</td>
+<td class="py-space-md px-space-md text-center">Tea-points / Pantries</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-space-md px-space-lg font-medium text-primary">
+                Limescale &amp; Calcium Removal (Sanitaryware &amp; Tiles)
+              </td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant">Standard wipe</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary bg-secondary-fixed/20">Full Acid Descale</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">Show-home Standard</td>
+<td class="py-space-md px-space-md text-center">Communal Washrooms</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-medium text-primary">
+                Inside Cupboards, Wardrobes &amp; Drawers
+              </td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant">Exterior only</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary bg-secondary-fixed/20">If emptied</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">100% Inside &amp; Out</td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant">Stationery/Storage</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-space-md px-space-lg font-medium text-primary">
+                Carpet &amp; Upholstery Steam Extraction
+              </td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant">Vacuum only</td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant bg-secondary-fixed/20">Optional bolt-on</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">Optional / Discounted</td>
+<td class="py-space-md px-space-md text-center">Quarterly Scheduled</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-medium text-primary">
+                Commercial Waste &amp; Rubbish Segregation
+              </td>
+<td class="py-space-md px-space-md text-center">Domestic bins</td>
+<td class="py-space-md px-space-md text-center bg-secondary-fixed/20">Up to 3 bags</td>
+<td class="py-space-md px-space-md text-center">Complete property clear</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">Bespoke Waste Stream</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="py-space-md px-space-lg font-medium text-primary">
+                Eco Detergents &amp; Pro Equipment Supplied
+              </td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant">Client or +£3/hr</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary bg-secondary-fixed/20">All Provided</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">All Provided</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">All Provided (COSHH)</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-lg font-medium text-primary">
+                Signed Inventory Guarantee &amp; Re-Clean Window
+              </td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant">—</td>
+<td class="py-space-md px-space-md text-center text-on-surface-variant bg-secondary-fixed/20">24 Hours</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">72 Hours Complimentary</td>
+<td class="py-space-md px-space-md text-center font-semibold text-secondary">SLA Penalty Protected</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Editorial Visual Proof / Heritage Section -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-6 space-y-space-md">
+<div class="inline-flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">assured_workload</span>
+            London Heritage Since 2006
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+            White-Glove Standard Without Hidden London Premiums.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Unlike gig-economy platforms that dispatch unvetted independent contractors, Super Cleaners London employs full-time, seasoned cleaning technicians trained in period home preservation, marble masonry care, and bespoke upholstery fabrics.
+          </p>
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="font-display-hero text-3xl font-bold text-primary">18+ Yrs</div>
+<div class="text-xs text-on-surface-variant mt-1">Continuous operation across Greater London boroughs</div>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="font-display-hero text-3xl font-bold text-primary">£10M</div>
+<div class="text-xs text-on-surface-variant mt-1">AXA Commercial Underwritten Indemnity Protection</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 grid grid-cols-2 gap-space-md">
+<img class="rounded-xl object-cover w-full h-72 shadow-sm" data-alt="Impeccably pristine luxury townhouse kitchen interior in London with polished marble countertops, gleaming chrome fixtures, immaculate parquet wooden floors, and luminous morning sunlight shining through heritage sash windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG7l6vV70-bKEek9_v4mtTRpcA7-vjQ0vSOZG4imd-LM-YVfXq9qfSK2_DBjICIzDHRoRS3i880dWskDMgOsW25f1NMZsDVnVvM74Rb6F0ZeZDdd0D9W3w1Q0j8N7BIJShzq2j7Q7TAK3dYjKfuvOuOsYCRFCkz_2GqzyctSvbAwzC8XFruhCIYeBU975AH6vzT8kwenVFnivJf5-bTh60RKR0GGSassLYlG7BV0NkEzgc3Sw4MR1WZA">
+<img class="rounded-xl object-cover w-full h-72 shadow-sm mt-space-lg" data-alt="Uniformed professional housekeeper wearing elegant navy apron carefully arranging crisp folded white Egyptian cotton towels in a pristine Belgravia master bathroom with descaled brass fittings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAmRBlF-u8afVxCX47DwsHHFFfuwoTJXZZq9ud--3HyAFo6iVLegYWnT8KDFOX_RGK_g2_D21ldjVGZjbcwbrcslM-t5JI5srh2Do_hJXng4QNE0YIhL7AeQ0Mw0wL0aL__sRyN7bzaiyEsz9nFdVk-a_YO8VThX_l69s6o3cPH3zqY4w3EPOwZvr8003vgL6JYx9Rnea2qAlTg8p5YlqkPwxdK0WI4Uvk_g8m6EYbY-XMWmycLJKTJQ">
+</div>
+</div>
+</div>
+</section>
+<!-- Frequently Asked Pricing Questions -->
+<section class="w-full bg-background py-space-2xl">
+<div class="max-w-[840px] mx-auto px-margin-mobile lg:px-margin space-y-space-xl">
+<div class="text-center space-y-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Got Questions?</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Frequently Asked Pricing Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct answers about billing, deposits, London parking charges, and cancellations.</p>
+</div>
+<div class="space-y-space-sm" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-space-md transition-all shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-headline-sm text-base text-primary" type="button">
+<span class="">Are cleaning supplies, equipment, and vacuums included in the hourly rates?</span>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden pt-space-sm text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+            For Regular Domestic cleaning, clients typically provide standard detergents and vacuums to prevent cross-home contamination. However, your cleaner can provide high-grade eco-detergents and ProTeam HEPA vacuum units for a flat £3.00/hour supplement. For all Deep Cleans and End of Tenancy services, all heavy-duty chemicals and industrial machinery are 100% included in the quoted fee.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-space-md transition-all shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-headline-sm text-base text-primary" type="button">
+<span class="">What happens if my letting agent flags an issue after an End of Tenancy clean?</span>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden pt-space-sm text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+            We provide a strict 72-hour re-clean guarantee. If your landlord or inventory clerk notes any specific discrepancies against our letting agent checklist within 72 hours of completion, our supervisor returns to resolve them completely free of charge.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-space-md transition-all shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-headline-sm text-base text-primary" type="button">
+<span class="">How do you handle Congestion Charges and Central London parking fees?</span>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden pt-space-sm text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+            For Regular Domestic housekeeping, our staff travel via London Underground and public transport, incurring zero parking surcharges. For heavy-duty Deep Cleans and Tenancy vans carrying equipment, we absorb the ULEZ charge; parking scratch-cards or visitor permits provided by the resident are preferred, or actual street meter costs will be pre-agreed upfront with zero surcharge markup.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item bg-surface-container-lowest rounded-xl p-space-md transition-all shadow-sm">
+<button class="faq-toggle w-full flex items-center justify-between text-left font-headline-sm text-base text-primary" type="button">
+<span class="">What payment methods are supported and what is your cancellation window?</span>
+<span class="material-symbols-outlined text-secondary transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden pt-space-sm text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
+            We accept all major Visa/Mastercard/Amex cards, automated direct debits, and BACS bank transfers for corporate accounts. No prepayment deposit is required for recurring domestic cleans; fees are settled post-clean. For one-off services, you can cancel or reschedule without penalty up to 24 hours prior to appointment dispatch.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call to Action Strip -->
+<section class="w-full bg-primary text-on-primary py-space-xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-lg text-center md:text-left">
+<div class="space-y-1">
+<h3 class="font-headline-md text-headline-md font-bold text-on-primary">Need an immediate bespoke quote?</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Our Mayfair &amp; Kensington dispatch desk is available Monday through Sunday.</p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-space-md">
+<a class="inline-flex items-center gap-2 bg-on-primary text-primary px-space-lg py-3 rounded-lg font-label-md text-label-md font-bold hover:bg-secondary-fixed transition-colors shadow-sm" href="tel:02036649304">
+<span class="material-symbols-outlined text-[18px]">call</span>
+            020 3664 9304
+          </a>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-space-lg py-3 rounded-lg font-label-md text-label-md font-semibold hover:bg-secondary-container hover:text-on-secondary-container transition-colors" href="#calculator">
+            Use Online Calculator
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive Calculator Logic
+  (function() {
+    let currentBase = 78;
+    let currentMultiplier = 1.0;
+    let sizeLabel = 'Studio';
+    let typeLabel = 'Weekly Domestic';
+    let unitLabel = '/ visit';
+
+    const sizeBtns = document.querySelectorAll('.size-btn');
+    const typeBtns = document.querySelectorAll('.type-btn');
+    const addonChecks = document.querySelectorAll('.addon-check');
+
+    const totalEl = document.getElementById('calc-total');
+    const freqEl = document.getElementById('calc-freq-unit');
+    const summarySize = document.getElementById('summary-size');
+    const summaryType = document.getElementById('summary-type');
+    const summaryAddons = document.getElementById('summary-addons');
+    const lockBtn = document.getElementById('lock-price-btn');
+
+    function calculateTotal() {
+      let addonSum = 0;
+      let addonNames = [];
+
+      addonChecks.forEach(cb => {
+        if (cb.checked) {
+          addonSum += parseFloat(cb.getAttribute('data-price') || 0);
+          if (cb.id === 'addon-oven') addonNames.push('Oven');
+          if (cb.id === 'addon-carpet') addonNames.push('Carpet');
+          if (cb.id === 'addon-window') addonNames.push('Windows');
+        }
+      });
+
+      const total = Math.round((currentBase * currentMultiplier) + addonSum);
+      totalEl.textContent = '£' + total;
+      freqEl.textContent = unitLabel;
+      summarySize.textContent = sizeLabel;
+      summaryType.textContent = typeLabel;
+      summaryAddons.textContent = addonNames.length > 0 ? addonNames.join(', ') : 'None';
+    }
+
+    sizeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sizeBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        btn.classList.remove('bg-surface-container', 'text-on-surface');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        currentBase = parseFloat(btn.getAttribute('data-base') || 78);
+        sizeLabel = btn.querySelector('.text-lg').textContent.trim();
+        calculateTotal();
+      });
+    });
+
+    typeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        typeBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('bg-surface-container', 'text-on-surface');
+        });
+        btn.classList.remove('bg-surface-container', 'text-on-surface');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+        currentMultiplier = parseFloat(btn.getAttribute('data-mult') || 1.0);
+        const type = btn.getAttribute('data-type');
+        typeLabel = btn.querySelector('.font-label-md').textContent.trim();
+        
+        if (type === 'weekly') {
+          unitLabel = '/ visit';
+        } else {
+          unitLabel = 'total fixed';
+        }
+        calculateTotal();
+      });
+    });
+
+    addonChecks.forEach(cb => {
+      cb.addEventListener('change', calculateTotal);
+    });
+
+    if (lockBtn) {
+      lockBtn.addEventListener('click', () => {
+        alert('Your quote of ' + totalEl.textContent + ' (' + sizeLabel + ' - ' + typeLabel + ') has been locked. Redirecting to date reservation calendar...');
+      });
+    }
+
+    // FAQ Accordion Toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      toggle.addEventListener('click', () => {
+        const isHidden = content.classList.contains('hidden');
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    calculateTotal();
+  })();
+</script></div></main>
+
+  <!-- Fast Quote & Booking Action Bar -->
+  <section class="w-full bg-primary-container text-on-primary py-10 border-t border-outline-variant/10">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[26px]">support_agent</span>
+        </div>
+        <div>
+          <h2 class="font-headline-sm text-headline-sm text-on-primary">Need Same-Day or Next-Day London Cleaning?</h2>
+          <p class="font-body-sm text-body-sm text-on-primary-container">Speak directly with our London booking team or message us on WhatsApp for an instant response.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        <a class="scl-btn inline-flex items-center gap-2 bg-[#25D366] text-white font-label-md text-label-md px-5 py-3 rounded-lg hover:brightness-105 transition-all" href="https://wa.me/447786282887" rel="noopener" target="_blank">
+          <span>WhatsApp 07786 282887</span>
+        </a>
+        <a class="scl-btn inline-flex items-center gap-2 bg-surface-container-lowest text-primary font-label-md text-label-md px-5 py-3 rounded-lg hover:bg-surface-container-low transition-all" href="tel:02036649304">
+          <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span>
+          <span>Call 020 3664 9304</span>
+        </a>
+        <a class="scl-btn scl-btn-primary inline-flex items-center gap-2 bg-error text-on-error font-label-md text-label-md px-5 py-3 rounded-lg" href="#calculator">
+          <span>Get Online Quote</span>
+          <span class="material-symbols-outlined text-[18px] scl-icon-shift">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer (Global V2 Footer) -->
+  <footer class="w-full bg-primary text-surface-variant pt-16 pb-12">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-outline-variant/15" data-stagger-children="100">
+        <!-- Column 1: Brand & Heritage -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <div class="flex items-center gap-2.5">
+            <a class="bg-surface-container-lowest p-2 rounded-lg inline-flex items-center hover:scale-105 transition-transform duration-200" href="v2-enhanced.html">
+              <img
+                alt="Super Cleaners London"
+                class="h-10 w-auto object-contain"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+              />
+            </a>
+          </div>
+          <p class="font-body-sm text-body-sm text-surface-container-highest/80 leading-relaxed">
+            London cleaning since 2006. Over two decades of discrete, immaculate domestic and commercial cleaning services across Kensington, Chelsea, Westminster, and Greater London.
+          </p>
+          <div class="flex items-center gap-1.5 font-label-caps text-label-caps text-secondary-fixed-dim">
+            <span class="material-symbols-outlined text-[16px]">verified_user</span>
+            <span>DBS Vetted &amp; Fully Insured</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Services</h3>
+          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <li><a class="hover:text-on-primary transition-colors" href="domestic-v2-enhanced.html">Regular Domestic Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#service-professional">Deep &amp; Spring Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="domestic-v2-enhanced.html">End of Tenancy Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="commercial-v2-enhanced.html">Commercial Office Care</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#service-carpet">Specialist Carpet &amp; Upholstery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Coverage Areas -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Coverage Areas</h3>
+          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Kensington &amp; Chelsea (SW3, SW7, W8)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Westminster &amp; Belgravia (SW1, W1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Camden &amp; Hampstead (NW3, NW1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Islington &amp; City (N1, EC1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Richmond &amp; Wandsworth (SW11, TW9)</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Enquiries -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Contact &amp; Enquiries</h3>
+          <div class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="tel:02036649304">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">call</span>
+              <span>020 3664 9304</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/447786282887" rel="noopener" target="_blank">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
+              <span>WhatsApp: 07786 282887</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="mailto:info@supercleanerslondon.co.uk">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>
+              <span>info@supercleanerslondon.co.uk</span>
+            </a>
+            <div class="flex items-center gap-1.5 pt-1">
+              <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="font-bold text-on-primary">4.9/5 Rating</span>
+              <span class="text-surface-container-highest/70 font-label-sm text-label-sm">(1,400+ London Reviews)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Legal & Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-surface-container-highest/60">
+        <p>© 2006–2025 Super Cleaners London Ltd. All rights reserved. Registered in England &amp; Wales.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#faqs">Privacy Policy</a>
+          <a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#faqs">Terms of Service</a>
+          <a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#about">Insurance &amp; Vetting</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="./js/enhancements.js"></script>
+</body></html>

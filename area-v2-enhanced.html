@@ -1,0 +1,1076 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#4a5f7f", "tertiary": "#2e0004", "on-primary-container": "#798fb1", "on-error": "#ffffff", "on-secondary-fixed-variant": "#00458d", "surface-variant": "#dbe4e8", "on-error-container": "#93000a", "primary": "#001229", "on-secondary": "#ffffff", "on-primary": "#ffffff", "surface": "#f2fbff", "error": "#ba1a1a", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#324866", "surface-container-low": "#ecf5f9", "on-secondary-container": "#004083", "surface-dim": "#d2dbdf", "secondary-fixed": "#d6e3ff", "tertiary-fixed-dim": "#ffb3b1", "outline-variant": "#c4c6ce", "surface-container": "#e6eff3", "tertiary-container": "#55000c", "on-tertiary-fixed-variant": "#92001c", "inverse-primary": "#b2c8ed", "on-primary-fixed": "#021c39", "surface-container-highest": "#dbe4e8", "secondary-container": "#80aefe", "primary-fixed": "#d4e3ff", "on-tertiary-container": "#fe4b55", "primary-fixed-dim": "#b2c8ed", "error-container": "#ffdad6", "on-tertiary-fixed": "#410007", "surface-bright": "#f2fbff", "inverse-on-surface": "#e9f2f6", "on-surface": "#141d20", "on-background": "#141d20", "on-secondary-fixed": "#001b3e", "surface-container-lowest": "#ffffff", "on-surface-variant": "#44474d", "outline": "#74777e", "primary-container": "#0f2744", "surface-container-high": "#e1eaee", "background": "#f2fbff", "inverse-surface": "#293235", "tertiary-fixed": "#ffdad8", "secondary-fixed-dim": "#aac7ff", "secondary": "#295ea8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "3rem", "margin-mobile": "1.25rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-2xl": "4rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Inter" ], "display-hero": [ "Playfair Display" ], "display-hero-mobile": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-md-mobile": [ "Playfair Display" ], "label-caps": [ "Inter" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "headline-lg": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ], "label-md": [ "Inter" ], "body-md": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-md": [ "30px", { "lineHeight": "38px", "fontWeight": "500" } ], "headline-md-mobile": [ "24px", { "lineHeight": "32px", "fontWeight": "500" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "700" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "36px", "fontWeight": "600" } ], "label-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ] } } } };</script><link href="./css/enhancements.css" rel="stylesheet"/></head><body class="bg-background font-body-md text-on-surface antialiased">
+  <!-- Skip Link -->
+  <a class="scl-skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Top Navigation App Bar (Global V2 Header) -->
+  <header class="scl-header fixed top-0 left-0 right-0 z-50 h-20 flex items-center" id="site-header">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-4">
+      <!-- Brand Logo Lockup -->
+      <a aria-label="Super Cleaners London Home" class="flex items-center group" href="v2-enhanced.html">
+        <img
+          alt="Super Cleaners London - Residential &amp; Commercial"
+          class="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+        />
+      </a>
+
+      <!-- Center Navigation Links (Desktop) -->
+      <nav aria-label="Primary navigation" class="hidden xl:flex items-center gap-6">
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface hover:text-primary" href="v2-enhanced.html">Home</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="domestic-v2-enhanced.html">Domestic</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="commercial-v2-enhanced.html">Commercial</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="v2-enhanced.html#service-carpet">Specialized</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="v2-enhanced.html#about">About</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="pricing-v2-enhanced.html">Prices</a>
+        <a class="scl-nav-link is-active font-label-md text-label-md text-on-surface-variant hover:text-primary" href="area-v2-enhanced.html">Areas</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="v2-enhanced.html#faqs">FAQ</a>
+        <a class="scl-nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary" href="contact-v2-enhanced.html">Contact</a>
+      </nav>
+
+      <!-- Right Action Area -->
+      <div class="flex items-center gap-3">
+        <!-- Phone Contact -->
+        <a class="hidden md:flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-surface-container-low transition-colors text-primary font-label-md text-label-md" href="tel:02036649304">
+          <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span>
+          <span>020 3664 9304</span>
+        </a>
+
+        <!-- Primary CTA -->
+        <a class="scl-btn scl-btn-primary hidden sm:inline-flex items-center justify-center bg-error text-on-error font-label-md text-label-md px-5 py-2.5 rounded-lg" href="contact-v2-enhanced.html">
+          <span>Book Online</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          aria-controls="mobile-nav-drawer"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+          class="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container transition-colors"
+          id="mobile-menu-toggle"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Backdrop & Drawer (Global V2) -->
+  <div aria-hidden="true" class="scl-mobile-backdrop" id="mobile-nav-backdrop"></div>
+  <aside aria-label="Mobile navigation" class="scl-mobile-drawer" id="mobile-nav-drawer">
+    <div class="p-5 border-b border-outline-variant/25 flex items-center justify-between">
+      <a class="flex items-center" href="v2-enhanced.html">
+        <img
+          alt="Super Cleaners London"
+          class="h-10 w-auto object-contain"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+        />
+      </a>
+      <button
+        aria-label="Close navigation menu"
+        class="w-10 h-10 rounded-xl bg-surface-container-low text-primary flex items-center justify-center hover:bg-surface-container"
+        id="mobile-menu-close"
+        type="button"
+      >
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <nav class="p-5 flex-1 flex flex-col gap-1">
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-primary hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html">Home</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="domestic-v2-enhanced.html">Domestic Cleaning</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="commercial-v2-enhanced.html">Commercial Cleaning</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html#service-carpet">Specialized Services</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html#about">About &amp; Standards</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="pricing-v2-enhanced.html">Transparent Pricing</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-secondary font-bold bg-surface-container-low transition-colors" data-mobile-nav-link href="area-v2-enhanced.html">London Areas</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="v2-enhanced.html#faqs">FAQs</a>
+      <a class="px-4 py-3 rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors" data-mobile-nav-link href="contact-v2-enhanced.html">Contact &amp; Quote</a>
+    </nav>
+    <div class="p-5 border-t border-outline-variant/25 flex flex-col gap-3 bg-surface-container-low/60">
+      <a class="w-full py-3 px-4 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-primary font-label-md text-label-md flex items-center justify-center gap-2" href="tel:02036649304">
+        <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span>
+        <span>020 3664 9304</span>
+      </a>
+      <a class="scl-btn scl-btn-primary w-full py-3.5 px-5 rounded-xl bg-error text-on-error font-label-md text-label-md flex items-center justify-center gap-2" data-mobile-nav-link href="contact-v2-enhanced.html">
+        <span>Book Online Now</span>
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Fixed Right-Side Social & Quick Contact Bar (Global V2 Sticky Social Icons) -->
+  <aside aria-label="Quick Contact &amp; Social Media" class="scl-floating-dock fixed right-3 sm:right-5 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2.5">
+    <!-- Phone Call -->
+    <a aria-label="Call 020 3664 9304" class="group relative w-11 h-11 rounded-full bg-primary text-on-primary shadow-ambient flex items-center justify-center hover:bg-secondary transition-all duration-200" href="tel:02036649304" title="Call 020 3664 9304">
+      <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-primary px-3 py-1.5 font-label-sm text-label-sm text-on-primary opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">020 3664 9304</span>
+    </a>
+    <!-- WhatsApp -->
+    <a aria-label="WhatsApp 07786 282887" class="group relative w-11 h-11 rounded-full bg-[#25D366] text-white shadow-ambient flex items-center justify-center hover:brightness-105 transition-all duration-200" href="https://wa.me/447786282887" rel="noopener" target="_blank" title="WhatsApp 07786 282887">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.625.846 5.059 2.284 7.033l-1.492 5.448 5.601-1.469c1.908 1.261 4.192 1.988 6.607 1.988 6.627 0 12-5.373 12-12s-5.373-12-12-12z"></path></svg>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-[#128C7E] px-3 py-1.5 font-label-sm text-label-sm text-white opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">WhatsApp Us</span>
+    </a>
+    <!-- Instagram -->
+    <a aria-label="Follow us on Instagram" class="group relative w-11 h-11 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shadow-ambient flex items-center justify-center hover:brightness-110 transition-all duration-200" href="https://www.instagram.com" rel="noopener" target="_blank" title="Instagram">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-primary px-3 py-1.5 font-label-sm text-label-sm text-on-primary opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">Instagram</span>
+    </a>
+    <!-- Facebook -->
+    <a aria-label="Follow us on Facebook" class="group relative w-11 h-11 rounded-full bg-[#1877F2] text-white shadow-ambient flex items-center justify-center hover:brightness-110 transition-all duration-200" href="https://www.facebook.com" rel="noopener" target="_blank" title="Facebook">
+      <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-[#1877F2] px-3 py-1.5 font-label-sm text-label-sm text-white opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">Facebook</span>
+    </a>
+    <!-- Email Quote -->
+    <a aria-label="Email info@supercleanerslondon.co.uk" class="group relative w-11 h-11 rounded-full bg-error text-on-error shadow-ambient flex items-center justify-center hover:brightness-110 transition-all duration-200" href="mailto:info@supercleanerslondon.co.uk" title="Email info@supercleanerslondon.co.uk">
+      <span class="material-symbols-outlined text-[20px]">mail</span>
+      <span class="pointer-events-none absolute right-13 whitespace-nowrap rounded-lg bg-error px-3 py-1.5 font-label-sm text-label-sm text-on-error opacity-0 shadow-ambient transition-opacity duration-200 group-hover:opacity-100 hidden sm:block">Email Us</span>
+    </a>
+  </aside>
+
+  <main class="w-full pt-20 bg-background" id="main-content"><div class="flex flex-col w-full">
+<!-- Coverage Hero & Network Dispatch Banner -->
+<section class="relative w-full overflow-hidden bg-surface py-space-xl lg:py-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<!-- Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">
+<span class="">London Network</span>
+<span class="">/</span>
+<span class="text-primary font-bold">Territories &amp; Postcode Dispatch</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 bg-surface-container rounded-full shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">18 Liveried Crews On Active Patrol</span>
+</div>
+</div>
+<!-- Editorial Hero Header & Intro -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-end mb-space-2xl">
+<div class="lg:col-span-8 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps tracking-widest uppercase">
+            Greater London Service Radius • Est. 2006
+          </div>
+<h1 class="font-headline-lg text-headline-lg lg:font-display-hero lg:text-display-hero text-primary tracking-tight font-display-hero">
+            London Coverage Network — Local, Reliable Housekeeping Across Central &amp; Greater London.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Mobile liveried cleaning fleet stationed across South-West, Central and West London. Rapid dispatch to your door with accredited Mayfair-grade teams, key-holding security, and £10M public liability insurance.
+          </p>
+</div>
+<!-- Quick Metrics Pill Stack -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Average Dispatch</span>
+<span class="font-label-md text-label-md text-primary font-bold">45 Mins</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[88%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="">Direct Concierge:</span>
+<a class="font-headline-sm text-headline-sm text-primary font-bold hover:text-secondary transition-colors" href="tel:02036649304">020 3664 9304</a>
+</div>
+</div>
+</div>
+<!-- Real-Time Interactive Postcode Checker Widget -->
+<div class="w-full bg-primary text-on-primary rounded-xl p-space-lg lg:p-space-xl shadow-xl relative overflow-hidden">
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-5 space-y-space-xs">
+<div class="flex items-center gap-space-xs text-secondary-container font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span class="">Instant Dispatch Verifier</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-primary">
+              Verify Your London Postcode
+            </h2>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+              Enter your London postcode (e.g. SW3, SW6, W8, EC1) to check cleaner availability in under 10 seconds.
+            </p>
+</div>
+<div class="lg:col-span-7">
+<form class="flex flex-col sm:flex-row items-stretch gap-space-sm" id="postcodeCheckerForm" onsubmit="event.preventDefault(); window.checkPostcode();">
+<div class="relative flex-grow">
+<span class="absolute left-space-md top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">location_on</span>
+<input class="w-full h-12 pl-12 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md outline-none placeholder:text-outline" id="postcodeInput" placeholder="e.g. SW3 4LY or W8" required="" type="text">
+</div>
+<button class="h-12 px-space-lg bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center gap-space-xs whitespace-nowrap shadow-sm font-semibold" type="submit">
+<span class="">Check Availability</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Dynamic Result Card Container -->
+<div class="hidden mt-space-md p-space-md rounded-lg bg-primary-container text-on-primary text-body-sm font-body-sm" id="postcodeResult">
+<!-- Dynamically populated via JS -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive London Borough Directory -->
+<section class="w-full bg-surface-container-low py-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin space-y-space-2xl">
+<!-- Section Intro & Filter Controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-bold">Sectors &amp; Zones</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+            Greater London Borough Directory
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Strict local crew assignments minimize cross-borough commute times, ensuring scheduled arrivals and familiar, consistent housekeeping staff.
+          </p>
+</div>
+<!-- Filter Pill Toggles -->
+<div class="flex flex-wrap items-center gap-space-xs" id="regionFilterTabs">
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-primary text-on-primary" onclick="window.filterRegion('all', this)">All London (15)</button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" onclick="window.filterRegion('sw', this)">South West</button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" onclick="window.filterRegion('w-nw', this)">West &amp; NW</button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" onclick="window.filterRegion('central', this)">Central &amp; City</button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container" onclick="window.filterRegion('east', this)">East &amp; Wharf</button>
+</div>
+</div>
+<!-- Directory Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="boroughDirectoryGrid">
+<!-- CARD 1: Chelsea -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="sw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">SW3 • SW10</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Chelsea &amp; Royal Hospital</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Same-day slot availability</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Marble Floor Crystallisation, Heritage Antiques Care, Turnkey Tenancy Turnover.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in SW3</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 2: Fulham & Parsons Green -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="sw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">SW6</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 3 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Fulham &amp; Parsons Green</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Morning &amp; Afternoon Runs</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Weekly Domestic Housekeeping, Family Townhouse Deep Cleans, Pet Odour Extraction.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in SW6</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 3: Battersea & Clapham -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="sw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">SW11 • SW4</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Battersea &amp; Clapham</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Evening Turndowns Available</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Riverside Apartment Cleaning, End of Tenancy Check-out Guarantees, Balcony Decontamination.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in SW11</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 4: Putney & Barnes -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="sw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">SW15 • SW13</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 1 Crew On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Putney &amp; Barnes Village</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Dedicated Key Holding</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Period Sash Window Polishing, Wool Rug Wet Extraction, Fortnightly Executive Housekeeping.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in SW15</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 5: Wandsworth & Wimbledon -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="sw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">SW18 • SW19</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Wandsworth &amp; Wimbledon</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Bi-weekly Priority Routes</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Detached Residence Deep Cleans, Conservatory Glass Restoration, Pre-Listing Preparation.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in SW18</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 6: Kensington & Holland Park -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="w-nw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">W8 • W14</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 3 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Kensington &amp; Holland Park</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Diplomatic &amp; Estate Protocol</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chandeliers &amp; Gilded Decor, Silk Upholstery Care, Comprehensive Inventory Cleans.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in W8</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 7: Notting Hill & Bayswater -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="w-nw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">W11 • W2</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Notting Hill &amp; Bayswater</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Rapid Key Drop Off</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Post-Renovation Dust Removal, High-End Airbnb Turnovers, Parquet Floor Buffing.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in W11</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 8: Hammersmith & Chiswick -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="w-nw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">W6 • W4</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Hammersmith &amp; Chiswick</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Morning Dispatch Available</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Victorian Terrace Deep Cleans, Kitchen Range Restoration, Regular Housekeeping.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in W6</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 9: Hampstead & St John's Wood -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="w-nw">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">NW3 • NW8</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Hampstead &amp; St John's Wood</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Confidential NDA Service</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mansion Wing Cleaning, Subterranean Spa &amp; Gym Sanitisation, Private Art Care.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in NW3</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 10: Westminster, Belgravia & Mayfair -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="central">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">SW1 • W1</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 4 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Westminster, Belgravia &amp; Mayfair</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Bespoke Housekeeper Pairing</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Embassy Suite Cleans, Luxury Linen Pressing, Fine Wood Panelling Conditioning.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in SW1</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 11: City of London -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="central">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">EC1 • EC2 • EC3 • EC4</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">City of London Financial District</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Out-of-Hours Commercial Access</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Executive Penthouse Cleaning, Boardroom Deep Sanitation, High-Gloss Tile Restoration.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in EC2</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 12: Holborn & Midtown -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="central">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">WC1 • WC2</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Holborn, Bloomsbury &amp; Midtown</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Key Safe Secure Dispatch</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Georgian Townhouse Care, Law Chambers Cleaning, End of Academic Lease Cleans.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in WC1</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 13: Canary Wharf & Isle of Dogs -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="east">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">E14</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 2 Crews On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Canary Wharf &amp; Isle of Dogs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Concierge Desk Liaison</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">High-Rise Floor-to-Ceiling Glazing, Engineered Timber Maintenance, Tenancy Recoveries.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in E14</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 14: Shoreditch & Wapping -->
+<div class="borough-card bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between" data-region="east">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps font-bold">N1 • E1W</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> 1 Crew On Call
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Shoreditch, Islington &amp; Wapping</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Crews Active Daily — Same-day slot availability</p>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Key Specialisms:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Warehouse Loft Dust Extraction, Industrial Kitchen Degreasing, Studio Cleans.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<a class="font-label-sm text-label-sm text-primary font-semibold hover:text-secondary" href="tel:02036649304">Direct: 020 3664 9304</a>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" data-path="book-now" href="#">
+<span class="">Book Cleaner in E1W</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 15: Outer London Boroughs / Extended Coverage -->
+<div class="borough-card bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between" data-region="all">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-primary font-label-caps text-label-caps font-bold">GREATER LONDON</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant font-medium">
+                Advance Bookings
+              </span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Surrey Borders &amp; Outer Zones</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Bromley, Richmond, Kingston, Barnet &amp; Croydon</p>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg space-y-1">
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">Custom Booking:</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Our mobile fleet frequently accommodates larger country residences and properties outside the orbital ring.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Enquire Directly</span>
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded bg-primary-container text-on-primary hover:bg-secondary font-label-md text-label-md transition-colors" href="tel:02036649304">
+<span class="material-symbols-outlined text-[16px]">phone</span>
+<span class="">Call Concierge</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Map & Fleet Operations Section -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin space-y-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Map Column -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full h-[460px] rounded-xl overflow-hidden shadow-lg bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-location="Central London, UK" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDF31cxe6HPpUhh6qflfRlzSLO_tCrvfJpRfd1EnmXHoKlmuU4ngQornbLBMLwF1uxuWu0Dk2XgAcUNqUX28gIUPO0r_xxxjdp8wU3KOkFK8V2TmdG_ULmM3ngQIr2mM9R8CWJypQo0i3G3RS98HCvta03r_gXbogPiTVgZ9jTfdoYc01mnEZDck_pIORlnhUDvPyAdKgUDw8oZTQMcYdcupH6q4Wxw42lHc1GUyIGxwXN8-dxIMeT_g')"></div>
+<!-- Dispatch Overlay Badge -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-space-md rounded-lg shadow-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">local_shipping</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary">Central Hub &amp; Mobile Units</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Covers Zones 1–4 daily with rapid roadside dispatch</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary">verified</span>
+</div>
+</div>
+</div>
+<!-- Fleet Feature Narrative Column -->
+<div class="lg:col-span-6 space-y-space-lg">
+<div class="space-y-space-xs">
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[16px]">commute</span>
+<span class="">Fleet Specifications</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+              Our Liveried Mobile Van Fleet
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every Super Cleaners London vehicle is a self-contained, high-spec mobile cleaning headquarters equipped to handle delicate residential upholstery, industrial post-build finishes, and high-security key holding.
+            </p>
+</div>
+<!-- Feature Bullets -->
+<div class="space-y-space-md">
+<div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">water_drop</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">On-Board Pure Water Purification</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deionised multi-stage water filtration ensuring streak-free sash windows, atrium glazing, and marble rinses without harsh chalk mineral build-up.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">electric_car</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">100% Ultra-Low Emission &amp; EV Fleet</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ULEZ compliant custom-liveried electric and hybrid vans operating seamlessly across Mayfair, Westminster, and Congestion Charge zones without interruption.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Commercial-Grade HEPA Extraction Units</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prochem steam injection cleaners, high-filtration air scrubbers, and organic, non-toxic plant-based detergents safe for fine artwork and pets.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Verifiable Postcode Testimonials Section -->
+<section class="w-full bg-surface-container py-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin space-y-space-xl">
+<!-- Section Header with Google Rating Integration -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="">Real London Homes</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">
+            What Discerning Clients Say Across London
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Documented satisfaction from long-standing residential and corporate patrons across our core postcodes.
+          </p>
+</div>
+<!-- Google 5-Star Block -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md flex-shrink-0">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary text-headline-sm">
+            G
+          </div>
+<div>
+<div class="flex items-center gap-1 text-[#F59E0B]">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="font-label-sm text-label-sm text-primary font-bold">5.0 Out of 5 • 420+ Verified Reviews</div>
+</div>
+</div>
+</div>
+<!-- Testimonial Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Review 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-secondary font-bold">Chelsea SW3</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              “Super Cleaners London have held keys to our Cadogan Square home for over four years. Their attention to delicate surfaces, marble hearths, and silk drapery is impeccable. Completely discreet and utterly reliable.”
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold font-headline-sm">
+              SM
+            </div>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Sarah M.</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Weekly Domestic Housekeeping</div>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-secondary font-bold">Fulham SW6</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              “We booked an emergency same-day turnaround following a tenancy handover in Parsons Green. The liveried van arrived within 40 minutes, fully kitted out. Passed the strict estate checkout inventory with zero deductions.”
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold font-headline-sm">
+              EV
+            </div>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Eleanor V.</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Guaranteed End of Tenancy Clean</div>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center text-[#F59E0B]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-caps text-label-caps text-secondary font-bold">Kensington W8</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+              “The uniformed team always arrive on schedule, operate with absolute manners, and leave the property in immaculate boutique hotel condition. We wouldn't trust any other cleaning agency in London.”
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold font-headline-sm">
+              JT
+            </div>
+<div>
+<div class="font-label-md text-label-md text-primary font-bold">Julian T.</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Fortnightly Residence Service</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Photographic Trust & Direct Booking CTA Box -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+<div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+<div class="bg-primary text-on-primary rounded-xl overflow-hidden shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+<!-- Image Column -->
+<div class="lg:col-span-5 relative h-72 lg:h-full min-h-[360px]">
+<img class="w-full h-full object-cover" data-alt="A professional, friendly female London housekeeper in a navy blue uniform apron with the Super Cleaners London logo smiling warmly in an elegant, sunlit Kensington townhouse interior with clean marble finishes and soft natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKdJ2HggBWKMX066KXiyOybP8FoDJZdzNTk7_gBJE9osRHPgzOjYfJoQIJkJb9z3AU25NEZdtDL5GySzJMS4J4vN-B1W1Dy-X21YJi7RuvSyNHYxGEX3CehfbebwlGpU5YKO3iysuBPypA6P1OKHsiL-dkgK1rGaQNbPfbl7Op5dbfsRJBwFqpPaDe3MJQQWO38b7lBW-hIYqTpxhULSJjcDfnNk5F5-EB9AVP3parJnQ7ZhgXd-lfzQ">
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent lg:hidden"></div>
+</div>
+<!-- Content Column -->
+<div class="lg:col-span-7 p-space-lg lg:p-space-2xl space-y-space-lg">
+<div class="space-y-space-xs">
+<span class="font-label-caps text-label-caps text-secondary-container uppercase tracking-widest font-bold">
+                Direct London Dispatch
+              </span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary">
+                Book Your Certified Housekeeper Today
+              </h2>
+<p class="font-body-md text-body-md text-on-primary-container leading-relaxed">
+                Whether you require recurring private domestic care in Chelsea, an end of tenancy guarantee in Fulham, or out-of-hours corporate cleaning in the City, our liveried fleet is standing by.
+              </p>
+</div>
+<!-- Callout Phone & CTA Row -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg bg-surface-container-lowest text-primary hover:bg-secondary-fixed transition-colors font-headline-sm text-headline-sm font-bold shadow-md" href="tel:02036649304">
+<span class="material-symbols-outlined text-[22px] text-secondary">phone_in_talk</span>
+<span class="">020 3664 9304</span>
+</a>
+<a class="flex items-center justify-center gap-space-xs px-space-xl py-3 rounded-lg bg-secondary-container text-on-secondary-container hover:bg-secondary transition-colors font-label-md text-label-md font-bold shadow-md" data-path="book-now" href="#">
+<span class="">Book Instant Cleaner</span>
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</a>
+</div>
+<!-- Reassurance Checklist Badges -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-sm pt-space-sm text-on-primary-container font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">verified_user</span>
+<span class="">DBS Checked</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">shield</span>
+<span class="">£10M Insured</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">lock</span>
+<span class="">Key Holding Safe</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for Postcode Checker & Directory Tab Filtering -->
+<script>
+    (function() {
+      // 1. Interactive Postcode Checker Logic
+      window.checkPostcode = function() {
+        var input = document.getElementById('postcodeInput');
+        var resultBox = document.getElementById('postcodeResult');
+        if (!input || !resultBox) return;
+
+        var val = input.value.trim().toUpperCase();
+        if (!val) return;
+
+        var supported = ['SW', 'W', 'EC', 'WC', 'NW', 'E14', 'N1', 'SE', 'BR', 'CR', 'KT', 'TW'];
+        var isCovered = false;
+
+        for (var i = 0; i < supported.length; i++) {
+          if (val.indexOf(supported[i]) === 0) {
+            isCovered = true;
+            break;
+          }
+        }
+
+        resultBox.classList.remove('hidden');
+
+        if (isCovered) {
+          resultBox.innerHTML = `
+            <div class="flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-secondary-container text-[24px]">check_circle</span>
+              <div class="space-y-1">
+                <div class="font-headline-sm text-headline-sm font-bold text-on-primary">Territory Active: ` + val + ` Is Fully Covered</div>
+                <div class="font-body-sm text-body-sm text-on-primary-container">
+                  Active liveried crews in this sector. Same-day &amp; regular weekly recurring visits available.
+                </div>
+                <div class="pt-space-xs flex flex-wrap items-center gap-space-sm">
+                  <a href="#" data-path="book-now" class="inline-flex items-center gap-1 px-space-md py-1 bg-secondary-container text-on-secondary-container rounded font-label-md text-label-md font-bold hover:bg-secondary-fixed transition-colors">
+                    <span>Reserve Crew for ` + val + `</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                  <a href="tel:02036649304" class="text-on-primary hover:underline font-label-sm text-label-sm">Or Call Concierge: 020 3664 9304</a>
+                </div>
+              </div>
+            </div>
+          `;
+        } else {
+          resultBox.innerHTML = `
+            <div class="flex items-start gap-space-sm">
+              <span class="material-symbols-outlined text-secondary-container text-[24px]">info</span>
+              <div class="space-y-1">
+                <div class="font-headline-sm text-headline-sm font-bold text-on-primary">Extended Zone Dispatch: ` + val + `</div>
+                <div class="font-body-sm text-body-sm text-on-primary-container">
+                  Our mobile fleet operates scheduled runs to this area upon advance request. Contact our central coordinator to confirm dispatch slots.
+                </div>
+                <div class="pt-space-xs">
+                  <a href="tel:02036649304" class="inline-flex items-center gap-1 px-space-md py-1 bg-surface-container-lowest text-primary rounded font-label-md text-label-md font-bold hover:bg-secondary-fixed transition-colors">
+                    <span class="material-symbols-outlined text-[16px]">call</span>
+                    <span>Speak with Dispatch: 020 3664 9304</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      };
+
+      // 2. Directory Region Tab Filter Logic
+      window.filterRegion = function(regionKey, clickedBtn) {
+        var buttons = document.querySelectorAll('#regionFilterTabs .filter-tab');
+        buttons.forEach(function(btn) {
+          btn.classList.remove('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        });
+
+        if (clickedBtn) {
+          clickedBtn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+          clickedBtn.classList.add('bg-primary', 'text-on-primary');
+        }
+
+        var cards = document.querySelectorAll('#boroughDirectoryGrid .borough-card');
+        cards.forEach(function(card) {
+          var cardRegion = card.getAttribute('data-region');
+          if (regionKey === 'all' || cardRegion === regionKey || cardRegion === 'all') {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      };
+    })();
+  </script>
+</div></main>
+
+  <!-- Fast Quote & Booking Action Bar -->
+  <section class="w-full bg-primary-container text-on-primary py-10 border-t border-outline-variant/10">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex flex-col lg:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[26px]">support_agent</span>
+        </div>
+        <div>
+          <h2 class="font-headline-sm text-headline-sm text-on-primary">Need Same-Day or Next-Day London Cleaning?</h2>
+          <p class="font-body-sm text-body-sm text-on-primary-container">Speak directly with our London booking team or message us on WhatsApp for an instant response.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        <a class="scl-btn inline-flex items-center gap-2 bg-[#25D366] text-white font-label-md text-label-md px-5 py-3 rounded-lg hover:brightness-105 transition-all" href="https://wa.me/447786282887" rel="noopener" target="_blank">
+          <span>WhatsApp 07786 282887</span>
+        </a>
+        <a class="scl-btn inline-flex items-center gap-2 bg-surface-container-lowest text-primary font-label-md text-label-md px-5 py-3 rounded-lg hover:bg-surface-container-low transition-all" href="tel:02036649304">
+          <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">call</span>
+          <span>Call 020 3664 9304</span>
+        </a>
+        <a class="scl-btn scl-btn-primary inline-flex items-center gap-2 bg-error text-on-error font-label-md text-label-md px-5 py-3 rounded-lg" href="contact-v2-enhanced.html">
+          <span>Get Online Quote</span>
+          <span class="material-symbols-outlined text-[18px] scl-icon-shift">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer (Global V2 Footer) -->
+  <footer class="w-full bg-primary text-surface-variant pt-16 pb-12">
+    <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-outline-variant/15" data-stagger-children="100">
+        <!-- Column 1: Brand & Heritage -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <div class="flex items-center gap-2.5">
+            <a class="bg-surface-container-lowest p-2 rounded-lg inline-flex items-center hover:scale-105 transition-transform duration-200" href="v2-enhanced.html">
+              <img
+                alt="Super Cleaners London"
+                class="h-10 w-auto object-contain"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+              />
+            </a>
+          </div>
+          <p class="font-body-sm text-body-sm text-surface-container-highest/80 leading-relaxed">
+            London cleaning since 2006. Over two decades of discrete, immaculate domestic and commercial cleaning services across Kensington, Chelsea, Westminster, and Greater London.
+          </p>
+          <div class="flex items-center gap-1.5 font-label-caps text-label-caps text-secondary-fixed-dim">
+            <span class="material-symbols-outlined text-[16px]">verified_user</span>
+            <span>DBS Vetted &amp; Fully Insured</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Services</h3>
+          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <li><a class="hover:text-on-primary transition-colors" href="domestic-v2-enhanced.html">Regular Domestic Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#service-professional">Deep &amp; Spring Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="domestic-v2-enhanced.html">End of Tenancy Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="commercial-v2-enhanced.html">Commercial Office Care</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#service-carpet">Specialist Carpet &amp; Upholstery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Coverage Areas -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Coverage Areas</h3>
+          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Kensington &amp; Chelsea (SW3, SW7, W8)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Westminster &amp; Belgravia (SW1, W1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Camden &amp; Hampstead (NW3, NW1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Islington &amp; City (N1, EC1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="area-v2-enhanced.html">Richmond &amp; Wandsworth (SW11, TW9)</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Enquiries -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Contact &amp; Enquiries</h3>
+          <div class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="tel:02036649304">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">call</span>
+              <span>020 3664 9304</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/447786282887" rel="noopener" target="_blank">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
+              <span>WhatsApp: 07786 282887</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="mailto:info@supercleanerslondon.co.uk">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>
+              <span>info@supercleanerslondon.co.uk</span>
+            </a>
+            <div class="flex items-center gap-1.5 pt-1">
+              <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="font-bold text-on-primary">4.9/5 Rating</span>
+              <span class="text-surface-container-highest/70 font-label-sm text-label-sm">(1,400+ London Reviews)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Legal & Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-surface-container-highest/60">
+        <p>© 2006–2025 Super Cleaners London Ltd. All rights reserved. Registered in England &amp; Wales.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#faqs">Privacy Policy</a>
+          <a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#faqs">Terms of Service</a>
+          <a class="hover:text-on-primary transition-colors" href="v2-enhanced.html#about">Insurance &amp; Vetting</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="./js/enhancements.js"></script>
+</body></html>

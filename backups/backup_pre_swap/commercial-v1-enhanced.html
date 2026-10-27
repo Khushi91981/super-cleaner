@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Commercial Cleaning London — Super Cleaners London (Enhanced V1)</title>
+  <!-- Tailwind CSS v3 with Plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <!-- Shared Enhancements Stylesheet -->
+  <link href="./css/enhancements.css" rel="stylesheet"/>
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00152f',
+            secondary: '#295ea8',
+            'secondary-fixed': '#d6e3ff',
+            'surface-container-low': '#f2f3fa',
+            'surface-container-lowest': '#ffffff',
+            'on-surface-variant': '#43474d',
+            brand: {
+              navy: '#0b2546',
+              royal: '#0c4a8a',
+              red: '#c52227',
+              redHover: '#a61a1f',
+              sky: '#eaf4fd',
+              lightBlue: '#f0f7ff',
+              grayDark: '#2c3e50',
+              grayMuted: '#5b6b7c'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Custom CSS for specific bespoke visual effects -->
+  <style data-purpose="typography-and-shimmer">
+    .font-playfair-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+    }
+    /* Shimmer sweep animation for primary buttons */
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 80%
+      );
+      transform: rotate(30deg) translateX(-100%);
+      transition: transform 0.8s ease-in-out;
+    }
+    .shimmer-btn:hover::after {
+      transform: rotate(30deg) translateX(100%);
+    }
+
+    /* Floating contact dock pulse */
+    @keyframes dock-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .dock-ping {
+      animation: dock-pulse 3s infinite ease-in-out;
+    }
+  </style>
+  <style data-purpose="animations-and-scroll">
+    /* Scroll reveal transitions */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Sticky navigation elevation transition */
+    .nav-scrolled {
+      box-shadow: 0 10px 25px -5px rgba(11, 37, 70, 0.08), 0 8px 10px -6px rgba(11, 37, 70, 0.05);
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="font-sans text-brand-grayDark bg-white antialiased selection:bg-brand-royal selection:text-white overflow-x-hidden">
+  <!-- Skip Link -->
+  <a class="scl-skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- SCROLL PROGRESS INDICATOR BAR -->
+  <div aria-hidden="true" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-secondary via-error to-emerald-500 z-[100] transition-all duration-75 w-0" id="scroll-progress-bar"></div>
+
+  <!-- RESPONSIVE STICKY HEADER (GLOBAL V1 VARIANT) -->
+  <header class="scl-header" id="site-header">
+    <div class="scl-header-inner">
+      <!-- Brand Logo -->
+      <a aria-label="Super Cleaners London Home" class="scl-logo-link" href="v1-enhanced.html">
+        <img
+          alt="Super Cleaners London"
+          class="scl-logo-img"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+        />
+      </a>
+
+      <!-- Desktop Navigation (Visible >= 1200px) -->
+      <nav aria-label="Primary Navigation" class="scl-desktop-nav">
+        <a class="scl-nav-link" href="v1-enhanced.html">Home</a>
+        <a class="scl-nav-link" href="domestic-v1-enhanced.html">Domestic</a>
+        <a class="scl-nav-link" href="v1-enhanced.html#service-professional">Professional</a>
+        <a aria-current="page" class="scl-nav-link is-active" href="commercial-v1-enhanced.html">Commercial</a>
+        <a class="scl-nav-link" href="v1-enhanced.html#services">Prices</a>
+        <a class="scl-nav-link" href="#coverage">Areas</a>
+        <a class="scl-nav-link" href="v1-enhanced.html#about-us">About Us</a>
+        <a class="scl-nav-link" href="#footer-contact">Contact</a>
+      </nav>
+
+      <!-- Header Right Actions: Phone, Book Now CTA & Mobile Menu Toggle -->
+      <div class="scl-header-actions">
+        <a class="scl-header-phone" href="tel:02036649304" title="Call our London dispatch desk">
+          <span class="material-symbols-outlined text-secondary text-[20px]">call</span>
+          <span>020 3664 9304</span>
+        </a>
+
+        <button class="scl-header-cta" onclick="document.getElementById('quoteModal').showModal()" type="button">
+          <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+          <span>Book Now</span>
+          <span aria-hidden="true" class="hidden sm:inline">→</span>
+        </button>
+
+        <button
+          aria-label="Client Portal &amp; Enquiries"
+          class="hidden sm:flex w-9 h-9 rounded-full bg-primary/95 text-on-primary items-center justify-center shrink-0 hover:bg-secondary transition-colors"
+          onclick="document.getElementById('quoteModal').showModal()"
+          title="Contact &amp; Client Support"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[18px]">person</span>
+        </button>
+
+        <!-- Accessible Tablet & Mobile Hamburger Button -->
+        <button
+          aria-controls="mobile-nav-drawer"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+          class="scl-menu-toggle"
+          id="mobile-menu-toggle"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[24px]" id="mobile-menu-icon">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE & TABLET NAVIGATION BACKDROP & DRAWER -->
+  <div aria-hidden="true" class="scl-mobile-backdrop" id="mobile-nav-backdrop"></div>
+  <aside
+    aria-hidden="true"
+    aria-label="Mobile Navigation Menu"
+    class="scl-mobile-drawer"
+    id="mobile-nav-drawer"
+  >
+    <div class="p-5 flex flex-col justify-between min-h-full gap-6">
+      <div>
+        <div class="flex items-center justify-between pb-3 mb-2 border-b border-outline-variant/30">
+          <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
+            Navigation Menu
+          </span>
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Open 7 Days
+          </span>
+        </div>
+
+        <nav aria-label="Mobile Navigation Links" class="scl-mobile-nav-list px-0">
+          <a class="scl-mobile-nav-link" href="v1-enhanced.html">
+            <span>Home</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+          </a>
+          <a class="scl-mobile-nav-link" href="domestic-v1-enhanced.html">
+            <span>Domestic Cleaning Page</span>
+            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £19.50/hr</span>
+          </a>
+          <a class="scl-mobile-nav-link" href="v1-enhanced.html#service-professional">
+            <span>Professional &amp; End of Tenancy</span>
+            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £160</span>
+          </a>
+          <a class="scl-mobile-nav-link is-active" href="commercial-v1-enhanced.html">
+            <span>Commercial Office Cleaning Page</span>
+            <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+          </a>
+          <a class="scl-mobile-nav-link" href="#services">
+            <span>Commercial Sectors &amp; Services</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+          </a>
+          <a class="scl-mobile-nav-link" href="#results">
+            <span>Before &amp; After Proof</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+          </a>
+          <a class="scl-mobile-nav-link" href="#coverage">
+            <span>London Areas We Cover</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+          </a>
+          <a class="scl-mobile-nav-link" href="v1-enhanced.html#about-us">
+            <span>About Us &amp; Our Team</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+          </a>
+          <a class="scl-mobile-nav-link" href="#footer-contact">
+            <span>Contact &amp; Free Quote</span>
+            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Mobile Drawer Bottom Quick Actions -->
+      <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-3">
+        <button
+          class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md shadow-md hover:bg-primary-container transition-colors"
+          onclick="document.getElementById('quoteModal').showModal()"
+          type="button"
+        >
+          <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+          <span>Book Commercial Quote →</span>
+        </button>
+        <div class="grid grid-cols-2 gap-2.5">
+          <a
+            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container-low text-primary font-label-sm text-label-sm font-bold hover:bg-secondary-fixed transition-colors"
+            href="tel:02036649304"
+          >
+            <span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+            <span>020 3664 9304</span>
+          </a>
+          <a
+            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600 text-on-primary font-label-sm text-label-sm font-bold hover:bg-emerald-700 transition-colors"
+            href="https://wa.me/447786282887"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span>WhatsApp Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- INTERACTIVE FLOATING CONTACT DOCK WITH EXPANDING LABELS (SAME AS HOME PAGE) -->
+  <aside
+    aria-label="Quick Contact Toolbar"
+    class="scl-floating-dock fixed right-3 sm:right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2.5 shadow-[0_16px_36px_-6px_rgba(15,39,68,0.22)] p-2 rounded-full bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/40"
+  >
+    <!-- Call Us -->
+    <div class="relative group flex items-center justify-end">
+      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
+        Call Now: 020 3664 9304
+      </span>
+      <a
+        aria-label="Call Super Cleaners London on 020 3664 9304"
+        class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        href="tel:02036649304"
+        title="Call Us"
+      >
+        <span class="material-symbols-outlined text-[20px]">call</span>
+      </a>
+    </div>
+    <!-- WhatsApp Chat -->
+    <div class="relative group flex items-center justify-end">
+      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-emerald-700 text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
+        WhatsApp Concierge
+      </span>
+      <a
+        aria-label="Chat on WhatsApp"
+        class="w-10 h-10 rounded-full bg-emerald-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        href="https://wa.me/447786282887"
+        rel="noopener"
+        target="_blank"
+        title="WhatsApp Chat"
+      >
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+      </a>
+    </div>
+    <!-- Instagram -->
+    <div class="relative group flex items-center justify-end">
+      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
+        Follow @SuperCleaners
+      </span>
+      <a
+        aria-label="Follow Super Cleaners London on Instagram"
+        class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        href="#footer-contact"
+        title="Instagram"
+      >
+        <span class="material-symbols-outlined text-[20px]">photo_camera</span>
+      </a>
+    </div>
+    <!-- Facebook -->
+    <div class="relative group flex items-center justify-end">
+      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
+        Facebook Page
+      </span>
+      <a
+        aria-label="Visit Super Cleaners London on Facebook"
+        class="w-10 h-10 rounded-full bg-blue-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        href="#footer-contact"
+        title="Facebook"
+      >
+        <span class="material-symbols-outlined text-[20px]">public</span>
+      </a>
+    </div>
+    <!-- Email Us -->
+    <div class="relative group flex items-center justify-end">
+      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
+        Email Support Desk
+      </span>
+      <a
+        aria-label="Email Super Cleaners London"
+        class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        href="mailto:info@supercleanerslondon.co.uk"
+        title="Send Email"
+      >
+        <span class="material-symbols-outlined text-[20px]">mail</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="pt-20" id="main-content">
+    <!-- BEGIN: HeroSection -->
+    <section class="relative bg-gradient-to-b from-[#f2f7fc] via-white to-white pt-8 pb-12 sm:pt-14 sm:pb-16 overflow-hidden">
+      <!-- Decorative background blur orb -->
+      <div class="absolute top-10 left-1/4 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <!-- Left Content Column -->
+          <div class="lg:col-span-6 reveal-on-scroll" data-animate="fade-right">
+            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-royal bg-blue-50 border border-blue-200/60 px-3.5 py-1.5 rounded-full mb-4">
+              <i class="fa-solid fa-building-circle-check"></i> London Business Cleaning Specialist
+            </span>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-serif text-brand-navy leading-[1.1] mb-5">
+              Commercial <br class="hidden sm:inline"/>
+              <span class="text-brand-royal italic">Cleaning</span>
+            </h1>
+            <h2 class="text-xl sm:text-2xl font-bold font-serif italic text-brand-navy/90 mb-4">
+              A cleaner, safer workplace for your business.
+            </h2>
+            <p class="text-base sm:text-lg text-brand-grayMuted leading-relaxed mb-8 max-w-xl">
+              Professional commercial cleaning services tailored to offices, workplaces and all commercial premises. We provide reliable, high quality cleaning to keep your business clean, safe and inviting for staff, customers and visitors.
+            </p>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <button class="shimmer-btn bg-brand-red hover:bg-brand-redHover text-white text-lg font-bold px-8 py-3.5 rounded-full shadow-lg shadow-red-600/25 transition-all text-center flex items-center justify-center gap-3" onclick="document.getElementById('quoteModal').showModal()">
+                <span>Get a Free Quote</span>
+                <i class="fa-solid fa-arrow-right text-sm scl-icon-shift"></i>
+              </button>
+              <a class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white border border-gray-200 text-brand-navy font-semibold hover:border-brand-royal transition-all text-base" href="tel:02036649304">
+                <i class="fa-solid fa-phone text-brand-royal"></i><span>Call 020 3664 9304</span>
+              </a>
+            </div>
+            <!-- Trust micro indicators -->
+            <div class="mt-8 flex flex-wrap items-center gap-5 text-xs text-gray-500 font-medium">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-green-600"></i> COSHH Compliant</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-green-600"></i> Enhanced DBS Vetted</span>
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-green-600"></i> £10M Public Liability</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Imagery with Interactive Parallax Badges -->
+          <div class="lg:col-span-6 reveal-on-scroll relative" data-animate="scale-in">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 group" data-tilt-card>
+              <div class="relative h-[380px] sm:h-[460px] w-full overflow-hidden">
+                <img alt="Professional commercial cleaners sanitising modern executive London office" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCL7G8tZRCfQVNcQsUb1VReX3x9b5bq9ttF__sIHdBWw5OjAKHkr2wLBWY5GX9WvmczDxX7TE2sCbTHyxAv8HfxP4kQtkF4lRGKpOTEL2ok0J4EdqjUZg1KewsjURfiwyWphsO3aWUf5IRLZaVeLOS4eIu_8M7X9EWiMIfS7C-5Pfkn6tb1YphiqSK4ryhso8P8lPSlzRA8nJlqCKerij1B4u1CzdaBGfFlUGb3Wm-HtHec_ju_dxPtQ"/>
+              </div>
+            </div>
+
+            <!-- Floating Interactive Verified Badge 1: Bottom Left (Scroll + Mouse Parallax + Hover/Click Expand) -->
+            <div
+              class="scl-hero-parallax-wrap absolute -bottom-4 left-3 sm:left-5 z-20"
+              data-hero-parallax="1.15"
+              data-parallax-mouse="16"
+            >
+              <div class="scl-float-orbital-left">
+                <div
+                  aria-expanded="false"
+                  class="scl-hero-badge bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-blue-100 max-w-[285px]"
+                  data-badge-target="#services"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div class="flex items-center gap-3">
+                    <div class="scl-badge-icon w-10 h-10 rounded-full bg-blue-50 text-brand-royal flex items-center justify-center font-bold shrink-0">
+                      <i class="fa-solid fa-shield-halved text-lg"></i>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-xs font-bold text-brand-navy">100% Guaranteed Hygiene</span>
+                        <span class="scl-badge-live-dot" title="Interactive — hover or click"></span>
+                      </div>
+                      <div class="text-[11px] text-gray-500">Corporate &amp; Keyholder Certified</div>
+                    </div>
+                  </div>
+                  <div class="scl-hero-badge-details">
+                    <div class="flex flex-col gap-1 text-[11px] text-brand-navy font-medium">
+                      <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-check text-brand-royal text-[11px]"></i>
+                        BSI &amp; COSHH workstation sanitisation
+                      </span>
+                      <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-check text-brand-royal text-[11px]"></i>
+                        Click to inspect 11-point B2B scope →
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Interactive Badge 2: Top Right (Offset from right contact dock) -->
+            <div
+              class="scl-hero-parallax-wrap absolute -top-4 right-4 sm:right-6 z-20 hidden sm:block"
+              data-hero-parallax="-1.25"
+              data-parallax-mouse="-18"
+            >
+              <div class="scl-float-orbital-right">
+                <div
+                  aria-expanded="false"
+                  class="scl-hero-badge bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-emerald-100 max-w-[270px]"
+                  data-badge-target="#results"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div class="flex items-center gap-2.5">
+                    <div class="scl-badge-icon w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
+                      <i class="fa-solid fa-leaf text-base"></i>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-1.5">
+                        <span class="text-xs font-bold text-brand-navy">Eco-Conscious B2B Care</span>
+                        <span class="scl-badge-live-dot"></span>
+                      </div>
+                      <div class="text-[11px] text-emerald-700 font-semibold">Zero-VOC • Safe for Staff &amp; IT</div>
+                    </div>
+                  </div>
+                  <div class="scl-hero-badge-details">
+                    <div class="flex flex-col gap-1 text-[11px] text-brand-navy font-medium">
+                      <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i>
+                        Non-toxic anti-static screen &amp; desk care
+                      </span>
+                      <span class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i>
+                        Click to view Before &amp; After results →
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Pillar Feature Bar below Hero -->
+        <div class="mt-14 pt-8 border-t border-gray-200/80 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 reveal-on-scroll" data-stagger-group data-stagger-step="90">
+          <div class="scl-card-interactive flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-gray-100 shadow-sm" data-animate="fade-up" data-scroll-float="10" data-scroll-rot="-0.8" data-tilt-card>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-royal flex items-center justify-center shrink-0 border border-blue-100">
+              <i class="fa-solid fa-shield-cat text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-brand-navy leading-tight">Trusted &amp; Vetted</h4>
+              <p class="text-xs text-brand-grayMuted mt-0.5">Experienced cleaners</p>
+            </div>
+          </div>
+          <div class="scl-card-interactive flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-gray-100 shadow-sm" data-animate="fade-up" data-scroll-float="-10" data-scroll-rot="0.8" data-tilt-card>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100">
+              <i class="fa-solid fa-leaf text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-brand-navy leading-tight">Tailored Cleaning</h4>
+              <p class="text-xs text-brand-grayMuted mt-0.5">Built for your business</p>
+            </div>
+          </div>
+          <div class="scl-card-interactive flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-gray-100 shadow-sm" data-animate="fade-up" data-scroll-float="10" data-scroll-rot="-0.8" data-tilt-card>
+            <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0 border border-indigo-100">
+              <i class="fa-regular fa-clock text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-brand-navy leading-tight">Flexible Appointments</h4>
+              <p class="text-xs text-brand-grayMuted mt-0.5">Slots to suit your team</p>
+            </div>
+          </div>
+          <div class="scl-card-interactive flex items-center gap-3.5 p-3.5 rounded-2xl bg-white border border-gray-100 shadow-sm" data-animate="fade-up" data-scroll-float="-10" data-scroll-rot="0.8" data-tilt-card>
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0 border border-amber-100">
+              <i class="fa-regular fa-star text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-brand-navy leading-tight">High Standards</h4>
+              <p class="text-xs text-brand-grayMuted mt-0.5">&amp; Attention to detail</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: HeroSection -->
+
+    <!-- BEGIN: CommercialServicesSection -->
+    <section class="py-16 sm:py-20 bg-slate-50/70 border-y border-gray-200/60" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+          <!-- Left Column: Scope Overview & Exhaustive Checklist -->
+          <div class="lg:col-span-5 reveal-on-scroll" data-animate="fade-right" data-scroll-float="12">
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-serif italic text-brand-navy mb-4">
+              Our Commercial <br/>Cleaning Services
+            </h2>
+            <p class="text-brand-grayMuted text-sm sm:text-base leading-relaxed mb-6">
+              We provide a complete range of commercial cleaning solutions tailored to your business needs. We work with offices, retail spaces, schools, healthcare premises, restaurants and more, ensuring a clean, hygienic and professional environment.
+            </p>
+            <!-- Complete Service List matching specifications -->
+            <div class="bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm" data-tilt-card>
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-brand-royal">Core Commercial Capabilities</h3>
+                <span class="scl-section-badge scl-float-gentle text-[11px] font-bold bg-blue-50 text-brand-royal px-2.5 py-0.5 rounded-full border border-blue-100">11-Point Protocol</span>
+              </div>
+              <ul class="space-y-3 font-semibold text-brand-navy text-sm sm:text-base">
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Office Cleaning</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Deep Cleaning</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Washroom Cleaning</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Communal Area Cleaning</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Floor Cleaning &amp; Polishing</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Carpet &amp; Upholstery Cleaning</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Window &amp; Glass Cleaning</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Sanitising &amp; Disinfection</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Covid-19 Cleaning</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Waste Management</span>
+                </li>
+                <li class="flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center"><i class="fa-solid fa-check"></i></span>
+                  <span>Specialist Cleaning</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column: 2x2 Visual Feature Cards with Authentic Service Crops -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 reveal-on-scroll" data-stagger-group data-stagger-step="100">
+            <!-- Service Card 1: Office Cleaning -->
+            <div class="scl-card-interactive bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-shadow group flex flex-col" data-animate="fade-up" data-scroll-float="14" data-scroll-rot="-0.7" data-tilt-card>
+              <div class="h-44 overflow-hidden relative bg-slate-100">
+                <img alt="Spotless executive corporate office and meeting workspaces" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8zlgTdg9f4iVIFMop4Ak12PJX6DhWJYir6gVIGAEwyCegQUTbDBBOHEU8ZE0S032YnN0Aqhsfk5bjk078M_wnZNkeBTF-DvlExmF9x8r_zQNFcVvonx7pYilCOFbDUbEr5NA2pjR1BP8LQnNHC5rjj5reK3abvT17a14x4-qwdIYwlM0MvJmbHOLSci-Xc27HIPbk9uik02XmIu6FlIQL6o_Xatr5nvkIba3zPhp56BV9kq9_ph7yfg"/>
+                <span class="scl-float-gentle absolute top-3 right-3 bg-brand-navy/90 text-white px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md backdrop-blur-sm">Daily &amp; Out-of-Hours</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2.5 mb-2">
+                    <span class="text-brand-royal text-lg"><i class="fa-regular fa-building"></i></span>
+                    <h3 class="font-bold text-base text-brand-navy">Office Cleaning</h3>
+                  </div>
+                  <p class="text-xs sm:text-sm text-brand-grayMuted leading-relaxed">
+                    Regular and one-off cleaning for offices, desks, meeting rooms and workspaces.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 2: Commercial Deep Cleaning -->
+            <div class="scl-card-interactive bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-shadow group flex flex-col" data-animate="fade-up" data-scroll-float="-12" data-scroll-rot="0.7" data-tilt-card>
+              <div class="h-44 overflow-hidden relative bg-slate-100">
+                <img alt="Commercial deep cleaning of corporate architectural glass and premises" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxAdkp-XiZgNtKUNYaFDNPBrc5T3-ktZM2HHSSxzFpM5ElZ9vUay2lVb5-vLyseUuT3ktkqe65UuYpFrm3Ofc4O5J1pQjqqSiiXs4hqSFVOc-qwrWfvvKaWQrV5JFGMzXs6sotDvHBwcMPPfrGg8pLgwIno1P6MRWHme3USqgZnaZnWBnIF7CBfD9zbFnlZ49eUG2-EJXDu0GtTRbsPdGqgV5UtcVbaFIQ0yNJDFO2HGXaBBDMWLnz8w"/>
+                <span class="scl-float-gentle-delayed absolute top-3 right-3 bg-brand-royal/90 text-white px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md backdrop-blur-sm">COSHH Certified</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2.5 mb-2">
+                    <span class="text-brand-royal text-lg"><i class="fa-solid fa-city"></i></span>
+                    <h3 class="font-bold text-base text-brand-navy">Commercial Deep Cleaning</h3>
+                  </div>
+                  <p class="text-xs sm:text-sm text-brand-grayMuted leading-relaxed">
+                    Thorough cleaning for all types of commercial premises, including high traffic areas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 3: Communal Area Cleaning -->
+            <div class="scl-card-interactive bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-shadow group flex flex-col" data-animate="fade-up" data-scroll-float="12" data-scroll-rot="-0.7" data-tilt-card>
+              <div class="h-44 overflow-hidden relative bg-slate-100">
+                <img alt="Pristine communal building entrance and reception foyer" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoZW1IGoHybWMhPPTN0FZd5UULbrePZSQAJAe5Ownd-2NkhqHnmS2291dXiOplUCKZLGMAMsFRQYHw3rGnRiUksVC1fo7l3zuwI5f325TP0Wu3TBTjdTwyiwdcDMV4fH-qUX0Lv_avZMo3T16IOCGCS3F40u5F9NCR5aR3MnxoL1SiTv8Ktg14kTYGGVoU5nE1DcGx82pQAUALZ-1fdfwKDXTnpaGfosFsrlgIkeXDcqoLZsJ2VuEgsA"/>
+                <span class="scl-float-gentle absolute top-3 right-3 bg-emerald-700/90 text-white px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md backdrop-blur-sm">Foyers &amp; Lifts</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2.5 mb-2">
+                    <span class="text-brand-royal text-lg"><i class="fa-solid fa-users-viewfinder"></i></span>
+                    <h3 class="font-bold text-base text-brand-navy">Communal Area Cleaning</h3>
+                  </div>
+                  <p class="text-xs sm:text-sm text-brand-grayMuted leading-relaxed">
+                    Cleaning of reception areas, staircases, corridors, lifts and shared spaces.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 4: Floor Cleaning & Polishing -->
+            <div class="scl-card-interactive bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition-shadow group flex flex-col" data-animate="fade-up" data-scroll-float="-14" data-scroll-rot="0.7" data-tilt-card>
+              <div class="h-44 overflow-hidden relative bg-slate-100">
+                <img alt="Polished corporate commercial hallway and hard flooring" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxF-7_zTuNhZBU3x3oR4GP_iqAPuxl1T4U_63KYsePn-OWKfhZ-j2W79bu7-IAJ4q-Hxt2zaZbnR_yiZidAf9FRB2JxJDg7WqdegV9jwmfUoH6BsSSeqtcHU8BdE4AFuBB717x26kWiMvEx1AjeHEGCi_0MgmvR0hM_3gIRjP9FT5iqeCZo1IBLlRMVZ78KJJ68ZrS_XVcUjttFKRnWGOiU_aaAgJMo-T08xvbtpQFnMgkgyb-BWJJSg"/>
+                <span class="scl-float-gentle-delayed absolute top-3 right-3 bg-brand-navy/90 text-white px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md backdrop-blur-sm">Prochem &amp; Buffing</span>
+              </div>
+              <div class="p-5 flex-1 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2.5 mb-2">
+                    <span class="text-brand-royal text-lg"><i class="fa-solid fa-rug"></i></span>
+                    <h3 class="font-bold text-base text-brand-navy">Floor Cleaning &amp; Polishing</h3>
+                  </div>
+                  <p class="text-xs sm:text-sm text-brand-grayMuted leading-relaxed">
+                    Deep cleaning, stain removal and buffing for carpets, rugs, tiles and upholstered furniture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: CommercialServicesSection -->
+
+    <!-- BEGIN: BeforeAfterSection -->
+    <section class="py-16 sm:py-20 bg-white" id="results">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll" data-animate="fade-up" data-scroll-float="-10">
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-serif italic text-brand-navy mb-3">
+            Real Results from Our Commercial Cleaning Service
+          </h2>
+          <p class="text-brand-grayMuted text-base sm:text-lg">
+            See the difference we make. Here are some before and after examples from commercial premises we clean.
+          </p>
+        </div>
+
+        <!-- 4 Before / After Comparison Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll" data-stagger-group data-stagger-step="90">
+          <!-- Example 1: Office Carpet Cleaning -->
+          <div class="scl-card-interactive bg-slate-50 p-3 rounded-2xl border border-gray-200/90 text-center hover:shadow-lg transition-all group" data-animate="fade-up" data-scroll-float="14" data-scroll-rot="-1" data-tilt-card>
+            <div class="h-48 rounded-xl overflow-hidden relative mb-3 bg-gray-200">
+              <img alt="Spotless commercial office carpet restoration" class="w-full h-full object-cover scl-img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnNWvTW0ubhN9Ylgiq47gbbGGEl2ZujKHcIeJvrPC577nRxo11Y8UCChCzuULSFOZxQ51l6YEfDSh-3vZiFgtFuI2_-16yrUoDQxjCX-c30Lfsuj8E76MioiVyJuzNp70bpO9F888eKPqYxbWngy6uabxIjZcC16cUhXo2pxh3A9CSk0nA_i73kiTiPNzsuti93KrbEGgoflAhytcOWEQcqATMLFh-K6bjIHPp7dNEAFgOLN6F2oEzfw"/>
+            </div>
+            <div class="flex items-center justify-center gap-2 mb-2">
+              <span class="bg-brand-navy text-white text-xs font-bold px-3 py-0.5 rounded-full">Before</span>
+              <span class="text-gray-400 text-xs">/</span>
+              <span class="bg-brand-royal text-white text-xs font-bold px-3 py-0.5 rounded-full">After</span>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy">Office Carpet Cleaning</h4>
+          </div>
+
+          <!-- Example 2: Washroom Cleaning -->
+          <div class="scl-card-interactive bg-slate-50 p-3 rounded-2xl border border-gray-200/90 text-center hover:shadow-lg transition-all group" data-animate="fade-up" data-scroll-float="-12" data-scroll-rot="1" data-tilt-card>
+            <div class="h-48 rounded-xl overflow-hidden relative mb-3 bg-gray-200">
+              <img alt="Commercial executive washroom sanitation" class="w-full h-full object-cover scl-img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChCuz_LAb5XFoEDX8wps2XTfpp1FjwDuf86vD1FE1uEI2cp6LZ2B6dCfB1bJpd_YpoK4OghcwLp8sm-9F6lxZorQkuyHWLGurwI62acg90HFnux3XaOJcEofQvxcQbWHRVAia1KtEgt39_1wRmBAHKuWQIPvLPZXm0lU6NsLxk-dZVz1Yo37iMP6PWst0pOmPEyHNZh2NQ-GR4-q0Oay_7TKzWo7YRQYNMhfj6nTtfSfzTZvqEyW-rZg"/>
+            </div>
+            <div class="flex items-center justify-center gap-2 mb-2">
+              <span class="bg-brand-navy text-white text-xs font-bold px-3 py-0.5 rounded-full">Before</span>
+              <span class="text-gray-400 text-xs">/</span>
+              <span class="bg-brand-royal text-white text-xs font-bold px-3 py-0.5 rounded-full">After</span>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy">Washroom Cleaning</h4>
+          </div>
+
+          <!-- Example 3: Communal Area Cleaning -->
+          <div class="scl-card-interactive bg-slate-50 p-3 rounded-2xl border border-gray-200/90 text-center hover:shadow-lg transition-all group" data-animate="fade-up" data-scroll-float="14" data-scroll-rot="-1" data-tilt-card>
+            <div class="h-48 rounded-xl overflow-hidden relative mb-3 bg-gray-200">
+              <img alt="Pristine corporate lobby and polished floor foyer" class="w-full h-full object-cover scl-img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjT6dL64RK5zDE8GuPfRpwv5HNNisPzCWneNCoKCmimsT2X3_t-T-OYexergzT-8JE2qtd9IpTOdwaZJpq2ndxpHu32ftiZClKVGwzvr431yrqm1XUlItxAC-jqkm3lss40zJP6xLAm-IwBXKPEFcF_p1vy6vKBVy1E4Rl5uY_nkUoikP0zzhE9D64zeovnvzW5nNnDD3H8d-DhM9csGcShbiwMQ1bxoiTsLuUzo3XErB_TJf8ELsssQ"/>
+            </div>
+            <div class="flex items-center justify-center gap-2 mb-2">
+              <span class="bg-brand-navy text-white text-xs font-bold px-3 py-0.5 rounded-full">Before</span>
+              <span class="text-gray-400 text-xs">/</span>
+              <span class="bg-brand-royal text-white text-xs font-bold px-3 py-0.5 rounded-full">After</span>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy">Communal Area Cleaning</h4>
+          </div>
+
+          <!-- Example 4: Window & Glass Cleaning -->
+          <div class="scl-card-interactive bg-slate-50 p-3 rounded-2xl border border-gray-200/90 text-center hover:shadow-lg transition-all group" data-animate="fade-up" data-scroll-float="-12" data-scroll-rot="1" data-tilt-card>
+            <div class="h-48 rounded-xl overflow-hidden relative mb-3 bg-gray-200">
+              <img alt="Crystal clear commercial architectural windows" class="w-full h-full object-cover scl-img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByjusQDVvF6SUMpPDpJudEy98YXlWPy7ioX09aEopZtW9s_rsL14yvy6mINJwynBUkTnIaCJuH-RcrUlHTspA4GRri85IfTe4r0wROozZk1P7OVpdBWwYPEft0OjQNVRRMDhHiEj_Dj7ewblGLjhxLLrgwewW2N_0qSu4fjIeuaWEOizikGoq4d-NAAh8Hbiw_m7LO2KlerSkccYaopR8Z6fh-KWyvwng91MxD86vv8CYoFARJw-A5cQ"/>
+            </div>
+            <div class="flex items-center justify-center gap-2 mb-2">
+              <span class="bg-brand-navy text-white text-xs font-bold px-3 py-0.5 rounded-full">Before</span>
+              <span class="text-gray-400 text-xs">/</span>
+              <span class="bg-brand-royal text-white text-xs font-bold px-3 py-0.5 rounded-full">After</span>
+            </div>
+            <h4 class="font-bold text-sm text-brand-navy">Window &amp; Glass Cleaning</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: BeforeAfterSection -->
+
+    <!-- BEGIN: HowToBookSection -->
+    <section class="py-16 sm:py-20 bg-gradient-to-b from-[#f2f7fc] to-white border-t border-gray-200/80" id="how-to-book">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll" data-animate="fade-up" data-scroll-float="-10">
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-serif italic text-brand-navy mb-3">
+            How to Book Our Commercial Cleaning Service
+          </h2>
+          <p class="text-brand-grayMuted text-base sm:text-lg">
+            Booking is easy! Follow these simple steps to get a cleaner, safer workplace.
+          </p>
+        </div>
+
+        <!-- 4 Step Process Chain -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative reveal-on-scroll mb-12" data-stagger-group data-stagger-step="95">
+          <!-- Step 1 -->
+          <div class="scl-card-interactive bg-white p-6 rounded-2xl border border-gray-200 shadow-sm relative flex flex-col items-center text-center" data-animate="fade-up" data-scroll-float="12" data-scroll-rot="-0.8" data-tilt-card>
+            <div class="scl-float-gentle w-16 h-16 rounded-full bg-brand-royal text-white flex items-center justify-center text-2xl font-bold shadow-md shadow-blue-900/20 mb-4 relative">
+              <i class="fa-solid fa-phone"></i>
+              <span class="absolute -top-1 -left-1 w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center font-sans font-bold border-2 border-white">1</span>
+            </div>
+            <h3 class="text-base font-bold text-brand-navy mb-2">Get a Free Quick Quote</h3>
+            <p class="text-xs text-brand-grayMuted leading-relaxed">
+              Fill in our online form or contact us via WhatsApp to get a free, quick quote.
+            </p>
+            <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-gray-300 text-lg z-10">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="scl-card-interactive bg-white p-6 rounded-2xl border border-gray-200 shadow-sm relative flex flex-col items-center text-center" data-animate="fade-up" data-scroll-float="-10" data-scroll-rot="0.8" data-tilt-card>
+            <div class="scl-float-gentle-delayed w-16 h-16 rounded-full bg-brand-royal text-white flex items-center justify-center text-2xl font-bold shadow-md shadow-blue-900/20 mb-4 relative">
+              <i class="fa-regular fa-credit-card"></i>
+              <span class="absolute -top-1 -left-1 w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center font-sans font-bold border-2 border-white">2</span>
+            </div>
+            <h3 class="text-base font-bold text-brand-navy mb-2">Pay Booking Deposit / RFP Review</h3>
+            <p class="text-xs text-brand-grayMuted leading-relaxed">
+              Once you're happy with the quote, pay your booking deposit to secure your date.
+            </p>
+            <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-gray-300 text-lg z-10">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="scl-card-interactive bg-white p-6 rounded-2xl border border-gray-200 shadow-sm relative flex flex-col items-center text-center" data-animate="fade-up" data-scroll-float="12" data-scroll-rot="-0.8" data-tilt-card>
+            <div class="scl-float-gentle w-16 h-16 rounded-full bg-brand-royal text-white flex items-center justify-center text-2xl font-bold shadow-md shadow-blue-900/20 mb-4 relative">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span class="absolute -top-1 -left-1 w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center font-sans font-bold border-2 border-white">3</span>
+            </div>
+            <h3 class="text-base font-bold text-brand-navy mb-2">Confirm Your Date</h3>
+            <p class="text-xs text-brand-grayMuted leading-relaxed">
+              We'll finalise the date and time of your cleaning service.
+            </p>
+            <div class="hidden md:block absolute -right-4 top-1/2 -translate-y-1/2 text-gray-300 text-lg z-10">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="scl-card-interactive bg-white p-6 rounded-2xl border border-gray-200 shadow-sm relative flex flex-col items-center text-center" data-animate="fade-up" data-scroll-float="-10" data-scroll-rot="0.8" data-tilt-card>
+            <div class="scl-float-gentle-delayed w-16 h-16 rounded-full bg-brand-royal text-white flex items-center justify-center text-2xl font-bold shadow-md shadow-blue-900/20 mb-4 relative">
+              <i class="fa-solid fa-building-circle-check"></i>
+              <span class="absolute -top-1 -left-1 w-6 h-6 rounded-full bg-brand-navy text-white text-xs flex items-center justify-center font-sans font-bold border-2 border-white">4</span>
+            </div>
+            <h3 class="text-base font-bold text-brand-navy mb-2">Sit Back &amp; Relax</h3>
+            <p class="text-xs text-brand-grayMuted leading-relaxed">
+              Our professional cleaners will take care of the rest and keep your business clean and professional.
+            </p>
+          </div>
+        </div>
+
+        <!-- Center CTA Button -->
+        <div class="text-center reveal-on-scroll">
+          <button class="shimmer-btn bg-brand-royal hover:bg-brand-navy text-white text-base sm:text-lg font-bold px-9 py-3.5 rounded-full shadow-lg transition-all inline-flex items-center gap-3" onclick="document.getElementById('quoteModal').showModal()">
+            <span>Get a Free Quick Quote</span>
+            <i class="fa-solid fa-arrow-right text-sm scl-icon-shift"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- END: HowToBookSection -->
+
+    <!-- BEGIN: CoverageAndVanSection -->
+    <section class="py-14 bg-white overflow-hidden" id="coverage">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-brand-navy via-brand-navy to-[#133863] rounded-3xl overflow-hidden shadow-2xl relative text-white" data-animate="scale-in" data-scroll-float="-10" data-tilt-card>
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+            <!-- Left Info Panel -->
+            <div class="p-8 sm:p-12 lg:col-span-6 z-10">
+              <div class="flex items-center gap-2.5 text-brand-sky text-sm font-semibold mb-3">
+                <i class="fa-solid fa-location-dot text-brand-red text-lg"></i>
+                <span>London Boroughs &amp; Corporate Districts</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-serif mb-4 leading-snug">
+                We Cover Fulham, Chelsea, Wandsworth, Putney, City of London &amp; Canary Wharf
+              </h2>
+              <p class="text-sm text-blue-100/80 mb-6 leading-relaxed">
+                Whether you operate a boutique office in Chelsea, a financial consultancy in Kensington, or corporate facilities in the City and Putney, our vetted cleaning crews arrive fully equipped in our liveried vehicles.
+              </p>
+              <div class="flex flex-wrap items-center gap-4">
+                <button class="shimmer-btn bg-brand-royal hover:bg-white hover:text-brand-navy text-white text-sm font-bold px-6 py-3 rounded-full transition-all border border-blue-400/40" onclick="document.getElementById('quoteModal').showModal()">
+                  <span>Check If We Cover Your Area</span>
+                  <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                </button>
+                <a class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white border border-gray-200 text-brand-navy font-semibold hover:border-brand-royal transition-all text-base" href="tel:02036649304">
+                  <i class="fa-solid fa-phone text-brand-royal"></i><span>Call 020 3664 9304</span>
+                </a>
+              </div>
+            </div>
+            <!-- Right Visual: Authentic SuperCleaners London Van Crop -->
+            <div class="lg:col-span-6 h-64 sm:h-80 lg:h-full relative overflow-hidden bg-slate-900/40 flex items-center justify-center">
+              <div class="relative w-full h-full min-h-[300px] flex items-center justify-center overflow-hidden">
+                <img alt="Super Cleaners London professional uniformed commercial cleaning team and service vehicle" class="w-full h-full object-cover filter brightness-105 scl-img-zoom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJcV2v2mQ-BOGV0iDHO6kaNq3UtFVqQSaTWxS7T2sg-8i60UbAvHkpnlLcsk3hbx2w_YTuOP4LOBAXFBAIAaEEIpw1TxSCcHIZGJc18VoiE4YvyQBIi54XLdLSjiMLSmqRgaZGcg0D48vLLODYhtjLJ8t6KTdz5AYQxZ3aMAusjhQ0WlAXQYwlh77MbpQNx33n9lyLXoa7KHvqVSsNiYCPpgFJceznBTRTCurpQqaI4AFuWlXYOAmGKQ"/>
+                <div class="scl-float-gentle absolute bottom-4 right-4 bg-brand-navy/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/10 text-right">
+                  <div class="text-xs font-bold text-white">Fully Equipped London Fleet</div>
+                  <div class="text-[11px] text-blue-200">Covering SW, W, NW, EC &amp; Greater London</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: CoverageAndVanSection -->
+  </main>
+
+  <!-- BEGIN: FastQuoteModal -->
+  <dialog class="rounded-2xl p-0 backdrop:bg-brand-navy/60 shadow-2xl max-w-lg w-full m-auto border-0" id="quoteModal">
+    <div class="p-6 sm:p-8 bg-white text-brand-navy">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-red">Instant Enquiry</span>
+          <h3 class="text-2xl font-bold font-serif">Commercial Quote</h3>
+        </div>
+        <button aria-label="Close dialog" class="text-gray-400 hover:text-gray-700 p-2 text-xl" onclick="document.getElementById('quoteModal').close()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <p class="text-xs text-gray-500 mb-6">Receive a custom fixed-fee or hourly proposal for your workplace within 60 minutes.</p>
+      <form class="space-y-4" data-scl-form="commercial-rfp" method="dialog">
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Company / Organization Name</label>
+          <input class="w-full text-sm rounded-lg border-gray-300 focus:border-brand-royal focus:ring-brand-royal" placeholder="e.g. Mayfair Partners Ltd" required="" type="text"/>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Contact Name</label>
+            <input class="w-full text-sm rounded-lg border-gray-300 focus:border-brand-royal focus:ring-brand-royal" placeholder="Your name" required="" type="text"/>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Phone Number</label>
+            <input class="w-full text-sm rounded-lg border-gray-300 focus:border-brand-royal focus:ring-brand-royal" placeholder="07... / 020..." required="" type="tel"/>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-600 mb-1">Workplace Type &amp; Frequency</label>
+          <select class="w-full text-sm rounded-lg border-gray-300 focus:border-brand-royal focus:ring-brand-royal">
+            <option>Office Cleaning (Daily / Out of hours)</option>
+            <option>Office Cleaning (2-3 times per week)</option>
+            <option>Commercial Deep Clean (One-off)</option>
+            <option>Communal Area / Shared Building</option>
+            <option>Carpet &amp; Hard Floor Specialist Polishing</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-600 mb-1">London Postcode</label>
+          <input class="w-full text-sm rounded-lg border-gray-300 focus:border-brand-royal focus:ring-brand-royal" placeholder="e.g. SW6, SW3, W1, EC1" required="" type="text"/>
+        </div>
+        <button class="w-full shimmer-btn bg-brand-red hover:bg-brand-redHover text-white font-bold py-3 rounded-xl transition-all shadow-md mt-2" type="submit">
+          Submit Commercial Request →
+        </button>
+      </form>
+    </div>
+  </dialog>
+  <!-- END: FastQuoteModal -->
+
+  <!-- BEGIN: SiteFooter -->
+  <!-- =========================================================================
+       FAST QUOTE & BOOKING ACTION BAR + GLOBAL V1 FOOTER
+       ========================================================================= -->
+  <section class="w-full bg-primary-container text-on-primary py-12 lg:py-16 border-b border-white/10" id="footer-contact">
+    <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-6" data-scroll-float="8">
+        <div class="flex items-center gap-4 text-center lg:text-left" data-animate="fade-left">
+          <div class="scl-section-badge scl-float-gentle w-14 h-14 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 hidden sm:flex shadow-md">
+            <span class="material-symbols-outlined text-[30px]">cleaning_services</span>
+          </div>
+          <div>
+            <h2 class="font-headline-md text-[26px] text-on-primary font-bold">Get a Free Commercial Quote Today</h2>
+            <p class="font-body-sm text-body-sm text-surface-container-highest/85">Fast, easy, bespoke pricing tailored to your premises with zero obligation.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-3" data-animate="fade-right">
+          <a class="inline-flex items-center gap-2 bg-emerald-600 text-on-primary px-5 py-3 rounded-full font-label-md text-label-md hover:bg-emerald-500 transition-colors shadow-sm" href="https://wa.me/447786282887" rel="noopener" target="_blank">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            <span>WhatsApp Us</span>
+          </a>
+          <a class="inline-flex items-center gap-2 bg-white/10 text-on-primary px-5 py-3 rounded-full font-label-md text-label-md hover:bg-white/20 transition-colors border border-white/15" href="tel:02036649304">
+            <span class="material-symbols-outlined text-[20px]">call</span>
+            <span>020 3664 9304</span>
+          </a>
+          <button class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-full font-label-md text-label-md hover:bg-primary transition-colors shadow-md" onclick="document.getElementById('quoteModal').showModal()" type="button">
+            <span>Book Online Now</span>
+            <span class="material-symbols-outlined text-[18px] scl-icon-shift">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full bg-primary text-surface-variant pt-16 pb-12">
+    <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10" data-stagger-group data-stagger-step="90">
+        <!-- Column 1: Brand -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <div class="flex items-center gap-2">
+            <a class="bg-surface-container-lowest p-2 rounded-lg inline-flex items-center hover:scale-105 transition-transform duration-200" href="v1-enhanced.html">
+              <img
+                alt="Super Cleaners London"
+                class="h-10 w-auto object-contain"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+              />
+            </a>
+          </div>
+          <p class="font-body-sm text-body-sm text-surface-container-highest/80 leading-relaxed">
+            London cleaning since 2006. Over two decades of discrete, immaculate domestic and commercial cleaning services across Kensington, Chelsea, Westminster, and Greater London.
+          </p>
+          <div class="flex items-center gap-1.5 font-label-caps text-label-caps text-secondary-fixed-dim">
+            <span class="material-symbols-outlined text-[16px]">verified_user</span>
+            <span>DBS Vetted &amp; Fully Insured</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Services</h3>
+          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <li><a class="hover:text-on-primary transition-colors" href="domestic-v1-enhanced.html">Regular Domestic Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="v1-enhanced.html#service-professional">Deep &amp; Spring Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="domestic-v1-enhanced.html">End of Tenancy Cleaning</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="commercial-v1-enhanced.html">Commercial Office Care</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="v1-enhanced.html#service-carpet">Specialist Carpet &amp; Upholstery</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Coverage Areas -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Coverage Areas</h3>
+          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <li><a class="hover:text-on-primary transition-colors" href="#coverage">Kensington &amp; Chelsea (SW3, SW7, W8)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="#coverage">Westminster &amp; Belgravia (SW1, W1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="#coverage">Camden &amp; Hampstead (NW3, NW1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="#coverage">Islington &amp; City (N1, EC1)</a></li>
+            <li><a class="hover:text-on-primary transition-colors" href="#coverage">Richmond &amp; Wandsworth (SW11, TW9)</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Enquiries -->
+        <div class="flex flex-col gap-4" data-animate="fade-up">
+          <h3 class="font-headline-sm text-headline-sm text-on-primary">Contact &amp; Enquiries</h3>
+          <div class="flex flex-col gap-2.5 font-body-sm text-body-sm">
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="tel:02036649304">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">call</span>
+              <span>020 3664 9304</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/447786282887" rel="noopener" target="_blank">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
+              <span>WhatsApp: 07786 282887</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="mailto:info@supercleanerslondon.co.uk">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>
+              <span>info@supercleanerslondon.co.uk</span>
+            </a>
+            <div class="flex items-center gap-1.5 pt-1">
+              <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="font-bold text-on-primary">4.9/5 Rating</span>
+              <span class="text-surface-container-highest/70 font-label-sm text-label-sm">(1,400+ London Reviews)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-surface-container-highest/60">
+        <p>© 2006–2026 Super Cleaners London Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-on-primary transition-colors" href="v1-enhanced.html#faq">Privacy Policy</a>
+          <a class="hover:text-on-primary transition-colors" href="v1-enhanced.html#faq">Terms of Service</a>
+          <a class="hover:text-on-primary transition-colors" href="v1-enhanced.html#faq">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page Reveal Compatibility & Shared Enhancement Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealEls = document.querySelectorAll('.reveal-on-scroll');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible');
+        });
+      }, { threshold: 0.1 });
+      revealEls.forEach((el) => obs.observe(el));
+    });
+  </script>
+  <script defer src="./js/enhancements.js"></script>
+</body>
+</html>
