@@ -128,14 +128,14 @@ details:focus-visible {
 }
 
 .scl-logo-img {
-  height: 2.85rem;
+  height: 4rem;
   width: auto;
   object-fit: contain;
   transition: height 0.28s var(--ease-out-expo);
 }
 
 .scl-header.is-scrolled .scl-logo-img {
-  height: 2.5rem;
+  height: 3.5rem;
 }
 
 /* Desktop Navigation Links */
