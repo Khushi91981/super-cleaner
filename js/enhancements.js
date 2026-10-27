@@ -529,6 +529,27 @@
       });
     });
 
+    const heroVideo = document.getElementById("hero-team-video");
+    const heroVideoOverlay = document.getElementById("hero-video-overlay");
+    const heroVideoPlayBtn = document.getElementById("video-play-btn");
+
+    if (heroVideo && heroVideoOverlay && heroVideoPlayBtn) {
+      heroVideoPlayBtn.addEventListener("click", () => {
+        heroVideo.controls = true;
+        heroVideo.play().then(() => {
+          heroVideoOverlay.hidden = true;
+        }).catch((error) => {
+          console.error("Unable to play the hero video:", error);
+          heroVideo.controls = false;
+        });
+      });
+
+      heroVideo.addEventListener("ended", () => {
+        heroVideo.controls = false;
+        heroVideoOverlay.hidden = false;
+      });
+    }
+
     if (modalOverlay) {
       if (modalCloseBtn) {
         modalCloseBtn.addEventListener("click", closeShowcaseModal);
@@ -883,4 +904,3 @@
     });
   });
 })();
-
