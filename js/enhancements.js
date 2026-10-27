@@ -535,8 +535,10 @@
 
     if (heroVideo && heroVideoOverlay && heroVideoPlayBtn) {
       heroVideo.controls = false;
+      let ignorePlayUntil = 0;
 
       heroVideoPlayBtn.addEventListener("click", () => {
+        if (Date.now() < ignorePlayUntil) return;
         heroVideo.hidden = false;
         heroVideo.play().catch((error) => {
           console.error("Unable to play the hero video:", error);
@@ -545,9 +547,9 @@
         });
       });
 
-      heroVideo.addEventListener("dblclick", (event) => {
-        event.preventDefault();
+      heroVideo.addEventListener("click", () => {
         if (!heroVideo.paused) {
+          ignorePlayUntil = Date.now() + 400;
           heroVideo.pause();
         }
       });
