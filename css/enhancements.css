@@ -435,11 +435,11 @@ body.nav-open .scl-floating-dock {
   will-change: transform;
 }
 
-/* Lighter overlay keeps the v1 hero footage visible while protecting text contrast. */
+/* Balance hero footage visibility with readable foreground content. */
 .hero-v1-overlay {
   background:
-    radial-gradient(circle at 50% 42%, rgba(0, 18, 41, 0.2) 0%, rgba(2, 6, 23, 0.5) 78%),
-    linear-gradient(180deg, rgba(0, 18, 41, 0.38) 0%, rgba(2, 6, 23, 0.3) 48%, rgba(0, 18, 41, 0.62) 100%);
+    radial-gradient(circle at 50% 42%, rgba(0, 18, 41, 0.28) 0%, rgba(2, 6, 23, 0.58) 78%),
+    linear-gradient(180deg, rgba(0, 18, 41, 0.46) 0%, rgba(2, 6, 23, 0.38) 48%, rgba(0, 18, 41, 0.68) 100%);
 }
 
 #hero-video-overlay[hidden] {
