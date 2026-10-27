@@ -534,18 +534,30 @@
     const heroVideoPlayBtn = document.getElementById("video-play-btn");
 
     if (heroVideo && heroVideoOverlay && heroVideoPlayBtn) {
+      heroVideo.controls = false;
+
       heroVideoPlayBtn.addEventListener("click", () => {
-        heroVideo.controls = true;
-        heroVideo.play().then(() => {
-          heroVideoOverlay.hidden = true;
-        }).catch((error) => {
+        heroVideo.play().catch((error) => {
           console.error("Unable to play the hero video:", error);
-          heroVideo.controls = false;
         });
       });
 
+      heroVideo.addEventListener("dblclick", (event) => {
+        event.preventDefault();
+        if (!heroVideo.paused) {
+          heroVideo.pause();
+        }
+      });
+
+      heroVideo.addEventListener("play", () => {
+        heroVideoOverlay.hidden = true;
+      });
+
+      heroVideo.addEventListener("pause", () => {
+        heroVideoOverlay.hidden = false;
+      });
+
       heroVideo.addEventListener("ended", () => {
-        heroVideo.controls = false;
         heroVideoOverlay.hidden = false;
       });
     }
