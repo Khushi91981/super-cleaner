@@ -1054,3 +1054,27 @@ button:hover .scl-icon-shift {
   box-shadow: 0 4px 16px rgba(220, 38, 38, 0.5);
   transform: translateY(-1px);
 }
+
+/* Banner Logo Card with Smooth Border Radius & Polished Elevation */
+.scl-hero-logo-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.15rem;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 32px -4px rgba(0, 18, 41, 0.28), 0 4px 12px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.scl-hero-logo-card:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 18px 42px -4px rgba(0, 18, 41, 0.35), 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.scl-hero-logo-card img {
+  border-radius: 0.75rem;
+}
