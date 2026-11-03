@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
   <meta content="web_standard" name="shell-type" />
-  <title>Super Cleaners London — Experienced Cleaning Specialists Across London (Version 1 Enhanced)</title>
+  <title>Super Cleaners London — Experienced Cleaning Specialists Across London</title>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -118,24 +118,32 @@
   </script>
   <link href="./css/enhancements.css?v=20261027-2013" rel="stylesheet" />
   <style>
-    @keyframes floatGentle {
+    @keyframes floatSlow {
       0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-7px); }
+      50% { transform: translateY(-6px); }
     }
-    .animate-float {
-      animation: floatGentle 5.5s ease-in-out infinite;
+    .float-slow {
+      animation: floatSlow 5.5s ease-in-out infinite;
     }
-    .animate-float-delayed {
-      animation: floatGentle 6.5s ease-in-out infinite 2s;
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(41, 94, 168, 0.45); }
+      50% { box-shadow: 0 0 0 14px rgba(41, 94, 168, 0); }
+    }
+    .pulse-glow {
+      animation: pulseGlow 2.8s infinite;
     }
     @keyframes pinPulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(41, 94, 168, 0.65); }
-      50% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(41, 94, 168, 0); }
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(41, 94, 168, 0.7); }
+      50% { transform: scale(1.14); box-shadow: 0 0 0 10px rgba(41, 94, 168, 0); }
       100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(41, 94, 168, 0); }
     }
     .pin-highlight {
       animation: pinPulse 1.2s ease-in-out 3;
       background-color: #295ea8 !important;
+      color: #ffffff !important;
+      border-color: #d6e3ff !important;
+    }
+    .pin-highlight span {
       color: #ffffff !important;
     }
   </style>
@@ -149,34 +157,44 @@
   <header class="scl-header" id="site-header">
     <div class="scl-header-inner">
       <!-- Brand Logo -->
-      <a aria-label="Super Cleaners London Home" class="scl-logo-link">
+      <a aria-label="Super Cleaners London Home" class="scl-logo-link" href="#home">
         <img
           alt="Super Cleaners London"
-          class="scl-logo-img"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+          class="scl-logo-img h-12 sm:h-14 w-auto object-contain"
+          src="images/logo.png"
         />
       </a>
 
-      <!-- Desktop Navigation (Visible >= 1200px where all links fit comfortably) -->
+      <!-- Desktop Navigation (Clean client-approved links: Home, Services, FAQ, About Us, Contact) -->
       <nav aria-label="Primary Navigation" class="scl-desktop-nav">
-        <a aria-current="page" class="scl-nav-link is-active" data-nav-target="home">Home</a>
-        <a class="scl-nav-link">Domestic</a>
-        <a class="scl-nav-link" data-nav-target="services">Professional</a>
-        <a class="scl-nav-link">Commercial</a>
-        <a class="scl-nav-link" data-nav-target="services">Prices</a>
-        <a class="scl-nav-link" data-nav-target="coverage-areas">Areas</a>
-        <a class="scl-nav-link" data-nav-target="about-us">About Us</a>
-        <a class="scl-nav-link" data-nav-target="contact">Contact</a>
+        <a aria-current="page" class="scl-nav-link is-active" data-nav-target="home" href="#home">Home</a>
+        <a class="scl-nav-link" data-nav-target="services" href="#services">Services</a>
+        <a class="scl-nav-link" data-nav-target="faq" href="#faq">FAQ</a>
+        <a class="scl-nav-link" data-nav-target="about-us" href="#about-us">About Us</a>
+        <a class="scl-nav-link" data-nav-target="contact" href="#contact">Contact</a>
       </nav>
 
-      <!-- Header Right Actions: Phone, Book Now CTA & Mobile Menu Toggle -->
+      <!-- Header Right Actions: Phone, WhatsApp Contacts & Visible Red Book Now CTA -->
       <div class="scl-header-actions">
-        <a class="scl-header-phone" title="Call our London dispatch desk">
+        <a class="scl-header-phone" href="tel:02036649304" title="Call our London team">
           <span class="material-symbols-outlined text-secondary text-[20px]">call</span>
-          <span>020 3664 9304</span>
+          <span class="font-semibold">020 3664 9304</span>
         </a>
 
-        <a class="scl-header-cta" data-open-showcase-modal>
+        <!-- Quick WhatsApp contacts for desktop -->
+        <div class="hidden xl:flex items-center gap-1.5">
+          <a class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 transition-colors text-xs font-semibold" href="https://wa.me/447786282887" rel="noopener" target="_blank" title="WhatsApp 07786 282887">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">chat</span>
+            <span>07786 282887</span>
+          </a>
+          <a class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 transition-colors text-xs font-semibold" href="https://wa.me/44750700167" rel="noopener" target="_blank" title="WhatsApp 07507 00167">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">chat</span>
+            <span>07507 00167</span>
+          </a>
+        </div>
+
+        <!-- Visible Red CTA Button -->
+        <a class="scl-header-cta scl-header-cta--red" data-open-showcase-modal href="#contact">
           <span class="material-symbols-outlined text-[18px]">calendar_today</span>
           <span>Book Now</span>
           <span aria-hidden="true" class="hidden sm:inline">→</span>
@@ -218,76 +236,64 @@
         </div>
 
         <nav aria-label="Mobile Navigation Links" class="scl-mobile-nav-list px-0">
-          <a class="scl-mobile-nav-link is-active" data-nav-target="home">
+          <a class="scl-mobile-nav-link is-active" data-nav-target="home" href="#home">
             <span>Home</span>
             <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link">
-            <span>Domestic Cleaning Page</span>
-            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £19.50/hr</span>
-          </a>
-          <a class="scl-mobile-nav-link">
-            <span>Professional &amp; End of Tenancy</span>
-            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £160</span>
-          </a>
-          <a class="scl-mobile-nav-link">
-            <span>Commercial Office Cleaning Page</span>
+          <a class="scl-mobile-nav-link" data-nav-target="services" href="#services">
+            <span>Services</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link">
-            <span>Carpet &amp; Upholstery Care</span>
-            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £35</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="services">
-            <span>Services &amp; Tariff Guide</span>
+          <a class="scl-mobile-nav-link" data-nav-target="faq" href="#faq">
+            <span>FAQ</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link" data-nav-target="coverage-areas">
-            <span>London Areas We Cover</span>
+          <a class="scl-mobile-nav-link" data-nav-target="about-us" href="#about-us">
+            <span>About Us</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link" data-nav-target="about-us">
-            <span>About Us &amp; Our Team</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="reviews">
-            <span>Verified Client Reviews</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="faq">
-            <span>Frequently Asked Questions</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="contact">
-            <span>Contact &amp; Free Quote</span>
+          <a class="scl-mobile-nav-link" data-nav-target="contact" href="#contact">
+            <span>Contact</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
         </nav>
       </div>
 
-      <!-- Mobile Drawer Bottom Quick Actions -->
+      <!-- Mobile Drawer Bottom Quick Actions with Red CTA & Both WhatsApps -->
       <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-3">
         <a
-          class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md shadow-md hover:bg-primary-container transition-colors"
+          class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl btn-primary-red font-label-md text-label-md shadow-md transition-colors"
           data-open-showcase-modal
+          href="#contact"
         >
           <span class="material-symbols-outlined text-[20px]">calendar_today</span>
           <span>Book Your Clean Online →</span>
         </a>
-        <div class="grid grid-cols-2 gap-2.5">
+        <a
+          class="inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-surface-container-low text-primary font-label-sm text-label-sm font-bold hover:bg-secondary-fixed transition-colors border border-outline-variant/40"
+          href="tel:02036649304"
+        >
+          <span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+          <span>Call 020 3664 9304</span>
+        </a>
+        <div class="grid grid-cols-2 gap-2">
           <a
-            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container-low text-primary font-label-sm text-label-sm font-bold hover:bg-secondary-fixed transition-colors"
-          >
-            <span class="material-symbols-outlined text-secondary text-[18px]">call</span>
-            <span>020 3664 9304</span>
-          </a>
-          <a
-            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600 text-on-primary font-label-sm text-label-sm font-bold hover:bg-emerald-700 transition-colors"
+            class="inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600 text-white font-label-sm text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
+            href="https://wa.me/447786282887"
             rel="noopener"
             target="_blank"
           >
-            <span class="material-symbols-outlined text-[18px]">chat</span>
-            <span>WhatsApp Us</span>
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>07786 282887</span>
+          </a>
+          <a
+            class="inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600 text-white font-label-sm text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
+            href="https://wa.me/44750700167"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>07507 00167</span>
           </a>
         </div>
       </div>
@@ -313,18 +319,34 @@
         <span class="material-symbols-outlined text-[20px]">call</span>
       </a>
     </div>
-    <!-- WhatsApp Chat -->
+    <!-- WhatsApp 1 -->
     <div class="relative group flex items-center justify-end">
       <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-emerald-700 text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        WhatsApp Concierge
+        WhatsApp: 07786 282887
       </span>
       <a
-        aria-label="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp 07786 282887"
         class="w-10 h-10 rounded-full bg-emerald-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
         href="https://wa.me/447786282887"
         rel="noopener"
         target="_blank"
-        title="WhatsApp Chat"
+        title="WhatsApp 07786 282887"
+      >
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+      </a>
+    </div>
+    <!-- WhatsApp 2 -->
+    <div class="relative group flex items-center justify-end">
+      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-emerald-800 text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
+        WhatsApp: 07507 00167
+      </span>
+      <a
+        aria-label="Chat on WhatsApp 07507 00167"
+        class="w-10 h-10 rounded-full bg-teal-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        href="https://wa.me/44750700167"
+        rel="noopener"
+        target="_blank"
+        title="WhatsApp 07507 00167"
       >
         <span class="material-symbols-outlined text-[20px]">chat</span>
       </a>
@@ -343,20 +365,6 @@
         <span class="material-symbols-outlined text-[20px]">photo_camera</span>
       </a>
     </div>
-    <!-- Facebook -->
-    <div class="relative group flex items-center justify-end">
-      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        Facebook Page
-      </span>
-      <a
-        aria-label="Visit Super Cleaners London on Facebook"
-        class="w-10 h-10 rounded-full bg-blue-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
-        href="#contact"
-        title="Facebook"
-      >
-        <span class="material-symbols-outlined text-[20px]">public</span>
-      </a>
-    </div>
     <!-- Email Us -->
     <div class="relative group flex items-center justify-end">
       <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
@@ -364,7 +372,7 @@
       </span>
       <a
         aria-label="Email Super Cleaners London"
-        class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        class="w-10 h-10 rounded-full bg-secondary text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
         href="mailto:info@supercleanerslondon.co.uk"
         title="Send Email"
       >
@@ -376,19 +384,20 @@
   <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
     <div class="flex flex-col w-full">
 
-      <!-- =====================================================================
-           VERSION 1 HERO SECTION: CINEMATIC DARK PREMIUM HOUSEKEEPING SHOWCASE
+            <!-- =====================================================================
+           CLIENT-APPROVED HOMEPAGE HERO: CINEMATIC VIDEO BACKGROUND WITH LIGHT-BLUE OVERLAY
+           Combines Version 1 Video Concept with Version 2 Visual Identity & Centered Layout
            ===================================================================== -->
       <section
-        class="relative w-full overflow-hidden min-h-[640px] lg:min-h-[720px] flex items-center justify-center bg-slate-950 py-14 sm:py-20 lg:py-24 text-on-primary"
+        class="relative w-full overflow-hidden min-h-[640px] lg:min-h-[720px] flex items-center justify-center py-14 sm:py-20 lg:py-24 text-white"
         id="home"
       >
-        <!-- Full-Bleed Cleaner Video with Image Fallback and High-Contrast Gradient Overlay -->
+        <!-- Full-Bleed Background Video with Light Blue Tint Overlay (Keeping Cleaning Activity Clearly Visible) -->
         <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none">
           <img
-            alt="Clean luxury London townhouse interior and professional housekeeping crew"
+            alt="Super Cleaners London professional cleaners delivering spotless spaces"
             class="w-full h-full object-cover object-center hero-bg-pan"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGp5dgI8mLrGG0-CKRZnc57pmwd4vx-oedJDxjWpqi7nPLlT9q72H1yLll08Sq98wcv8ZH1p81HVzfYbqIZyHO38jsOhNbWEamhdBVm1ERb4lpOJy6Ah-H8NhJbkhBQ7Q2hCmaZmftncuJqWemfu8zfBVq6A-CJqivPb8-VPq8eJFez2ZrbjEyQdq_dfSsf3SwwAr_TYucGt1W1VtL94oCmIzW7AIU4YjVK3RRpEGssrt3tk_8U0n1mQ"
+            src="https://images.pexels.com/videos/4238760/pexels-photo-4238760.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920"
           />
           <video
             aria-hidden="true"
@@ -402,291 +411,83 @@
           >
             <source src="https://videos.pexels.com/video-files/4238760/4238760-hd_1920_1080_30fps.mp4" type="video/mp4" />
           </video>
-          <video
-            aria-hidden="true"
-            autoplay
-            class="absolute inset-0 w-full h-full object-cover object-center hero-bg-pan"
-            loop
-            muted
-            playsinline
-            poster="https://images.pexels.com/videos/4238760/pexels-photo-4238760.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920"
-            preload="metadata"
-          >
-            <source src="https://videos.pexels.com/video-files/4238760/4238760-hd_1920_1080_30fps.mp4" type="video/mp4" />
-          </video>
-          <div class="absolute inset-0 hero-v1-overlay"></div>
+          <!-- Light-Blue Overlay: Enhances Video Appearance Without Looking Dark or Black -->
+          <div class="absolute inset-0 hero-v2-video-overlay"></div>
         </div>
 
-        <!-- Interactive Floating Parallax Hero Badges (Visible on normal laptop/desktop screens & reactive on scroll + hover) -->
-        <!-- Left Badge: Hygiene Standard • 5-Star Hotel Protocol -->
-        <div
-          class="hidden lg:flex absolute left-4 xl:left-8 top-[30%] z-20 scl-hero-parallax-wrap"
-          data-hero-parallax
-          data-mouse-factor="16"
-          data-scroll-rot="-0.018"
-          data-scroll-speed-x="0.04"
-          data-scroll-speed-y="-0.22"
-        >
-          <div class="scl-float-orbital-left">
-            <div
-              aria-expanded="false"
-              aria-label="Hygiene Standard: 5-Star Hotel Protocol — Hover or click for details"
-              class="scl-hero-badge scl-hero-badge--amber px-4 py-3.5 rounded-2xl text-left w-[248px] xl:w-[264px] group"
-              role="button"
-              tabindex="0"
-            >
-              <div class="flex items-center gap-3">
-                <div class="scl-hero-badge-icon w-11 h-11 rounded-xl bg-amber-400/20 border border-amber-300/45 flex items-center justify-center text-amber-300 shrink-0">
-                  <span class="material-symbols-outlined text-[24px]">verified</span>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center justify-between gap-1">
-                    <p class="font-label-caps text-[10px] uppercase tracking-wider text-amber-200/90 font-bold">Hygiene Standard</p>
-                    <span class="material-symbols-outlined text-[15px] text-amber-300/80 transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-                  </div>
-                  <p class="font-label-md text-sm font-bold text-white truncate">5-Star Hotel Protocol</p>
-                </div>
-              </div>
+        <!-- Hero Content Container (Centered Layout as Requested) -->
+        <div class="relative z-10 max-w-[1060px] mx-auto px-margin-mobile lg:px-margin text-center flex flex-col items-center gap-5 sm:gap-6 my-auto">
 
-              <!-- Expandable Interactive Details on Hover / Click -->
-              <div class="scl-hero-badge-details text-xs text-surface-container-highest/95 space-y-1.5">
-                <div class="flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-amber-300 text-[15px]">check_circle</span>
-                  <span>Hospital-grade surface sanitisation</span>
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-amber-300 text-[15px]">check_circle</span>
-                  <span>Colour-coded microfibre protection</span>
-                </div>
-                <span
-                  class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-300 hover:text-amber-200 pt-1"
-                  data-badge-jump="#service-professional"
-                >
-                  <span>Inspect Deep Clean Protocol</span>
-                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Badge: Eco-Friendly Care • Safe for Pets & Kids (Offset right-20/right-24 to never overlap floating dock) -->
-        <div
-          class="hidden lg:flex absolute right-20 xl:right-24 top-[38%] z-20 scl-hero-parallax-wrap"
-          data-hero-parallax
-          data-mouse-factor="-16"
-          data-scroll-rot="0.018"
-          data-scroll-speed-x="-0.04"
-          data-scroll-speed-y="-0.16"
-        >
-          <div class="scl-float-orbital-right">
-            <div
-              aria-expanded="false"
-              aria-label="Eco-Friendly Care: Safe for Pets and Kids — Hover or click for details"
-              class="scl-hero-badge scl-hero-badge--emerald px-4 py-3.5 rounded-2xl text-left w-[248px] xl:w-[264px] group"
-              role="button"
-              tabindex="0"
-            >
-              <div class="flex items-center gap-3">
-                <div class="scl-hero-badge-icon w-11 h-11 rounded-xl bg-emerald-400/20 border border-emerald-300/45 flex items-center justify-center text-emerald-300 shrink-0">
-                  <span class="material-symbols-outlined text-[24px]">eco</span>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex items-center justify-between gap-1">
-                    <p class="font-label-caps text-[10px] uppercase tracking-wider text-emerald-200/90 font-bold">Eco-Friendly Care</p>
-                    <span class="material-symbols-outlined text-[15px] text-emerald-300/80 transition-transform duration-300 group-hover:rotate-180">expand_more</span>
-                  </div>
-                  <p class="font-label-md text-sm font-bold text-white truncate">Safe for Pets &amp; Kids</p>
-                </div>
-              </div>
-
-              <!-- Expandable Interactive Details on Hover / Click -->
-              <div class="scl-hero-badge-details text-xs text-surface-container-highest/95 space-y-1.5">
-                <div class="flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-emerald-300 text-[15px]">check_circle</span>
-                  <span>100% non-toxic botanical formulas</span>
-                </div>
-                <div class="flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-emerald-300 text-[15px]">check_circle</span>
-                  <span>Allergy, baby &amp; paw-safe finishes</span>
-                </div>
-                <span
-                  class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-300 hover:text-emerald-200 pt-1"
-                  data-badge-jump="#service-domestic"
-                >
-                  <span>Explore Eco Housekeeping</span>
-                  <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Hero Content Container -->
-        <div class="relative z-10 max-w-[1040px] mx-auto px-margin-mobile lg:px-margin text-center flex flex-col items-center gap-5 sm:gap-6 my-auto">
-
-          <!-- Top Status & 5-Star Rating Badge Group -->
-          <div class="flex flex-wrap items-center justify-center gap-2.5" data-animate="fade-scale">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/75 backdrop-blur-md border border-white/20 text-on-primary text-xs font-label-sm shadow-sm">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span class="font-semibold tracking-wide">Live London Housekeeping in Action</span>
-            </div>
-
-            <div class="inline-flex items-center gap-2 bg-white/12 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 shadow-md">
-              <div aria-label="5 out of 5 stars" class="flex text-amber-400">
-                <span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                <span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              </div>
-              <span class="font-label-caps text-label-caps uppercase tracking-wider text-white font-bold">
-                Trusted Since 2006 • <span class="counter-number font-bold" data-target="20">20</span> Years Experience
-              </span>
-            </div>
+          <!-- Centered Diamond SC Brand Logo -->
+          <div class="flex justify-center" data-animate="fade-scale">
+            <img
+              src="images/logo.png"
+              alt="Super Cleaners London — Residential &amp; Commercial"
+              class="h-24 sm:h-28 md:h-36 w-auto object-contain drop-shadow-[0_4px_24px_rgba(0,18,41,0.65)] transition-transform hover:scale-105 duration-300"
+            />
           </div>
 
-          <!-- H1 Headline -->
+          <!-- Trust & 20 Years Experience Rating Badge -->
+          <div class="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 shadow-md" data-animate="fade-up">
+            <div aria-label="5 out of 5 stars" class="flex text-amber-400">
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <span class="font-label-caps text-label-caps uppercase tracking-wider text-white font-bold">
+              Trusted Since 2006 • <span class="counter-num font-bold" data-target="20">20</span> Years Experience
+            </span>
+          </div>
+
+          <!-- Hero H1 Headline -->
           <h1
-            class="font-display-hero text-[34px] sm:text-[48px] lg:text-[58px] leading-[1.12] text-white tracking-tight max-w-4xl text-balance drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
+            class="font-display-hero text-[34px] sm:text-[46px] lg:text-[56px] text-white tracking-tight leading-[1.14] text-balance drop-shadow-[0_2px_14px_rgba(0,18,41,0.65)]"
             data-animate="fade-up"
           >
-            Experienced Cleaning Specialists <span class="italic text-secondary-fixed font-headline-lg font-normal">Across London</span>
+            Experienced Cleaning Specialists <span class="italic text-sky-200 font-headline-lg font-semibold">Across London</span>
           </h1>
 
-          <!-- Subheadline -->
+          <!-- Hero Subheadline -->
           <p
-            class="font-body-lg text-[16px] sm:text-[18px] lg:text-[19px] text-white/90 max-w-2xl text-center leading-relaxed text-pretty drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]"
+            class="font-body-lg text-[16px] sm:text-[18px] lg:text-[20px] text-white/95 max-w-2xl leading-relaxed text-pretty drop-shadow-[0_2px_8px_rgba(0,18,41,0.6)]"
             data-animate="fade-up"
           >
-            Cleaner homes, healthier spaces, happier lives. Discrete, meticulous residential housekeeping and commercial deep care trusted across Chelsea, Kensington, and Westminster.
+            Professional residential and commercial cleaning services, delivered with care, attention to detail and flexible bookings to suit your needs.
           </p>
 
-          <!-- Primary, Secondary & Tertiary CTA Hierarchy -->
-          <div
-            class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center gap-3.5 pt-2 w-full sm:w-auto"
-            data-animate="fade-up"
-          >
+          <!-- Centered Action Buttons with Standout Red Booking CTA -->
+          <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3.5 pt-2" data-animate="fade-up">
+            <!-- Standout Red Primary CTA -->
             <a
-              class="group inline-flex items-center justify-center gap-2 btn-primary-crimson px-7 py-3.5 rounded-full font-label-md text-label-md"
+              href="#contact"
+              class="group inline-flex items-center justify-center gap-2 btn-primary-red px-8 py-4 rounded-full font-label-md text-label-md shadow-lg"
+              data-open-showcase-modal
             >
-              <span class="font-bold">Book Your Clean Today</span>
-              <span class="material-symbols-outlined text-[18px] scl-icon-shift">arrow_forward</span>
+              <span class="font-bold text-base">Book Your Clean Today</span>
+              <span class="material-symbols-outlined text-[20px] scl-icon-shift">arrow_forward</span>
             </a>
 
+            <!-- Call Dispatch Button -->
             <a
-              class="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white backdrop-blur-md border border-white/30 px-6 py-3.5 rounded-full font-label-md text-label-md transition-all duration-200 shadow-sm"
+              href="tel:02036649304"
+              class="inline-flex items-center justify-center gap-2 bg-white/95 text-primary border border-white/40 px-6 py-4 rounded-full font-label-md text-label-md hover:bg-white hover:text-secondary transition-all shadow-md backdrop-blur-sm"
             >
-              <span class="material-symbols-outlined text-secondary-fixed text-[20px]">call</span>
-              <span class="font-bold">020 3664 9304</span>
+              <span class="material-symbols-outlined text-secondary text-[20px]">call</span>
+              <span class="font-bold text-base">020 3664 9304</span>
             </a>
 
+            <!-- WhatsApp Concierge Button -->
             <a
-              class="inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3.5 rounded-full font-label-md text-label-md transition-all duration-200 shadow-md"
-              rel="noopener"
+              href="https://wa.me/447786282887"
               target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center gap-2 bg-emerald-600/90 hover:bg-emerald-600 text-white border border-emerald-400/40 px-6 py-4 rounded-full font-label-md text-label-md transition-all shadow-md backdrop-blur-sm"
             >
               <span class="material-symbols-outlined text-[20px]">chat</span>
-              <span class="font-semibold">WhatsApp Concierge</span>
+              <span class="font-bold text-base">WhatsApp Concierge</span>
             </a>
-          </div>
-
-          <!-- Responsive Interactive Hygiene & Eco Badges for Tablet/Mobile (< 1024px) -->
-          <div class="flex lg:hidden flex-wrap items-center justify-center gap-3 pt-2 w-full">
-            <div class="scl-float-orbital-left">
-              <div
-                aria-expanded="false"
-                class="scl-hero-badge scl-hero-badge--amber px-3.5 py-2.5 rounded-2xl text-left w-[235px] group"
-                role="button"
-                tabindex="0"
-              >
-                <div class="flex items-center gap-2.5">
-                  <div class="scl-hero-badge-icon w-9 h-9 rounded-xl bg-amber-400/20 border border-amber-300/45 flex items-center justify-center text-amber-300 shrink-0">
-                    <span class="material-symbols-outlined text-[20px]">verified</span>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <p class="font-label-caps text-[10px] uppercase tracking-wider text-amber-200/90 font-bold">Hygiene Standard</p>
-                    <p class="font-label-md text-xs font-bold text-white truncate">5-Star Hotel Protocol</p>
-                  </div>
-                </div>
-                <div class="scl-hero-badge-details text-xs text-surface-container-highest/95 space-y-1">
-                  <p>• Hospital-grade sanitisation</p>
-                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-300" data-badge-jump="#service-professional">
-                    <span>Inspect Protocol</span>
-                    <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div class="scl-float-orbital-right">
-              <div
-                aria-expanded="false"
-                class="scl-hero-badge scl-hero-badge--emerald px-3.5 py-2.5 rounded-2xl text-left w-[235px] group"
-                role="button"
-                tabindex="0"
-              >
-                <div class="flex items-center gap-2.5">
-                  <div class="scl-hero-badge-icon w-9 h-9 rounded-xl bg-emerald-400/20 border border-emerald-300/45 flex items-center justify-center text-emerald-300 shrink-0">
-                    <span class="material-symbols-outlined text-[20px]">eco</span>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <p class="font-label-caps text-[10px] uppercase tracking-wider text-emerald-200/90 font-bold">Eco-Friendly Care</p>
-                    <p class="font-label-md text-xs font-bold text-white truncate">Safe for Pets &amp; Kids</p>
-                  </div>
-                </div>
-                <div class="scl-hero-badge-details text-xs text-surface-container-highest/95 space-y-1">
-                  <p>• 100% non-toxic botanicals</p>
-                  <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-300" data-badge-jump="#service-domestic">
-                    <span>Explore Eco Care</span>
-                    <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Trust Statistics Pill + Interactive Tour Controls -->
-          <div class="pt-3 flex flex-col items-center gap-3 w-full" data-animate="fade-up">
-            <div class="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-2 bg-slate-950/75 border border-white/20 px-6 py-3 rounded-2xl sm:rounded-full backdrop-blur-md text-surface-container-highest font-label-sm text-label-sm shadow-lg">
-              <div class="flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-secondary-fixed text-[18px]">verified_user</span>
-                <span class="font-semibold text-white">100% DBS Vetted</span>
-              </div>
-              <span class="text-white/30 hidden sm:inline">•</span>
-              <div class="flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-secondary-fixed text-[18px]">security</span>
-                <span class="font-semibold text-white">£<span class="counter-number font-semibold text-white" data-target="10">10</span>M Public Liability</span>
-              </div>
-              <span class="text-white/30 hidden sm:inline">•</span>
-              <div class="flex items-center gap-1.5">
-                <span class="material-symbols-outlined text-secondary-fixed text-[18px]">cleaning_services</span>
-                <span class="font-semibold text-white"><span class="counter-number font-semibold text-white" data-target="18500">18,500</span>+ Homes Cleaned</span>
-              </div>
-            </div>
-
-            <!-- Subtle Ambient Video & Sound Controls -->
-            <div class="flex flex-wrap items-center justify-center gap-2.5 pt-1">
-              <button
-                aria-pressed="false"
-                class="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-900/75 hover:bg-slate-900 text-white/90 text-xs font-label-sm backdrop-blur-md border border-white/15 transition-all duration-200"
-                id="audio-toggle-btn"
-                title="Toggle Ambient Sound"
-                type="button"
-              >
-                <span class="material-symbols-outlined text-[16px] group-hover:text-amber-400 transition-colors" id="audio-icon">volume_off</span>
-                <span id="audio-status-text">Ambient Sound Off</span>
-              </button>
-
-              <button
-                class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/15 hover:bg-white/25 text-white text-xs font-label-sm backdrop-blur-md border border-white/25 transition-all duration-200 shadow-sm"
-                data-open-showcase-modal
-                type="button"
-              >
-                <span class="material-symbols-outlined text-[16px] text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-                <span class="font-semibold">Watch 4K Housekeeping Tour</span>
-              </button>
-            </div>
           </div>
 
         </div>
@@ -695,16 +496,15 @@
       <!-- =====================================================================
            VALUE PROPOSITION STRIP
            ===================================================================== -->
-      <section class="w-full bg-surface-container-low py-14 lg:py-16 border-b border-outline-variant/25">
+      <section class="w-full bg-surface-container-low py-14 lg:py-16 border-y border-outline-variant/25">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
           <div class="text-center pb-8" data-animate="fade-up" data-float-y="-8" data-scroll-float>
             <p class="font-headline-md text-[24px] sm:text-headline-md italic text-secondary">
               A team you can trust, quality you can see.
             </p>
           </div>
-
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger-group data-stagger-step="90">
-            <!-- Prop 1 -->
+            <!-- Prop 1: Trusted & Professional Team -->
             <div data-float-rot="-0.8" data-float-y="-12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
@@ -712,15 +512,14 @@
                 </div>
                 <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Trusted &amp; Professional Team</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Experienced, respectful cleaners vetted carefully for complete security in your home.
+                  Experienced cleaners you can trust in your home.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ Enhanced DBS &amp; 2-Reference Vetted
+                  ✓ Experienced Cleaners You Can Trust
                 </div>
               </div>
             </div>
-
-            <!-- Prop 2 -->
+            <!-- Prop 2: Fully Trained & Insured -->
             <div data-float-rot="0.8" data-float-y="12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
@@ -728,15 +527,14 @@
                 </div>
                 <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Fully Trained &amp; Insured</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Trained to rigorous five-star hotel hygiene protocols, uniformed, and comprehensively insured.
+                  Professional cleaners who are fully trained, uniformed and supervised.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ £10,000,000 Public Liability Cover
+                  ✓ Trained, Uniformed &amp; Supervised
                 </div>
               </div>
             </div>
-
-            <!-- Prop 3 -->
+            <!-- Prop 3: Flexible, Quick Bookings -->
             <div data-float-rot="-0.8" data-float-y="-12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
@@ -744,26 +542,25 @@
                 </div>
                 <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Flexible, Quick Bookings</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Same-day turnaround or recurring slots arranged effortlessly via WhatsApp or online.
+                  Bookings tailored to your needs, with fast booking by WhatsApp or online.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-emerald-700 w-full">
-                  ✓ Same-Day &amp; Weekend Slots Open
+                  ✓ Fast Booking by WhatsApp or Online
                 </div>
               </div>
             </div>
-
-            <!-- Prop 4 -->
+            <!-- Prop 4: Flexible & Simple Cleaning / Clear Pricing -->
             <div data-float-rot="0.8" data-float-y="12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
                   <span class="material-symbols-outlined text-[28px]">assignment_turned_in</span>
                 </div>
-                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">No Complicated Contracts</h2>
+                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Clear Pricing, No Hidden Fees</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Transparent hourly or fixed tariffs with zero hidden cancellation fees or long lock-ins.
+                  Straightforward cleaning services with clear pricing and no hidden fees.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ Pause or Reschedule with 24h Notice
+                  ✓ Clear Pricing • No Hidden Fees
                 </div>
               </div>
             </div>
@@ -772,7 +569,7 @@
       </section>
 
       <!-- =====================================================================
-           OUR CLEANING SERVICES (VERSION 1 LANDSCAPE STACKED CARDS)
+           OUR CLEANING SERVICES (VERSION 2 SPLIT-COLUMN LANDSCAPE ROWS)
            ===================================================================== -->
       <section class="w-full bg-surface py-16 lg:py-24" id="services">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10 lg:gap-12">
@@ -786,51 +583,53 @@
             </p>
           </div>
 
-          <!-- 4 Wide Landscape Service Rows -->
+          <!-- 4 Split Landscape Service Rows -->
           <div class="flex flex-col gap-7">
             <!-- Service 1: Domestic Cleaning -->
             <article
-              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 flex flex-col group"
+              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 grid grid-cols-1 lg:grid-cols-12 items-stretch group"
               data-animate="fade-left"
               data-tilt-card
               data-tilt-max="1.8"
               id="service-domestic"
             >
-              <div class="relative w-full h-64 sm:h-72 overflow-hidden">
+              <div class="lg:col-span-5 relative min-h-[260px] lg:min-h-full overflow-hidden">
                 <img
-                  alt="Domestic Cleaning London"
-                  class="w-full h-full object-cover scl-img-zoom"
+                  alt="Domestic Cleaning &amp; Housekeeping in London"
+                  class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXu6lsMe2gi1bjdPpOXI0Boih4-PvONX-ztoSpQF6hbnOR7BG1eb1E-YQDasl_RvFNcfo9rab0TiUQ_hFiarauUjmumn0wuDsTr8Kf6QcAWOvqbnVmpKFNF1i5DKPPjWbus01FaJ9HwiqFXULRxe1VwgnD0375L33vDkWLRYxGHHv3iCqO3VLysoIWKmfVJGIUD7WVSm7um_4x6hbD5t8i1qo4VpHtUuUPycrxjUNqbCu16SP_4Ic_LA"
                 />
-                <div class="scl-badge-icon absolute top-4 left-4 w-14 h-14 rounded-full bg-error text-on-error flex items-center justify-center shadow-lg border-2 border-white">
-                  <span class="material-symbols-outlined text-[28px]">home</span>
-                </div>
-                <!-- Scroll-Reactive Floating Service Badge -->
-                <div class="absolute bottom-4 right-4 z-10" data-float-rot="-1.5" data-float-y="-18" data-scroll-float>
-                  <div class="scl-section-badge scl-float-gentle bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-xl border border-white/25 shadow-lg flex items-center gap-2 text-xs font-bold">
-                    <span class="material-symbols-outlined text-emerald-400 text-[18px]">verified_user</span>
-                    <span>Same Dedicated Cleaner Every Visit</span>
+                <div class="absolute bottom-3 left-3 z-10" data-float-y="-14" data-scroll-float>
+                  <div class="scl-section-badge scl-float-gentle bg-primary/90 text-on-primary backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md flex items-center gap-1.5 text-xs font-bold">
+                    <span class="material-symbols-outlined text-emerald-400 text-[16px]">verified_user</span>
+                    <span>Dedicated Domestic Cleaners</span>
                   </div>
                 </div>
               </div>
-              <div class="p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-5 bg-surface-container-lowest">
-                <div class="flex flex-col gap-1.5">
-                  <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Domestic Cleaning</h3>
-                  <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
-                    Regular weekly, bi-weekly, or one-off house upkeep designed around your home. Kitchen sanitisation, dusting, laundry, and ironing by vetted housekeepers.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mt-2">
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Weekly &amp; Bi-Weekly</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">One-off House Cleaning</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">DBS Vetted Housekeepers</span>
+              <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-rose-100 text-error flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[26px]">cottage</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Domestic Cleaning &amp; Housekeeping</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+                      Regular domestic cleaning services tailored to your household requirements, with flexible weekly, fortnightly and daily cleaning schedules to suit your needs.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Kitchen &amp; Appliances</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Sanitary Ware</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Fine Dusting</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Quality Detergents</span>
+                    </div>
                   </div>
                 </div>
-                <div class="flex flex-row md:flex-col items-center md:items-end justify-between shrink-0 gap-3 pt-3 md:pt-0 border-t md:border-t-0 border-outline-variant/25">
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <div class="flex flex-wrap items-center gap-2">
                     <a
                       class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
                     >
-                      <span>Book Domestic Clean</span>
+                      <span>View Domestic Services</span>
                       <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
                     </a>
                   </div>
@@ -838,97 +637,101 @@
               </div>
             </article>
 
-            <!-- Service 2: Professional Cleaning Services -->
+            <!-- Service 2: Professional Deep Cleaning -->
             <article
-              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 flex flex-col group"
+              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 grid grid-cols-1 lg:grid-cols-12 items-stretch group"
               data-animate="fade-right"
               data-tilt-card
               data-tilt-max="1.8"
               id="service-professional"
             >
-              <div class="relative w-full h-64 sm:h-72 overflow-hidden">
+              <div class="lg:col-span-5 relative min-h-[260px] lg:min-h-full overflow-hidden">
                 <img
-                  alt="Professional Cleaning Services London"
-                  class="w-full h-full object-cover scl-img-zoom"
+                  alt="Professional Deep &amp; End of Tenancy Cleaning London"
+                  class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuABtUWd6U2k1kmAFZ_BvLkajR7hf3NTJGlTtLM6cTAoauTF7_Hc4TMybiqv1AwOE-AnlosSNGPWP8KMa7plgqRKKwkCRhg5pd_FYL97ZR9UOGI59QDFBqmlG2P5bmv8RsEbePqejvsnvdv8fysezWRVpdfmqK_7OHhSb_7fMhmlFj1gT59ksLSpBIgfhROyVkK3e3OuYQBUMoeytqnq3DjKH36pHXb4ntsfuff1tCOepfF0NPz-3NridA"
                 />
-                <div class="scl-badge-icon absolute top-4 left-4 w-14 h-14 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-lg border-2 border-white">
-                  <span class="material-symbols-outlined text-[28px]">auto_awesome</span>
-                </div>
-                <!-- Scroll-Reactive Floating Service Badge -->
-                <div class="absolute bottom-4 right-4 z-10" data-float-rot="1.5" data-float-y="-18" data-scroll-float>
-                  <div class="scl-section-badge scl-float-gentle-delayed bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-xl border border-white/25 shadow-lg flex items-center gap-2 text-xs font-bold">
-                    <span class="material-symbols-outlined text-amber-400 text-[18px]">workspace_premium</span>
-                    <span>100% Inventory Deposit Guarantee</span>
+                <div class="absolute bottom-3 left-3 z-10" data-float-y="-14" data-scroll-float>
+                  <div class="scl-section-badge scl-float-gentle-delayed bg-primary/90 text-on-primary backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md flex items-center gap-1.5 text-xs font-bold">
+                    <span class="material-symbols-outlined text-amber-400 text-[16px]">workspace_premium</span>
+                    <span>High Standards Guarantee</span>
                   </div>
                 </div>
               </div>
-              <div class="p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-5 bg-surface-container-lowest">
-                <div class="flex flex-col gap-1.5">
-                  <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Professional Cleaning Services</h3>
-                  <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
-                    Comprehensive deep cleans, after-build debris removal, and guaranteed end-of-tenancy cleans approved by top London estate agencies and inventory clerks.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mt-2">
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">End of Tenancy Guarantee</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">After-Build Cleaning</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Industrial Henry &amp; Hetty Equip</span>
+              <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-cyan-100 text-teal-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[26px]">auto_awesome</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Professional Cleaning Services</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+                      Professional cleaning services delivered with precision, care and attention to detail. Our experienced team provides exceptional results, tailored to your business needs and finished to the highest standards.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">100% Deposit Guarantee</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Oven Cleaning (Separate Item)</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Limescale Extraction</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Inventory Approved</span>
+                    </div>
                   </div>
                 </div>
-                <div class="flex flex-row md:flex-col items-center md:items-end justify-between shrink-0 gap-3 pt-3 md:pt-0 border-t md:border-t-0 border-outline-variant/25">
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <a
                     class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
                   >
-                    <span>View Deep Cleaning</span>
+                    <span>View Professional Services</span>
                     <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
                   </a>
                 </div>
               </div>
             </article>
 
-            <!-- Service 3: Commercial Cleaning -->
+            <!-- Service 3: Commercial Office Care -->
             <article
-              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 flex flex-col group"
+              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 grid grid-cols-1 lg:grid-cols-12 items-stretch group"
               data-animate="fade-left"
               data-tilt-card
               data-tilt-max="1.8"
               id="service-commercial"
             >
-              <div class="relative w-full h-64 sm:h-72 overflow-hidden">
+              <div class="lg:col-span-5 relative min-h-[260px] lg:min-h-full overflow-hidden">
                 <img
-                  alt="Commercial Cleaning London"
-                  class="w-full h-full object-cover scl-img-zoom"
+                  alt="Commercial &amp; Office Cleaning London"
+                  class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDepkpkFn9CvASXIEf8UwydgT473Ow1NDYa1WDLeEx1lq_udJ_bNNhU-HxWSrbZXCMa6HnVIXJM9rFfZKGVYliM8YGsIdc59aLytUTNnFikNrkmAjZO992RfMYi_u6MjA8NuB1e6u6E5GT-_nTwwa5tU1PkLe_3NQXv3VSmd48t-BqVwJWHufQ-o7E_LUtyKRxm8OCWHK5ikHnTWg6tNzxL0-_nN3Z562e5c0YWytluRIfk-MSBSbLz3A"
                 />
-                <div class="scl-badge-icon absolute top-4 left-4 w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg border-2 border-white">
-                  <span class="material-symbols-outlined text-[28px]">apartment</span>
-                </div>
-                <!-- Scroll-Reactive Floating Service Badge -->
-                <div class="absolute bottom-4 right-4 z-10" data-float-rot="-1.5" data-float-y="-18" data-scroll-float>
-                  <div class="scl-section-badge scl-float-gentle bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-xl border border-white/25 shadow-lg flex items-center gap-2 text-xs font-bold">
-                    <span class="material-symbols-outlined text-secondary-fixed text-[18px]">vpn_key</span>
+                <div class="absolute bottom-3 left-3 z-10" data-float-y="-14" data-scroll-float>
+                  <div class="scl-section-badge scl-float-gentle bg-primary/90 text-on-primary backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md flex items-center gap-1.5 text-xs font-bold">
+                    <span class="material-symbols-outlined text-secondary-fixed text-[16px]">vpn_key</span>
                     <span>Keyholder &amp; Out-of-Hours SLA</span>
                   </div>
                 </div>
               </div>
-              <div class="p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-5 bg-surface-container-lowest">
-                <div class="flex flex-col gap-1.5">
-                  <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Commercial Cleaning</h3>
-                  <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
-                    Tailored office maintenance, boutique commercial workspaces, retail spaces, and communal buildings. Flexible morning, evening, or weekend schedules.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mt-2">
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Office &amp; Co-Working Care</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Keyholder Management</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Flexible Invoicing</span>
+              <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[26px]">corporate_fare</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Commercial Cleaning Services</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+                      Tailored commercial cleaning solutions across London for offices, clinics, salons, retail stores, gyms, warehouses, and workshops.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Bespoke Keyholder Access</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Daily &amp; Evening Slots</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Communal Entrances</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Dedicated Manager</span>
+                    </div>
                   </div>
                 </div>
-                <div class="flex flex-row md:flex-col items-center md:items-end justify-between shrink-0 gap-3 pt-3 md:pt-0 border-t md:border-t-0 border-outline-variant/25">
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <div class="flex flex-wrap items-center gap-2">
                     <a
                       class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
                     >
-                      <span>Request Business Quote</span>
+                      <span>View Commercial Services</span>
                       <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
                     </a>
                   </div>
@@ -938,46 +741,48 @@
 
             <!-- Service 4: Carpet & Upholstery Cleaning -->
             <article
-              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 flex flex-col group"
+              class="scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/35 grid grid-cols-1 lg:grid-cols-12 items-stretch group"
               data-animate="fade-right"
               data-tilt-card
               data-tilt-max="1.8"
               id="service-carpet"
             >
-              <div class="relative w-full h-64 sm:h-72 overflow-hidden">
+              <div class="lg:col-span-5 relative min-h-[260px] lg:min-h-full overflow-hidden">
                 <img
                   alt="Carpet &amp; Upholstery Cleaning London"
-                  class="w-full h-full object-cover scl-img-zoom"
+                  class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMzZXGSPjEJwGFArpJAzGdJLS0Y2pO7GDna_HIksVcgoHf1m-JoBeNJJ_MefHAl3kIGmr4i9hITDF4SXYzT-CRgu89MfXJUxQpGvNmlpH028YBvMB3k4fN9wyfNI-Ka9LrRAugNdtzl1ZexqNwPxtdU2y93ATwoU4u4OXWsltM98DGamObJ2EhkUYtlyTZenoiKdyHXjxw0poisqcrBV3hSivtTaZbEjYnIfmseEskaK98JaSB216UUg"
                 />
-                <div class="scl-badge-icon absolute top-4 left-4 w-14 h-14 rounded-full bg-amber-500 text-on-primary flex items-center justify-center shadow-lg border-2 border-white">
-                  <span class="material-symbols-outlined text-[28px]">layers</span>
-                </div>
-                <!-- Scroll-Reactive Floating Service Badge -->
-                <div class="absolute bottom-4 right-4 z-10" data-float-rot="1.5" data-float-y="-18" data-scroll-float>
-                  <div class="scl-section-badge scl-float-gentle-delayed bg-primary/90 backdrop-blur-md text-on-primary px-4 py-2 rounded-xl border border-white/25 shadow-lg flex items-center gap-2 text-xs font-bold">
-                    <span class="material-symbols-outlined text-amber-400 text-[18px]">water_drop</span>
-                    <span>Prochem Hot-Water Steam Extraction</span>
+                <div class="absolute bottom-3 left-3 z-10" data-float-y="-14" data-scroll-float>
+                  <div class="scl-section-badge scl-float-gentle-delayed bg-primary/90 text-on-primary backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md flex items-center gap-1.5 text-xs font-bold">
+                    <span class="material-symbols-outlined text-amber-400 text-[16px]">water_drop</span>
+                    <span>Prochem Steam Extraction</span>
                   </div>
                 </div>
               </div>
-              <div class="p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-5 bg-surface-container-lowest">
-                <div class="flex flex-col gap-1.5">
-                  <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Carpet &amp; Upholstery Cleaning</h3>
-                  <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
-                    Heavy-duty steam hot water extraction, pet odour neutralisation, tough stain lifting, and fabric protection for luxury wool carpets, rugs, and velvet sofas.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mt-2">
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Steam Hot Water Extraction</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Pet Stain &amp; Odour Removal</span>
-                    <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Rapid 2-Hour Dry</span>
+              <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[26px]">water_drop</span>
+                  </div>
+                  <div>
+                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Carpet &amp; Upholstery Cleaning</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+                      Professional carpet and upholstery steam cleaning services restoring carpets, rugs, sofas, and fabrics across London.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Hot Water Extraction</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Pet Stain Neutralisation</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Scotchgard Protection</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Rapid Dry (2 hrs)</span>
+                    </div>
                   </div>
                 </div>
-                <div class="flex flex-row md:flex-col items-center md:items-end justify-between shrink-0 gap-3 pt-3 md:pt-0 border-t md:border-t-0 border-outline-variant/25">
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <a
                     class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
                   >
-                    <span>Book Carpet Cleaning</span>
+                    <span>View Carpet Services</span>
                     <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
                   </a>
                 </div>
@@ -988,82 +793,139 @@
       </section>
 
       <!-- =====================================================================
-           ABOUT SECTION & FOUNDER
+           ABOUT SECTION & FOUNDER (VERSION 2 EDITORIAL SHOWCASE CARD)
            ===================================================================== -->
-      <section class="w-full bg-surface-container-low py-16 lg:py-24" id="about-us">
+      <section class="w-full bg-surface py-12 lg:py-20 relative overflow-hidden" id="about-us">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <!-- Story Column -->
-            <div class="lg:col-span-7 flex flex-col gap-4" data-animate="fade-left">
-              <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Heritage &amp; Care</span>
-              <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">About Super Cleaners London</h2>
-              <p class="font-headline-md text-[24px] sm:text-headline-md italic text-secondary">
-                A family-run business, with a personal touch ♥
-              </p>
-              <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                Super Cleaners London is a family-run business established in 2006, providing reliable and high-quality cleaning services for homes and businesses across London.
-              </p>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                We take immense pride in our trusted team, obsessive attention to detail, and deeply personalised service. Whether you require meticulous regular housekeeping or a punctual end-of-tenancy clearance, our goal remains steadfast: to give you a cleaner, healthier space and total peace of mind.
-              </p>
+          <div class="relative rounded-3xl bg-surface-container-lowest border border-outline-variant/35 shadow-xl overflow-hidden p-6 sm:p-8 lg:p-10">
+            <!-- Ambient Soft Blur Accents -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-secondary-fixed/40 pointer-events-none blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-rose-100/60 pointer-events-none blur-3xl"></div>
 
-              <!-- Key Highlights Grid -->
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-3" data-stagger-group data-stagger-step="80">
-                <div data-float-y="-10" data-scroll-float>
-                  <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-xl text-center shadow-sm border border-outline-variant/25" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                    <span class="material-symbols-outlined text-secondary text-[24px] mb-1">verified</span>
-                    <p class="font-label-md text-label-md text-primary font-bold">Trusted</p>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant">Since 2006</p>
+            <div class="relative z-10 flex flex-col gap-10">
+              <!-- About Header Bar -->
+              <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-outline-variant/25 pb-6" data-animate="fade-up">
+                <div class="flex flex-col gap-2">
+                  <div class="inline-flex items-center gap-1.5 bg-secondary-fixed/50 px-3.5 py-1 rounded-full w-fit">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                    <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Heritage &amp; Care • Est. 2006</span>
+                  </div>
+                  <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">
+                    About <span class="text-secondary italic">Super Cleaners London</span>
+                  </h2>
+                </div>
+                <div class="scl-section-badge scl-float-gentle inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 px-4 py-2 rounded-2xl w-fit" data-float-y="-10" data-scroll-float>
+                  <span class="material-symbols-outlined text-error text-[22px]">favorite</span>
+                  <p class="font-headline-md text-[19px] sm:text-[20px] text-secondary italic font-semibold leading-tight">
+                    A family-run business, with a personal touch ♥
+                  </p>
+                </div>
+              </div>
+
+              <!-- Founder Portrait & Story Split -->
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                <div class="lg:col-span-5 flex flex-col items-center" data-animate="fade-left" data-float-rot="-1.2" data-float-y="-16" data-scroll-float>
+                  <div class="relative w-full max-w-sm rounded-2xl bg-surface-container-low p-3 shadow-lg border border-outline-variant/30 group" data-tilt-card data-tilt-max="3">
+                    <div class="relative rounded-xl overflow-hidden aspect-[4/5] bg-surface-container">
+                      <img
+                        alt="Portrait of founder Myriam Campbell wearing royal blue Super Cleaners London uniform apron smiling warmly"
+                        class="w-full h-full object-cover scl-img-zoom"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb0aUI8G2cdH9hgjnbBb3n0MvlVphwVsgawX-gpg4udbUmMxBD40_PgrhQZffhVxnBImemOn6m1jTjq-DSJPW-Q1pMetZOfzn6xREiwoOXJk_gax1aFhk04SR1r7HuoQJDqYE-nEjqVMOp7-S5UZ_Z9bSQR2z-YGikrrBcEyPpjNNCq_b1RbmcBohCNMf6zoUIdBvGn0a4cC9SvaHP6Mge7MEm_An5tDx2gTF12McoGXJbH_NiFphKEA"
+                      />
+                      <div class="scl-section-badge scl-float-gentle absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+                        <span class="material-symbols-outlined text-amber-400 text-[16px]">hotel_class</span>
+                        <span class="font-label-caps text-[11px] text-on-primary font-bold uppercase tracking-wider">Founder &amp; Director</span>
+                      </div>
+                      <div class="scl-section-badge absolute bottom-3 left-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md p-3 rounded-xl shadow-md border border-outline-variant/30">
+                        <div class="flex items-center justify-between">
+                          <div class="flex flex-col">
+                            <span class="font-headline-sm text-[18px] font-bold text-primary leading-tight">Myriam Campbell</span>
+                            <span class="font-label-sm text-label-sm text-secondary font-medium">Founder &amp; Director, Super Cleaners London</span>
+                          </div>
+                          <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div data-float-y="10" data-scroll-float>
-                  <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-xl text-center shadow-sm border border-outline-variant/25" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                    <span class="material-symbols-outlined text-secondary text-[24px] mb-1">diversity_3</span>
-                    <p class="font-label-md text-label-md text-primary font-bold">Experienced</p>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant">Vetted Team</p>
+
+                <div class="lg:col-span-7 flex flex-col gap-5" data-animate="fade-right">
+                  <div class="relative bg-surface-container-low/75 border border-outline-variant/25 rounded-2xl p-5 lg:p-6 shadow-sm" data-float-y="10" data-scroll-float>
+                    <span class="font-display-hero text-[56px] leading-none text-secondary/35 font-bold absolute -top-3 left-4 pointer-events-none">“</span>
+                    <blockquote class="font-headline-md text-[24px] sm:text-headline-md italic text-primary leading-snug pl-6 relative z-10">
+                      Our mission is to make your home or workplace a cleaner, healthier and happier place.”
+                    </blockquote>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant pl-6 pt-2 font-semibold uppercase tracking-wider">
+                      — Myriam Campbell • Founder &amp; Managing Director
+                    </p>
                   </div>
-                </div>
-                <div data-float-y="-10" data-scroll-float>
-                  <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-xl text-center shadow-sm border border-outline-variant/25" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                    <span class="material-symbols-outlined text-secondary text-[24px] mb-1">star</span>
-                    <p class="font-label-md text-label-md text-primary font-bold">Excellence</p>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant">High Standards</p>
+
+                  <div class="flex flex-col gap-3 text-on-surface-variant font-body-md">
+                    <p class="leading-relaxed">
+                      Founded in 2006, <strong class="text-primary font-semibold">Super Cleaners London</strong> has grown from an attentive neighbourhood cleaning service into London's premier residential housekeeping and commercial deep care specialist.
+                    </p>
+                    <p class="leading-relaxed">
+                      We take tremendous pride in our close-knit, highly experienced team and personal approach. Whether handling delicate heritage residences in Chelsea or modern corporate suites in the City, our commitment remains uncompromising: delivering effortless peace of mind and pristine cleanliness.
+                    </p>
                   </div>
-                </div>
-                <div data-float-y="10" data-scroll-float>
-                  <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-xl text-center shadow-sm border border-outline-variant/25" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                    <span class="material-symbols-outlined text-secondary text-[24px] mb-1">contract</span>
-                    <p class="font-label-md text-label-md text-primary font-bold">Transparent</p>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant">No Hidden Fees</p>
+
+                  <div class="flex flex-wrap items-center gap-2.5 pt-1">
+                    <div class="inline-flex items-center gap-1.5 bg-secondary-fixed px-3.5 py-1.5 rounded-full font-label-caps text-[11px] font-bold text-primary tracking-wide">
+                      <span class="material-symbols-outlined text-secondary text-[16px]">event_available</span>
+                      <span>Est. 2006 in London</span>
+                    </div>
+                    <div class="inline-flex items-center gap-1.5 bg-surface-container px-3.5 py-1.5 rounded-full font-label-caps text-[11px] font-bold text-primary tracking-wide">
+                      <span class="material-symbols-outlined text-secondary text-[16px]">family_restroom</span>
+                      <span>100% Family-Owned</span>
+                    </div>
+                    <div class="inline-flex items-center gap-1.5 bg-surface-container px-3.5 py-1.5 rounded-full font-label-caps text-[11px] font-bold text-primary tracking-wide">
+                      <span class="material-symbols-outlined text-secondary text-[16px]">security</span>
+                      <span>Fully Trained &amp; Insured</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Founder Quote & Portrait -->
-            <div class="lg:col-span-5 flex flex-col items-center" data-animate="fade-right" data-float-rot="1.2" data-float-y="-18" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-lg border border-outline-variant/30 relative w-full max-w-md group" data-tilt-card data-tilt-max="3">
-                <div class="relative rounded-xl overflow-hidden aspect-[4/5] mb-4">
-                  <img
-                    alt="Portrait of Myriam Campbell, Founder and Managing Director of Super Cleaners London"
-                    class="w-full h-full object-cover scl-img-zoom"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb0aUI8G2cdH9hgjnbBb3n0MvlVphwVsgawX-gpg4udbUmMxBD40_PgrhQZffhVxnBImemOn6m1jTjq-DSJPW-Q1pMetZOfzn6xREiwoOXJk_gax1aFhk04SR1r7HuoQJDqYE-nEjqVMOp7-S5UZ_Z9bSQR2z-YGikrrBcEyPpjNNCq_b1RbmcBohCNMf6zoUIdBvGn0a4cC9SvaHP6Mge7MEm_An5tDx2gTF12McoGXJbH_NiFphKEA"
-                  />
-                  <div class="scl-section-badge scl-float-gentle absolute top-3 right-3 bg-primary/90 text-on-primary backdrop-blur-md px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-md border border-white/20 text-xs font-bold">
-                    <span class="material-symbols-outlined text-amber-400 text-[16px]">workspace_premium</span>
-                    <span>Est. 2006 • 20 Years</span>
-                  </div>
-                  <div class="scl-section-badge absolute bottom-3 left-3 bg-surface-container-lowest/95 backdrop-blur-md px-3 py-1.5 rounded-lg flex items-center gap-2 shadow-sm">
-                    <span class="material-symbols-outlined text-error text-[18px]">verified</span>
-                    <span class="font-label-sm text-label-sm font-bold text-primary">Founder &amp; Director</span>
+              <!-- 4 Key Pillars Row -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2" data-stagger-group data-stagger-step="85">
+                <div data-float-y="-12" data-scroll-float>
+                  <div class="scl-card-interactive bg-surface-container-low p-5 rounded-2xl border border-outline-variant/30 flex flex-col gap-2 h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-600 text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                      <span class="material-symbols-outlined text-[24px]">verified_user</span>
+                    </div>
+                    <h3 class="font-headline-sm text-[18px] text-primary font-bold">Trusted Since 2006</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Nearly two decades of trusted service across London.</p>
                   </div>
                 </div>
-                <blockquote class="font-headline-md text-[24px] sm:text-headline-md italic text-primary leading-snug">
-                  “Our mission is to make your home or workplace a cleaner, healthier, and happier place.”
-                </blockquote>
-                <p class="font-label-md text-label-md font-bold text-secondary mt-3">Myriam Campbell</p>
-                <p class="font-label-sm text-label-sm text-on-surface-variant">Founder &amp; Managing Director</p>
+                <div data-float-y="12" data-scroll-float>
+                  <div class="scl-card-interactive bg-surface-container-low p-5 rounded-2xl border border-outline-variant/30 flex flex-col gap-2 h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-600 text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                      <span class="material-symbols-outlined text-[24px]">groups</span>
+                    </div>
+                    <h3 class="font-headline-sm text-[18px] text-primary font-bold">Experienced Team</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Experienced, uniformed cleaners who are fully trained and supervised.</p>
+                  </div>
+                </div>
+                <div data-float-y="-12" data-scroll-float>
+                  <div class="scl-card-interactive bg-surface-container-low p-5 rounded-2xl border border-outline-variant/30 flex flex-col gap-2 h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
+                    <div class="w-12 h-12 rounded-xl bg-secondary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                      <span class="material-symbols-outlined text-[24px]">clean_hands</span>
+                    </div>
+                    <h3 class="font-headline-sm text-[18px] text-primary font-bold">High Cleaning Standards</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">High quality cleaning products tailored to care for your home and workplace.</p>
+                  </div>
+                </div>
+                <div data-float-y="12" data-scroll-float>
+                  <div class="scl-card-interactive bg-surface-container-low p-5 rounded-2xl border border-outline-variant/30 flex flex-col gap-2 h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
+                    <div class="w-12 h-12 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm">
+                      <span class="material-symbols-outlined text-[24px]">task_alt</span>
+                    </div>
+                    <h3 class="font-headline-sm text-[18px] text-primary font-bold">Clear Pricing, No Hidden Fees</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">We clean from top to bottom, with additional services such as oven cleaning charged separately per item.</p>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -1072,164 +934,278 @@
       <!-- =====================================================================
            COVERAGE MAP & INTERACTIVE POSTCODE CHECKER SECTION
            ===================================================================== -->
-      <section class="w-full bg-surface py-16 lg:py-24" id="coverage-areas">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <!-- Areas List + Interactive Postcode Checker -->
-            <div class="lg:col-span-6 flex flex-col gap-5" data-animate="fade-left">
-              <div class="flex flex-col gap-1.5">
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Service Range</span>
-                <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Areas We Cover</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant">
-                  Professional cleaning across Central, West, South-West London and surrounding boroughs. Select a borough or check your postcode below:
+      <section class="w-full bg-surface-container-low py-16 lg:py-24 relative overflow-hidden" id="coverage-areas">
+        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin relative z-10 flex flex-col gap-10">
+
+          <!-- Section Header with Flyer Accent -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-outline-variant/30 pb-6" data-animate="fade-up">
+            <div class="flex flex-col gap-2 max-w-2xl">
+              <div class="inline-flex items-center gap-1.5 bg-secondary-fixed/50 px-3.5 py-1 rounded-full w-fit">
+                <span class="material-symbols-outlined text-secondary text-[18px]">location_on</span>
+                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">London &amp; Surrounding Areas</span>
+              </div>
+              <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">
+                Areas We <span class="text-secondary italic">Cover</span>
+              </h2>
+              <p class="font-body-lg text-[16px] sm:text-body-lg text-on-surface-variant">
+                Professional cleaning across London and surrounding areas with trusted, local housekeepers and technicians.
+              </p>
+            </div>
+
+            <!-- Flyer-style Badge & Handwritten Script Tagline -->
+            <div class="scl-section-badge scl-float-gentle flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/35" data-scroll-float="-14" data-scroll-rot="1.5">
+              <div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
+                <span class="material-symbols-outlined text-[28px]">location_city</span>
+              </div>
+              <div>
+                <p class="font-headline-md text-[20px] text-secondary italic font-semibold leading-tight flex items-center gap-1">
+                  Local • Reliable • Trusted <span class="text-error text-[18px] inline-block">♥</span>
                 </p>
+                <div class="flex items-center gap-2 mt-1">
+                  <span class="font-label-caps text-label-caps tracking-widest bg-secondary-fixed text-primary px-2 py-0.5 rounded font-bold uppercase">
+                    Cleaning London Since 2006 ♥
+                  </span>
+                </div>
               </div>
+            </div>
+          </div>
 
-              <!-- Interactive Coverage Pins Grid -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-2.5 gap-x-3 pt-1 font-body-sm text-body-sm text-primary">
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="fulham" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Fulham (SW6)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="chelsea" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Chelsea (SW3, SW10)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="hammersmith" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Hammersmith (W6)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="parsons-green" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Parsons Green (SW6)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="putney" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Putney (SW15)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="south-kensington" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">South Kensington (SW7)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="battersea" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Battersea (SW11)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="clapham" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Clapham (SW4)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="chiswick" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Chiswick (W4)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="west-brompton" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">West Brompton (SW10)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="wandsworth" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Wandsworth (SW18)</span>
-                </button>
-                <button class="flex items-center gap-1.5 p-2 rounded-lg hover:bg-secondary-fixed/50 hover:text-secondary transition-colors text-left" data-borough="bromley" type="button">
-                  <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                  <span class="font-medium">Bromley &amp; More...</span>
-                </button>
-              </div>
+          <!-- Two-column split: Interactive Boroughs List + Stylized London Map -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
 
-              <!-- Interactive Postcode Checker Bar -->
-              <div class="bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/35 shadow-sm flex flex-col gap-2.5">
-                <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold flex items-center gap-1.5" for="postcode-input">
-                  <span class="material-symbols-outlined text-secondary text-[18px]">search</span>
-                  <span>Check Instant Availability in Your London Postcode:</span>
-                </label>
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-                  <input
-                    class="w-full px-3.5 py-2.5 text-body-sm rounded-xl bg-surface border border-outline-variant/45 focus:border-secondary"
-                    id="postcode-input"
-                    placeholder="Enter postcode or borough (e.g. SW3, SW6, W8, Putney)"
-                    type="text"
-                  />
-                  <button
-                    class="btn-primary-royal px-5 py-2.5 rounded-xl font-label-md text-label-md shrink-0"
-                    id="check-postcode-btn"
-                    type="button"
-                  >
-                    Check Area
+            <!-- Column 1: Boroughs Grid & Coverage Check -->
+            <div class="lg:col-span-6 flex flex-col gap-5" data-animate="fade-left" data-scroll-float="12">
+              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/35 flex flex-col gap-4" data-tilt-card>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary text-[24px]">near_me</span>
+                    <h3 class="font-headline-sm text-headline-sm text-primary font-bold">London Boroughs We Serve</h3>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-medium bg-surface-container px-2.5 py-1 rounded-full">
+                    Click to Inspect
+                  </span>
+                </div>
+
+                <!-- London Boroughs Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-2.5 gap-x-2 pt-1" id="boroughs-grid">
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="fulham" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Fulham</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="chelsea" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Chelsea</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="hammersmith" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Hammersmith</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="parsons-green" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Parsons Green</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="putney" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Putney</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="south-kensington" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">South Kensington</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="battersea" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Battersea</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="clapham" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Clapham</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="chiswick" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Chiswick</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="west-brompton" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">West Brompton</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="wandsworth" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Wandsworth</span>
+                  </button>
+                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="bromley" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
+                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Bromley</span>
                   </button>
                 </div>
-                <div aria-live="polite" class="hidden" id="postcode-status"></div>
+
+                <!-- Postcode Quick Checker Input -->
+                <div class="pt-3 border-t border-outline-variant/30 flex flex-col gap-2.5">
+                  <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold flex items-center gap-1.5" for="postcode-input">
+                    <span class="material-symbols-outlined text-secondary text-[16px]">search</span>
+                    <span>Enter London Postcode or Area:</span>
+                  </label>
+                  <div class="flex items-center gap-2">
+                    <input
+                      class="w-full px-3.5 py-2.5 text-body-sm rounded-xl bg-surface border border-outline-variant/45 focus:outline-none focus:border-secondary"
+                      id="postcode-input"
+                      placeholder="e.g. SW3, SW6, W8, Putney"
+                      type="text"
+                    />
+                    <button
+                      class="btn-primary-royal px-5 py-2.5 rounded-xl font-label-md text-label-md shrink-0"
+                      id="check-postcode-btn"
+                      type="button"
+                    >
+                      Check
+                    </button>
+                  </div>
+                  <div aria-live="polite" class="hidden" id="postcode-status"></div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-1">
+                  <a
+                    class="w-full inline-flex items-center justify-center gap-2 btn-primary-royal px-6 py-3.5 rounded-xl font-label-md text-label-md"
+                  >
+                    <span class="material-symbols-outlined text-[20px]">travel_explore</span>
+                    <span>Book for Your Postcode →</span>
+                  </a>
+                </div>
               </div>
 
-              <!-- Notice Pill -->
-              <div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-3 text-primary border border-outline-variant/25" data-float-y="10" data-scroll-float>
-                <span class="material-symbols-outlined text-secondary text-[24px] shrink-0">directions_car</span>
-                <p class="font-body-sm text-body-sm text-on-surface">
-                  We also service other postcodes across Greater London. Get in touch to check same-day slots.
+              <!-- Service Extension Van Notice -->
+              <div class="scl-section-badge scl-float-gentle-delayed bg-secondary-fixed/40 p-4 rounded-2xl flex items-center gap-4 border border-secondary-fixed-dim/50 shadow-sm" data-scroll-float="-8">
+                <div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-secondary flex items-center justify-center shrink-0 shadow-sm">
+                  <span class="material-symbols-outlined text-[28px]">local_shipping</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-primary leading-snug">
+                  <strong class="font-bold">We also cover all other London postcodes!</strong> Get in touch with our friendly dispatch desk to confirm instant slot availability.
                 </p>
               </div>
             </div>
 
-            <!-- Stylized Map Graphic Box -->
-            <div class="lg:col-span-6" data-animate="fade-right" data-float-rot="-1.2" data-float-y="-16" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-md border border-outline-variant/30 relative overflow-hidden flex flex-col justify-between min-h-[400px]" data-tilt-card data-tilt-max="3">
-                <!-- Decorative London Vector Backing -->
-                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#295ea8_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            <!-- Column 2: Stylized London Thames Coverage Map Graphic -->
+            <div class="lg:col-span-6 relative" data-animate="fade-right" data-scroll-float="-14" data-scroll-rot="0.7">
+              <div class="scl-card-interactive bg-surface-container-lowest rounded-2xl p-5 sm:p-6 border border-outline-variant/35 shadow-md relative overflow-hidden flex flex-col justify-between min-h-[460px]" data-tilt-card>
 
-                <div class="relative z-10 flex items-center justify-between pb-4">
-                  <div>
-                    <p class="font-headline-md text-[26px] sm:text-headline-md italic text-secondary">Local • Reliable • Trusted ♥</p>
-                    <p class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold">Cleaning London Since 2006</p>
+                <!-- Map Header Info -->
+                <div class="flex items-center justify-between pb-3 border-b border-outline-variant/20 z-10">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Active Live Coverage Map</span>
                   </div>
-                  <div class="scl-section-badge scl-float-gentle w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 shadow-sm">
-                    <span class="material-symbols-outlined text-[26px]">map</span>
+                  <div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">hub</span>
+                    <span>Greater London Hubs</span>
                   </div>
                 </div>
 
-                <!-- Stylised Thames River Representation with Interactive Area Pins -->
-                <div class="relative z-10 my-3 h-56 w-full bg-surface-container-low rounded-xl flex items-center justify-center p-4 overflow-hidden border border-outline-variant/20">
-                  <svg class="absolute inset-0 w-full h-full text-secondary-fixed opacity-75 pointer-events-none" fill="none" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M-20,120 C80,100 120,160 220,90 C320,20 360,110 420,70" stroke="currentColor" stroke-linecap="round" stroke-width="24"></path>
+                <!-- Interactive Vector Styled London Map Canvas -->
+                <div class="relative w-full h-[360px] rounded-xl bg-gradient-to-br from-surface to-surface-container-low overflow-hidden my-2 flex items-center justify-center border border-outline-variant/20">
+
+                  <!-- Stylized River Thames SVG Path -->
+                  <svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="50" x2="50" y1="0" y2="360"></line>
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="150" x2="150" y1="0" y2="360"></line>
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="250" x2="250" y1="0" y2="360"></line>
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="350" x2="350" y1="0" y2="360"></line>
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="450" x2="450" y1="0" y2="360"></line>
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="0" x2="500" y1="90" y2="90"></line>
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="0" x2="500" y1="180" y2="180"></line>
+                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="0" x2="500" y1="270" y2="270"></line>
+
+                    <!-- London Landmark Watermark -->
+                    <path d="M 420 80 L 420 50 L 425 45 L 430 50 L 430 80 Z M 418 80 L 432 80 M 425 35 L 425 45" fill="none" stroke="rgba(41, 94, 168, 0.25)" stroke-width="1.5"></path>
+                    <circle cx="450" cy="65" fill="none" r="18" stroke="rgba(41, 94, 168, 0.25)" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+                    <line stroke="rgba(41, 94, 168, 0.25)" stroke-width="1.5" x1="450" x2="445" y1="65" y2="90"></line>
+                    <line stroke="rgba(41, 94, 168, 0.25)" stroke-width="1.5" x1="450" x2="455" y1="65" y2="90"></line>
+
+                    <!-- River Thames Curved Ribbon -->
+                    <path d="M 0 170 C 70 180, 110 240, 160 230 C 220 215, 240 130, 310 145 C 370 160, 420 120, 500 135" opacity="0.45" stroke="#80aefe" stroke-linecap="round" stroke-width="18"></path>
+                    <path d="M 0 170 C 70 180, 110 240, 160 230 C 220 215, 240 130, 310 145 C 370 160, 420 120, 500 135" opacity="0.7" stroke="#295ea8" stroke-linecap="round" stroke-width="6"></path>
                   </svg>
 
-                  <!-- Interactive Location Tags on Map -->
-                  <div class="relative z-10 grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-center w-full max-w-md">
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="south-kensington" id="pin-south-kensington" type="button">
-                      Kensington
-                    </button>
-                    <button class="map-pin bg-primary text-on-primary px-2.5 py-1.5 rounded-lg shadow-md text-xs font-bold hover:bg-secondary transition-colors" data-borough="westminster" id="pin-central-london" type="button">
-                      Central London
-                    </button>
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="chelsea" id="pin-chelsea" type="button">
-                      Chelsea
-                    </button>
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="fulham" id="pin-fulham" type="button">
-                      Fulham
-                    </button>
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="battersea" id="pin-battersea" type="button">
-                      Battersea
-                    </button>
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="clapham" id="pin-clapham" type="button">
-                      Clapham
-                    </button>
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="hammersmith" id="pin-hammersmith" type="button">
-                      Hammersmith
-                    </button>
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="putney" id="pin-putney" type="button">
-                      Putney
-                    </button>
-                    <button class="map-pin bg-surface-container-lowest/95 px-2.5 py-1.5 rounded-lg shadow-sm text-xs font-bold text-primary hover:bg-secondary hover:text-white transition-colors" data-borough="chiswick" id="pin-chiswick" type="button">
-                      Chiswick
+                  <!-- Central London Diamond Badge -->
+                  <div class="absolute top-[18%] left-[54%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
+                    <button class="map-pin bg-primary text-on-primary px-2.5 py-1 rounded-full shadow-md flex items-center gap-1 border border-secondary-fixed/50 hover:scale-105 transition-transform" data-borough="westminster" id="pin-central-london" type="button">
+                      <span class="material-symbols-outlined text-secondary-fixed text-[14px]">hotel_class</span>
+                      <span class="font-label-caps text-[10px] font-bold tracking-wider uppercase">Central London</span>
                     </button>
                   </div>
+
+                  <!-- Floating Borough Pin Badges -->
+                  <button class="map-pin absolute top-[32%] left-[8%] sm:left-[10%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="chiswick" id="pin-chiswick" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Chiswick</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[28%] left-[26%] sm:left-[28%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="hammersmith" id="pin-hammersmith" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Hammersmith</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[26%] left-[48%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="south-kensington" id="pin-south-kensington" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">South Kensington</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[42%] left-[52%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-md border-2 border-secondary hover:scale-105 transition-all cursor-pointer" data-borough="chelsea" id="pin-chelsea" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">star</span>
+                    <span class="font-label-caps text-[11px] text-secondary font-bold">Chelsea</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[46%] left-[28%] sm:left-[30%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-md border-2 border-secondary hover:scale-105 transition-all cursor-pointer" data-borough="fulham" id="pin-fulham" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">star</span>
+                    <span class="font-label-caps text-[11px] text-secondary font-bold">Fulham</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[38%] left-[36%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="west-brompton" id="pin-west-brompton" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">West Brompton</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[58%] left-[22%] sm:left-[26%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="parsons-green" id="pin-parsons-green" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Parsons Green</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[70%] left-[18%] sm:left-[20%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="putney" id="pin-putney" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Putney</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[55%] left-[50%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="battersea" id="pin-battersea" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Battersea</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[75%] left-[40%] sm:left-[42%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="wandsworth" id="pin-wandsworth" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Wandsworth</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[68%] left-[60%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="clapham" id="pin-clapham" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Clapham</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[82%] left-[72%] sm:left-[76%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="bromley" id="pin-bromley" type="button">
+                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                    <span class="font-label-caps text-[11px] text-primary font-bold">Bromley</span>
+                  </button>
                 </div>
 
-                <div class="relative z-10 flex items-center justify-between text-on-surface-variant pt-2 font-label-sm text-label-sm">
-                  <span>All 32 London Boroughs Accommodated</span>
-                  <span class="text-secondary font-bold">Rapid Van Response</span>
+                <!-- Map Footer Note -->
+                <div class="flex flex-wrap items-center justify-between gap-2 pt-2 text-on-surface-variant font-label-sm text-label-sm border-t border-outline-variant/20">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-secondary-container inline-block"></span>
+                    <span>River Thames Corridor</span>
+                  </div>
+                  <span class="font-medium text-secondary">South-West &amp; Central London Priority Hub</span>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -1237,54 +1213,54 @@
       <!-- =====================================================================
            CLEANING JOURNAL
            ===================================================================== -->
-      <section class="w-full bg-surface py-16 lg:py-24" id="cleaning-journal">
+      <section class="w-full bg-primary py-16 lg:py-24 relative overflow-hidden" id="cleaning-journal">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
-          <div class="text-center max-w-2xl mx-auto flex flex-col gap-2" data-animate="fade-up">
-            <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">From the Journal</span>
-            <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Cleaning Tips &amp; Advice</h2>
-            <div class="w-16 h-1 bg-error mx-auto rounded-full mt-1 mb-2"></div>
-            <p class="font-body-md text-body-md text-on-surface-variant">Practical guidance from our London cleaning team to help you care for your home.</p>
+          <div class="text-center max-w-2xl mx-auto flex flex-col gap-2" data-animate="fade-up" data-scroll-float="-8">
+            <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">The Housekeeping Edit</span>
+            <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-on-primary font-bold tracking-tight">Notes for a Better-kept Home</h2>
+            <div class="w-16 h-1 bg-amber-400 mx-auto rounded-full mt-1 mb-2"></div>
+            <p class="font-body-md text-body-md text-surface-container-highest">Thoughtful advice from our London cleaning team for considered everyday care.</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
-            <article class="scl-card-interactive bg-surface-container-lowest rounded-2xl p-6 sm:p-7 shadow-sm border border-outline-variant/30 flex flex-col gap-4" data-animate="fade-up" data-tilt-card>
-              <div class="w-12 h-12 rounded-xl bg-secondary-fixed/70 text-secondary flex items-center justify-center">
-                <span class="material-symbols-outlined text-[26px]">calendar_month</span>
+            <article class="scl-card-interactive bg-primary-container rounded-2xl overflow-hidden shadow-lg border border-white/10 flex flex-col" data-animate="fade-up" data-scroll-float="8" data-tilt-card>
+              <div class="h-36 bg-gradient-to-br from-blue-400/30 via-secondary/25 to-primary-container flex items-center justify-center border-b border-white/10">
+                <span class="material-symbols-outlined text-[54px] text-secondary-fixed">calendar_month</span>
               </div>
-              <div class="flex flex-col gap-2">
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Home Care</span>
-                <h3 class="font-headline-sm text-[21px] text-primary font-bold">How Often Should You Deep Clean Your Home?</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">A room-by-room guide to building a deep-cleaning routine that keeps busy London homes feeling fresh.</p>
+              <div class="p-6 sm:p-7 flex flex-col gap-2">
+                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">Home Care · 5 min read</span>
+                <h3 class="font-headline-sm text-[21px] text-on-primary font-bold">How Often Should You Deep Clean Your Home?</h3>
+                <p class="font-body-sm text-body-sm text-surface-container-highest leading-relaxed">A room-by-room guide to building a deep-cleaning routine that keeps busy London homes feeling fresh.</p>
               </div>
-              <span class="mt-auto inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary">
+              <span class="mt-auto px-6 sm:px-7 pb-6 sm:pb-7 inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary-fixed">
                 Cleaning advice <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
               </span>
             </article>
 
-            <article class="scl-card-interactive bg-surface-container-lowest rounded-2xl p-6 sm:p-7 shadow-sm border border-outline-variant/30 flex flex-col gap-4" data-animate="fade-up" data-tilt-card>
-              <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center">
-                <span class="material-symbols-outlined text-[26px]">checklist</span>
+            <article class="scl-card-interactive bg-primary-container rounded-2xl overflow-hidden shadow-lg border border-white/10 flex flex-col" data-animate="fade-up" data-scroll-float="-6" data-tilt-card>
+              <div class="h-36 bg-gradient-to-br from-rose-400/30 via-purple-500/20 to-primary-container flex items-center justify-center border-b border-white/10">
+                <span class="material-symbols-outlined text-[54px] text-rose-200">checklist</span>
               </div>
-              <div class="flex flex-col gap-2">
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Moving Home</span>
-                <h3 class="font-headline-sm text-[21px] text-primary font-bold">A Stress-Free End-of-Tenancy Checklist</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">The details tenants and landlords often overlook before a final inventory inspection.</p>
+              <div class="p-6 sm:p-7 flex flex-col gap-2">
+                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">Moving Home · 4 min read</span>
+                <h3 class="font-headline-sm text-[21px] text-on-primary font-bold">A Stress-Free End-of-Tenancy Checklist</h3>
+                <p class="font-body-sm text-body-sm text-surface-container-highest leading-relaxed">The details tenants and landlords often overlook before a final inventory inspection.</p>
               </div>
-              <span class="mt-auto inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary">
+              <span class="mt-auto px-6 sm:px-7 pb-6 sm:pb-7 inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary-fixed">
                 Moving guidance <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
               </span>
             </article>
 
-            <article class="scl-card-interactive bg-surface-container-lowest rounded-2xl p-6 sm:p-7 shadow-sm border border-outline-variant/30 flex flex-col gap-4" data-animate="fade-up" data-tilt-card>
-              <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
-                <span class="material-symbols-outlined text-[26px]">eco</span>
+            <article class="scl-card-interactive bg-primary-container rounded-2xl overflow-hidden shadow-lg border border-white/10 flex flex-col" data-animate="fade-up" data-scroll-float="8" data-tilt-card>
+              <div class="h-36 bg-gradient-to-br from-emerald-400/30 via-teal-500/20 to-primary-container flex items-center justify-center border-b border-white/10">
+                <span class="material-symbols-outlined text-[54px] text-emerald-200">eco</span>
               </div>
-              <div class="flex flex-col gap-2">
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Healthy Home</span>
-                <h3 class="font-headline-sm text-[21px] text-primary font-bold">Choosing Cleaning Products for Pets &amp; Children</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Simple ways to reduce harsh residues while keeping kitchens, floors and family spaces clean.</p>
+              <div class="p-6 sm:p-7 flex flex-col gap-2">
+                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">Healthy Home · 6 min read</span>
+                <h3 class="font-headline-sm text-[21px] text-on-primary font-bold">Choosing Cleaning Products for Pets &amp; Children</h3>
+                <p class="font-body-sm text-body-sm text-surface-container-highest leading-relaxed">Simple ways to reduce harsh residues while keeping kitchens, floors and family spaces clean.</p>
               </div>
-              <span class="mt-auto inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary">
+              <span class="mt-auto px-6 sm:px-7 pb-6 sm:pb-7 inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary-fixed">
                 Healthy home tips <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
               </span>
             </article>
@@ -1293,154 +1269,85 @@
       </section>
 
 
-      <!-- =====================================================================
-           MEET OUR TEAM SECTION
+            <!-- =====================================================================
+           MEET OUR TEAM SECTION (FEATURING SUPER CLEANERS LONDON TEAM PHOTO)
            ===================================================================== -->
-      <section class="w-full bg-surface-container-low py-16 lg:py-24" id="team">
+      <section class="w-full bg-surface-container-low py-16 lg:py-24 border-t border-outline-variant/25" id="team">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
-          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4" data-animate="fade-up" data-float-y="-10" data-scroll-float>
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4" data-animate="fade-up">
             <div>
               <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Our People</span>
-              <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Meet Our Team ♥</h2>
-              <p class="font-body-md text-body-md text-on-surface-variant">A dedicated, warm, and highly vetted team here for your sanctuary.</p>
+              <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Meet Our Team</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">Experienced, uniformed, and dedicated cleaners ready to care for your London home and business.</p>
             </div>
-            <p class="font-headline-md text-[24px] sm:text-headline-md italic text-secondary self-start sm:self-auto">
-              The Team Behind the Shine ♥
+            <p class="font-headline-md text-[24px] sm:text-headline-md italic text-secondary self-start sm:self-auto" data-scroll-float="-10" data-scroll-rot="-1.5">
+              The Team Behind the Shine
             </p>
           </div>
 
-          <!-- Team Gallery Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger-group data-stagger-step="90">
-            <!-- Team Member 1: Myriam -->
-            <div data-float-y="-14" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between border border-outline-variant/30 group h-full" data-animate="fade-up" data-tilt-card data-tilt-max="3.5">
-                <div>
-                  <div class="rounded-xl overflow-hidden aspect-square mb-3.5 relative">
-                    <img
-                      alt="Myriam Campbell - Founder"
-                      class="w-full h-full object-cover scl-img-zoom"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlMXwqTleHDQJ59YBdLIZ5fRiveVBATbdmpOiRv7d-4zyL-NRAaAA1rGxgPZzCVsMy1R84puGF5KvF8mYrTaY9DfnZ-Kd5dYD2GX09KoASxiZNp-DAYJ9igEuadyIj1sTNOaDeuddPbTKhYyxphP0DGmUrIXzQQlSbKLBT0AY6PMlFXrzy6Kk22Znale4FDSKQlS7fc12kNaJkvJRJAHxhEwK6t1WTg80n1a_HLUXNt6CDlc_g_P8ZGw"
-                    />
-                    <div class="scl-section-badge absolute bottom-2.5 left-2.5 bg-primary/85 text-on-primary text-xs px-2.5 py-1 rounded-full font-label-sm flex items-center gap-1 backdrop-blur-sm">
-                      <span class="material-symbols-outlined text-[14px] text-amber-400">verified</span>
-                      <span>Since 2006</span>
+          <!-- Team Showcase Layout: Main Team Photo + Key Pillars -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left: Showcase Photo of Team in branded uniforms -->
+            <div class="lg:col-span-7" data-animate="fade-left">
+              <div class="scl-card-interactive bg-surface-container-lowest p-3 sm:p-4 rounded-3xl shadow-md border border-outline-variant/35 overflow-hidden group">
+                <div class="rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] relative">
+                  <img
+                    alt="Super Cleaners London Professional Cleaning Team in branded uniforms"
+                    class="w-full h-full object-cover object-center scl-img-zoom"
+                    src="images/team.jpg"
+                  />
+                  <div class="absolute bottom-3 left-3 right-3 sm:left-4 sm:right-auto z-10">
+                    <div class="bg-primary/90 text-on-primary backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg inline-flex items-center gap-2 text-xs sm:text-sm font-semibold">
+                      <span class="material-symbols-outlined text-amber-300 text-[18px]">verified</span>
+                      <span>Super Cleaners London Dedicated Team</span>
                     </div>
                   </div>
-                  <div class="text-center">
-                    <h3 class="font-label-md text-label-md font-bold text-primary">Myriam Campbell</h3>
-                    <p class="font-label-sm text-label-sm text-secondary font-semibold">Founder &amp; Managing Director</p>
-                    <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-                      Overseeing quality assurance &amp; bespoke client care across London.
-                    </p>
-                  </div>
-                </div>
-                <div class="mt-4 pt-2.5 border-t border-outline-variant/30 flex items-center justify-center gap-1.5 text-xs text-on-surface-variant font-label-sm">
-                  <span class="material-symbols-outlined text-[15px] text-secondary">shield</span>
-                  <span>Enhanced DBS Checked</span>
                 </div>
               </div>
             </div>
 
-            <!-- Team Member 2: Elena -->
-            <div data-float-y="14" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between border border-outline-variant/30 group h-full" data-animate="fade-up" data-tilt-card data-tilt-max="3.5">
-                <div>
-                  <div class="rounded-xl overflow-hidden aspect-square mb-3.5 relative">
-                    <img
-                      alt="Elena Petrova - Head of Housekeeping"
-                      class="w-full h-full object-cover scl-img-zoom"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRxiIZXT_sDqdVyNQli-QEKxykUA8DxlMtc7qsrq4skD0JMq3V2LcmtuTDS5Do9FB5sxRbE-Rx7N504XzmaoE-lyJIgZbdfsOEuPnGYnYpeBxx-N8wYCVUzM2EwVL4gda8fYRfNTb-8ZMIifbTjqJmhiCRUbWgV6yS5K-1fY_VWz-dPzF4_TShNZmFEKw-KAIeqQqn4W97Rj3PEZ5JcMSbVfsa3jQBPUD0VfBj-ZEbX-SOD4Y3K5q8hw"
-                    />
-                    <div class="scl-section-badge absolute bottom-2.5 left-2.5 bg-primary/85 text-on-primary text-xs px-2.5 py-1 rounded-full font-label-sm flex items-center gap-1 backdrop-blur-sm">
-                      <span class="material-symbols-outlined text-[14px] text-amber-400">star</span>
-                      <span>9 Yrs Experience</span>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <h3 class="font-label-md text-label-md font-bold text-primary">Elena Petrova</h3>
-                    <p class="font-label-sm text-label-sm text-secondary font-semibold">Head of Housekeeping</p>
-                    <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-                      Specialising in luxury residential upkeep &amp; fine fabrics in SW3 and SW7.
-                    </p>
-                  </div>
+            <!-- Right: 4 Team Credibility Pillars -->
+            <div class="lg:col-span-5 flex flex-col gap-4" data-animate="fade-right">
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">badge</span>
                 </div>
-                <div class="mt-4 pt-2.5 border-t border-outline-variant/30 flex items-center justify-center gap-1.5 text-xs text-on-surface-variant font-label-sm">
-                  <span class="material-symbols-outlined text-[15px] text-secondary">shield</span>
-                  <span>Enhanced DBS Checked</span>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Fully Trained &amp; Supervised</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Every specialist undergoes thorough in-house training with regular quality supervision.</p>
+                </div>
+              </div>
+
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">sentiment_satisfied</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Friendly &amp; Respectful</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Punctual, discreet, and courteous professionals you can feel comfortable having in your space.</p>
+                </div>
+              </div>
+
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">security</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Fully Insured</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Full public liability insurance coverage for complete peace of mind on every visit.</p>
+                </div>
+              </div>
+
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">support_agent</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Direct WhatsApp Support</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Quick communication directly with our London coordination desk on 07786 282887 or 07507 00167.</p>
                 </div>
               </div>
             </div>
-
-            <!-- Team Member 3: Sofia -->
-            <div data-float-y="-14" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between border border-outline-variant/30 group h-full" data-animate="fade-up" data-tilt-card data-tilt-max="3.5">
-                <div>
-                  <div class="rounded-xl overflow-hidden aspect-square mb-3.5 relative">
-                    <img
-                      alt="Sofia Vance - Deep Clean Senior"
-                      class="w-full h-full object-cover scl-img-zoom"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuApuyKfNA9zBGbfUsXrvpqRRlbCl8eBQCEYCtZNkDGErd-WftRVfDgk4jd8-zEsOimlaJbKsB_0Qx4yszf-Igc4QS_iGmM61UdG71hkd1uTcm64Rss6dZDPzKyA-REPE_Zt4PK-WG62fl-mXtpuvlb1nm01kmHWs_2n9qvGm26lh4N8tTYIrBc8zNlF183sN0m0CCM_6mQrh63WkYs1Cm6WU6zr9bLbSQ_MZc84jLMx9rXyl0fEkiEzUg"
-                    />
-                    <div class="scl-section-badge absolute bottom-2.5 left-2.5 bg-primary/85 text-on-primary text-xs px-2.5 py-1 rounded-full font-label-sm flex items-center gap-1 backdrop-blur-sm">
-                      <span class="material-symbols-outlined text-[14px] text-amber-400">verified</span>
-                      <span>Master Certified</span>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <h3 class="font-label-md text-label-md font-bold text-primary">Sofia Vance</h3>
-                    <p class="font-label-sm text-label-sm text-secondary font-semibold">Deep Clean &amp; Tenancy Lead</p>
-                    <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-                      Expert in tenancy handovers, oven valeting, and post-builder restoration.
-                    </p>
-                  </div>
-                </div>
-                <div class="mt-4 pt-2.5 border-t border-outline-variant/30 flex items-center justify-center gap-1.5 text-xs text-on-surface-variant font-label-sm">
-                  <span class="material-symbols-outlined text-[15px] text-secondary">shield</span>
-                  <span>Enhanced DBS Checked</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Team Member 4: James & Marcus -->
-            <div data-float-y="14" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between border border-outline-variant/30 group h-full" data-animate="fade-up" data-tilt-card data-tilt-max="3.5">
-                <div>
-                  <div class="rounded-xl overflow-hidden aspect-square mb-3.5 relative">
-                    <img
-                      alt="Specialist Carpet &amp; Equipment Unit"
-                      class="w-full h-full object-cover scl-img-zoom"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBKLBsrlq78EybeCaINanspNukymTVjqx37bLuac-9IOmn7oicv2znEWNbyXaI1Pnprqu-yMyCY9UulUyVHux-G2YMsnl-xpz2yO9vxS4QxBM-IYyM9Pqj_afDgg1nWMq3mJ8poUGnIUPzABKoQtUVlTlWGf6y3TuSwUJ69sO1Sr4gCJwmO1bYACJT9ssjOq0Jr8YCT-PuI4F6qaJjP3yFl24U7mHzoMbsdMZFLXaA9q3R7KKfqSMUEQ"
-                    />
-                    <div class="scl-section-badge absolute bottom-2.5 left-2.5 bg-primary/85 text-on-primary text-xs px-2.5 py-1 rounded-full font-label-sm flex items-center gap-1 backdrop-blur-sm">
-                      <span class="material-symbols-outlined text-[14px] text-amber-400">sanitizer</span>
-                      <span>Prochem &amp; Henry</span>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <h3 class="font-label-md text-label-md font-bold text-primary">James &amp; Marcus</h3>
-                    <p class="font-label-sm text-label-sm text-secondary font-semibold">Carpet &amp; Upholstery Technicians</p>
-                    <p class="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-                      Hot water steam extraction and commercial heavy-duty floor restoration.
-                    </p>
-                  </div>
-                </div>
-                <div class="mt-4 pt-2.5 border-t border-outline-variant/30 flex items-center justify-center gap-1.5 text-xs text-on-surface-variant font-label-sm">
-                  <span class="material-symbols-outlined text-[15px] text-secondary">shield</span>
-                  <span>Enhanced DBS Checked</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2" data-animate="fade-up">
-            <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
-              <span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
-              <span>All staff members are 100% directly employed, rigorously trained, and DBS checked.</span>
-            </div>
-            <a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-primary transition-colors group">
-              <span class="group-hover:underline">View Client Reviews</span>
-              <span class="material-symbols-outlined text-[18px] scl-icon-shift">arrow_forward</span>
-            </a>
           </div>
         </div>
       </section>
@@ -1457,8 +1364,7 @@
               <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">What Our Clients Say ♥</h2>
               <p class="font-body-md text-body-md text-on-surface-variant">Real London homeowners. Real homes. Real spotless results.</p>
             </div>
-
-            <div class="scl-section-badge scl-float-gentle flex items-center gap-4 bg-surface-container-lowest px-6 py-3.5 rounded-2xl shadow-sm border border-outline-variant/30 w-fit" data-float-y="-12" data-scroll-float>
+            <div class="scl-section-badge scl-float-gentle flex items-center gap-4 bg-surface-container-lowest px-6 py-3.5 rounded-2xl shadow-sm border border-outline-variant/30 w-fit" data-scroll-float="-12" data-scroll-rot="1.2">
               <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shadow-sm">
                 <span class="font-bold text-primary font-headline-sm">G</span>
               </div>
@@ -1479,77 +1385,71 @@
           <!-- Testimonial Cards -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger-group data-stagger-step="100">
             <!-- Review 1 -->
-            <div data-float-y="-14" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between h-full" data-animate="fade-up" data-tilt-card data-tilt-max="3.5">
-                <div class="flex flex-col gap-3">
-                  <div class="flex text-amber-500">
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  </div>
-                  <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
-                    “Super Cleaners London are fantastic! Always reliable, professional and the standard of cleaning is excellent. My home has never looked better!”
-                  </p>
+            <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between" data-animate="fade-up" data-scroll-float="12" data-scroll-rot="-0.8" data-tilt-card>
+              <div class="flex flex-col gap-3">
+                <div class="flex text-amber-500">
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
-                  <div>
-                    <p class="font-label-md text-label-md font-bold text-primary">Nayeli S.</p>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant">Fulham Homeowner</p>
-                  </div>
-                  <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+                  “Super Cleaners London are fantastic! Always reliable, professional and the standard of cleaning is excellent. My home has never looked better!”
+                </p>
+              </div>
+              <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
+                <div>
+                  <p class="font-label-md text-label-md font-bold text-primary">Nayeli S.</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">Fulham Homeowner</p>
                 </div>
+                <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
               </div>
             </div>
 
             <!-- Review 2 -->
-            <div data-float-y="14" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between h-full" data-animate="fade-up" data-tilt-card data-tilt-max="3.5">
-                <div class="flex flex-col gap-3">
-                  <div class="flex text-amber-500">
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  </div>
-                  <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
-                    “I booked a last minute clean and they were amazing. Friendly, efficient and very thorough. Highly recommend this company!”
-                  </p>
+            <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between" data-animate="fade-up" data-scroll-float="-14" data-tilt-card>
+              <div class="flex flex-col gap-3">
+                <div class="flex text-amber-500">
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
-                  <div>
-                    <p class="font-label-md text-label-md font-bold text-primary">Rachel M.</p>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant">Chelsea Resident</p>
-                  </div>
-                  <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+                  “I booked a last minute clean and they were amazing. Friendly, efficient and very thorough. Highly recommend this company!”
+                </p>
+              </div>
+              <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
+                <div>
+                  <p class="font-label-md text-label-md font-bold text-primary">Rachel M.</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">Chelsea Resident</p>
                 </div>
+                <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
               </div>
             </div>
 
             <!-- Review 3 -->
-            <div data-float-y="-14" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between h-full" data-animate="fade-up" data-tilt-card data-tilt-max="3.5">
-                <div class="flex flex-col gap-3">
-                  <div class="flex text-amber-500">
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                    <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  </div>
-                  <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
-                    “The team did an outstanding job. Super reliable, great communication and my flat was spotless. I will definitely use them again!”
-                  </p>
+            <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between" data-animate="fade-up" data-scroll-float="12" data-scroll-rot="0.8" data-tilt-card>
+              <div class="flex flex-col gap-3">
+                <div class="flex text-amber-500">
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
-                  <div>
-                    <p class="font-label-md text-label-md font-bold text-primary">James T.</p>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant">Battersea Property Owner</p>
-                  </div>
-                  <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+                  “The team did an outstanding job. Super reliable, great communication and my flat was spotless. I will definitely use them again!”
+                </p>
+              </div>
+              <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
+                <div>
+                  <p class="font-label-md text-label-md font-bold text-primary">James T.</p>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant">Battersea Property Owner</p>
                 </div>
+                <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
               </div>
             </div>
           </div>
@@ -1560,112 +1460,99 @@
            FREQUENTLY ASKED QUESTIONS SECTION
            ===================================================================== -->
       <section class="w-full bg-surface-container-low py-16 lg:py-24 border-t border-outline-variant/30" id="faq">
-        <div class="max-w-[1040px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
-          <div class="text-center max-w-2xl mx-auto flex flex-col gap-2" data-animate="fade-up" data-float-y="-8" data-scroll-float>
-            <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Got Questions?</span>
-            <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Frequently Asked Questions</h2>
+        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="text-center max-w-2xl mx-auto flex flex-col gap-2 mb-10" data-animate="fade-up" data-scroll-float="-10">
+            <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Frequently Asked Questions</span>
+            <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Got Questions? We’ve Got Answers</h2>
             <div class="w-16 h-1 bg-error mx-auto rounded-full mt-1 mb-2"></div>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              Everything you need to know about our London domestic, deep, and commercial cleaning services.
-            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant">Everything you need to know about our London cleaning services</p>
           </div>
 
-          <!-- FAQ Items Accordion Stack -->
-          <div class="flex flex-col gap-3.5" data-stagger-group data-stagger-step="70" id="faq-accordion-container">
-            <!-- FAQ 1 -->
-            <details class="faq-details group bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/35 overflow-hidden transition-all duration-300 hover:border-secondary/50" data-animate="fade-up" open="">
-              <summary class="cursor-pointer p-5 flex items-center justify-between gap-4 font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold select-none transition-colors group-hover:text-secondary list-none">
-                <span>Do I need to be at home during the cleaning appointment?</span>
+          <div class="max-w-3xl mx-auto flex flex-col gap-3.5" data-stagger-group data-stagger-step="70">
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="8" open="">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  Do I need to be at home during the cleaning appointment?
+                </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
-              <div class="faq-content px-5 pb-5 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/20 pt-3.5 leading-relaxed">
-                No, over 70% of our regular clients provide key access or use our secure keyholding protocol. Our staff are fully insured, enhanced DBS checked, and strictly vetted so you can return to an immaculate home without disrupting your schedule.
-              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                No, many of our clients provide key access or use our secure keyholding service. Our staff are fully insured, trustworthy, and respectful, giving you total peace of mind while you work or enjoy your day.
+              </p>
             </details>
 
-            <!-- FAQ 2 -->
-            <details class="faq-details group bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/35 overflow-hidden transition-all duration-300 hover:border-secondary/50" data-animate="fade-up">
-              <summary class="cursor-pointer p-5 flex items-center justify-between gap-4 font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold select-none transition-colors group-hover:text-secondary list-none">
-                <span>What is included in Domestic Cleaning vs Deep Cleaning?</span>
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="-6">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  What is included in your Domestic Cleaning vs Deep Cleaning?
+                </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
-              <div class="faq-content px-5 pb-5 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/20 pt-3.5 leading-relaxed">
-                Regular domestic cleaning covers everyday upkeep, surfaces, dusting, sanitary sanitisation, hoovering, mopping, and ironing. Deep cleaning includes full inside-appliance degreasing (ovens, fridges), limescale extraction, behind-furniture clearance, woodwork detailing, and tile scrubbing.
-              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                Regular domestic cleaning covers everyday upkeep, dusting, kitchen sanitisation, hoovering, mopping, and ironing. Deep cleaning includes full inside-appliance degreasing, limescale removal, behind-furniture extraction, and woodwork scrub following strict inventory checklists.
+              </p>
             </details>
 
-            <!-- FAQ 3 -->
-            <details class="faq-details group bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/35 overflow-hidden transition-all duration-300 hover:border-secondary/50" data-animate="fade-up">
-              <summary class="cursor-pointer p-5 flex items-center justify-between gap-4 font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold select-none transition-colors group-hover:text-secondary list-none">
-                <span>Are cleaning materials and equipment provided?</span>
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="8">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  How does your pricing work, and is oven cleaning included?
+                </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
-              <div class="faq-content px-5 pb-5 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/20 pt-3.5 leading-relaxed">
-                Yes! For one-off deep cleans, end-of-tenancy, and specialist carpet services we bring all commercial-grade eco-friendly chemicals, steam wands, and Numatic Henry vacuums. For weekly domestic visits, we can use your preferred products or supply our luxury eco-friendly kit.
-              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                We clean from top to bottom with clear pricing and no hidden fees. Additional specialist services such as oven cleaning are charged separately per item, allowing you to tailor your booking exactly to your requirements.
+              </p>
             </details>
 
-            <!-- FAQ 4 -->
-            <details class="faq-details group bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/35 overflow-hidden transition-all duration-300 hover:border-secondary/50" data-animate="fade-up">
-              <summary class="cursor-pointer p-5 flex items-center justify-between gap-4 font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold select-none transition-colors group-hover:text-secondary list-none">
-                <span>Are your cleaners insured and vetted?</span>
+
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="8">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  Are cleaning materials and equipment provided?
+                </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
-              <div class="faq-content px-5 pb-5 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/20 pt-3.5 leading-relaxed">
-                Absolutely. All Super Cleaners London professionals undergo rigorous background verification, criminal record checks (Enhanced DBS), identity screening, and in-house five-star standard training. In addition, we hold £10,000,000 public liability insurance.
-              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                Yes, for one-off deep cleans, end of tenancy, and specialist services we bring all commercial-grade, high-quality cleaning equipment and professional products. For regular domestic visits, we can use your preferred supplies or provide our professional kit.
+              </p>
             </details>
 
-            <!-- FAQ 5 -->
-            <details class="faq-details group bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/35 overflow-hidden transition-all duration-300 hover:border-secondary/50" data-animate="fade-up">
-              <summary class="cursor-pointer p-5 flex items-center justify-between gap-4 font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold select-none transition-colors group-hover:text-secondary list-none">
-                <span>How do cancellations or rescheduling work?</span>
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="-6">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  Are your cleaners fully trained and insured?
+                </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
-              <div class="faq-content px-5 pb-5 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/20 pt-3.5 leading-relaxed">
-                We offer ultimate flexibility with zero lock-in contracts. As long as you give us at least 24 hours notice, you can reschedule or cancel your cleaning visit via WhatsApp or phone call without any penalty fees.
-              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                All Super Cleaners London cleaners undergo thorough background checks, in-person interviews, and continuous professional training and supervision. We hold £10,000,000 in comprehensive public liability insurance for complete homeowner and business protection.
+              </p>
             </details>
 
-            <!-- FAQ 6 -->
-            <details class="faq-details group bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/35 overflow-hidden transition-all duration-300 hover:border-secondary/50" data-animate="fade-up">
-              <summary class="cursor-pointer p-5 flex items-center justify-between gap-4 font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold select-none transition-colors group-hover:text-secondary list-none">
-                <span>How do I get an exact quote or book?</span>
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="8">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  How do cancellations or rescheduling work?
+                </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
-              <div class="faq-content px-5 pb-5 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/20 pt-3.5 leading-relaxed">
-                You can click 'Book Online Now', send quick room photos via our WhatsApp concierge (07786 282887), or call our London desk directly at 020 3664 9304 for an immediate, transparent estimate.
-              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                We offer flexible scheduling. Just give us at least 24 hours notice to reschedule or cancel without any penalty.
+              </p>
             </details>
-          </div>
 
-          <!-- Bottom FAQ Help Prompt -->
-          <div class="bg-surface-container p-5 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 border border-outline-variant/30" data-animate="fade-scale" data-float-y="-10" data-scroll-float>
-            <div class="flex items-center gap-3.5 text-center sm:text-left">
-              <div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0 hidden sm:flex">
-                <span class="material-symbols-outlined text-[24px]">help_center</span>
-              </div>
-              <div>
-                <p class="font-label-md text-label-md font-bold text-primary">Still have questions about our services?</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Our team is available 7 days a week to assist you.</p>
-              </div>
-            </div>
-            <div class="flex flex-wrap items-center justify-center gap-2.5">
-              <a
-                class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-emerald-600 text-on-primary font-label-sm text-label-sm hover:bg-emerald-700 transition-colors shadow-sm"
-                rel="noopener"
-                target="_blank"
-              >
-                <span class="material-symbols-outlined text-[16px]">chat</span>
-                <span>Chat on WhatsApp</span>
-              </a>
-              <a
-                class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm hover:bg-secondary hover:text-on-secondary transition-colors shadow-sm"
-              >
-                <span class="material-symbols-outlined text-[16px]">call</span>
-                <span>020 3664 9304</span>
-              </a>
-            </div>
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="-6">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  How do I get an exact quote or book?
+                </span>
+                <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+              </summary>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                You can click 'Book Now', message us on WhatsApp (07786 282887 or 07507 00167), or call our London desk directly at 020 3664 9304 for an instant estimate.
+              </p>
+            </details>
           </div>
         </div>
       </section>
@@ -1675,10 +1562,10 @@
            ===================================================================== -->
       <section class="w-full bg-primary-container text-on-primary py-12 lg:py-16 border-b border-white/10" id="contact">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
-          <div class="flex flex-col lg:flex-row items-center justify-between gap-6" data-float-y="-8" data-scroll-float>
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
             <!-- Quote Tagline -->
-            <div class="flex items-center gap-4 text-center lg:text-left" data-animate="fade-left">
-              <div class="scl-section-badge scl-float-gentle w-14 h-14 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 hidden sm:flex shadow-md">
+            <div class="flex items-center gap-4 text-center lg:text-left" data-animate="fade-left" data-scroll-float="10">
+              <div class="scl-float-gentle w-14 h-14 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0 hidden sm:flex shadow-md">
                 <span class="material-symbols-outlined text-[30px]">cleaning_services</span>
               </div>
               <div>
@@ -1688,7 +1575,7 @@
             </div>
 
             <!-- Quick Interactive Action Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-3" data-animate="fade-right">
+            <div class="flex flex-wrap items-center justify-center gap-3" data-animate="fade-right" data-scroll-float="-10">
               <a
                 class="inline-flex items-center gap-2 bg-emerald-600 text-on-primary px-5 py-3 rounded-full font-label-md text-label-md hover:bg-emerald-500 transition-colors shadow-sm"
                 rel="noopener"
@@ -1738,7 +1625,7 @@
               <img
                 alt="Super Cleaners London"
                 class="h-16 w-auto object-contain"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+                src="images/logo.png"
               />
             </a>
           </div>
@@ -1747,7 +1634,7 @@
           </p>
           <div class="flex items-center gap-1.5 font-label-caps text-label-caps text-secondary-fixed-dim">
             <span class="material-symbols-outlined text-[16px]">verified_user</span>
-            <span>DBS Vetted &amp; Fully Insured</span>
+            <span>Fully Trained &amp; Insured</span>
           </div>
         </div>
 
@@ -1783,9 +1670,13 @@
               <span class="material-symbols-outlined text-secondary-fixed text-[18px]">call</span>
               <span>020 3664 9304</span>
             </a>
-            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" rel="noopener" target="_blank">
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/447786282887" rel="noopener" target="_blank">
               <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
               <span>WhatsApp: 07786 282887</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/44750700167" rel="noopener" target="_blank">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
+              <span>WhatsApp: 07507 00167</span>
             </a>
             <a class="flex items-center gap-2 hover:text-on-primary transition-colors">
               <span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>
@@ -1827,7 +1718,7 @@
         <div class="flex items-center gap-2.5">
           <span class="material-symbols-outlined text-secondary-fixed text-[24px]">verified</span>
           <div>
-            <h3 class="font-headline-sm text-lg font-bold" id="scl-modal-title">Super Cleaners London — Concierge Desk</h3>
+            <h3 class="font-headline-sm text-lg font-bold" id="scl-modal-title">Super Cleaners London — Team Showcase</h3>
             <p class="text-xs text-surface-container-highest/80">Five-Star Residential &amp; Commercial Housekeeping Since 2006</p>
           </div>
         </div>
@@ -1851,10 +1742,10 @@
           <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex flex-col justify-end p-4 text-white">
             <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-300 mb-1">
               <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              5-Star Hotel Hygiene Protocol
+              High Quality Standards
             </span>
             <p class="text-sm font-medium">
-              Every team member is directly employed, Enhanced DBS vetted, and covered by £10M public liability insurance.
+              Every team member is directly employed, fully trained, uniformed, and covered by comprehensive public liability insurance.
             </p>
           </div>
         </div>

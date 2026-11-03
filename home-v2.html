@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
   <meta content="web_standard" name="shell-type" />
-  <title>Super Cleaners London — Experienced Cleaning Specialists Across London (Version 2 Enhanced)</title>
+  <title>Super Cleaners London — Experienced Cleaning Specialists Across London</title>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
@@ -157,34 +157,44 @@
   <header class="scl-header" id="site-header">
     <div class="scl-header-inner">
       <!-- Brand Logo -->
-      <a aria-label="Super Cleaners London Home" class="scl-logo-link">
+      <a aria-label="Super Cleaners London Home" class="scl-logo-link" href="#home">
         <img
           alt="Super Cleaners London"
-          class="scl-logo-img"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+          class="scl-logo-img h-12 sm:h-14 w-auto object-contain"
+          src="images/logo.png"
         />
       </a>
 
-      <!-- Desktop Navigation (Visible >= 1200px) -->
+      <!-- Desktop Navigation (Clean client-approved links: Home, Services, FAQ, About Us, Contact) -->
       <nav aria-label="Primary Navigation" class="scl-desktop-nav">
-        <a aria-current="page" class="scl-nav-link is-active" data-nav-target="home">Home</a>
-        <a class="scl-nav-link">Domestic</a>
-        <a class="scl-nav-link" data-nav-target="services">Professional</a>
-        <a class="scl-nav-link">Commercial</a>
-        <a class="scl-nav-link">Prices</a>
-        <a class="scl-nav-link">Areas</a>
-        <a class="scl-nav-link" data-nav-target="about-us">About Us</a>
-        <a class="scl-nav-link">Contact</a>
+        <a aria-current="page" class="scl-nav-link is-active" data-nav-target="home" href="#home">Home</a>
+        <a class="scl-nav-link" data-nav-target="services" href="#services">Services</a>
+        <a class="scl-nav-link" data-nav-target="faq" href="#faq">FAQ</a>
+        <a class="scl-nav-link" data-nav-target="about-us" href="#about-us">About Us</a>
+        <a class="scl-nav-link" data-nav-target="contact" href="#contact">Contact</a>
       </nav>
 
-      <!-- Header Right Actions: Phone, Book Now CTA & Mobile Menu Toggle -->
+      <!-- Header Right Actions: Phone, WhatsApp Contacts & Visible Red Book Now CTA -->
       <div class="scl-header-actions">
-        <a class="scl-header-phone" title="Call our London dispatch desk">
+        <a class="scl-header-phone" href="tel:02036649304" title="Call our London team">
           <span class="material-symbols-outlined text-secondary text-[20px]">call</span>
-          <span>020 3664 9304</span>
+          <span class="font-semibold">020 3664 9304</span>
         </a>
 
-        <a class="scl-header-cta" data-open-showcase-modal>
+        <!-- Quick WhatsApp contacts for desktop -->
+        <div class="hidden xl:flex items-center gap-1.5">
+          <a class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 transition-colors text-xs font-semibold" href="https://wa.me/447786282887" rel="noopener" target="_blank" title="WhatsApp 07786 282887">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">chat</span>
+            <span>07786 282887</span>
+          </a>
+          <a class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 transition-colors text-xs font-semibold" href="https://wa.me/44750700167" rel="noopener" target="_blank" title="WhatsApp 07507 00167">
+            <span class="material-symbols-outlined text-emerald-600 text-[16px]">chat</span>
+            <span>07507 00167</span>
+          </a>
+        </div>
+
+        <!-- Visible Red CTA Button -->
+        <a class="scl-header-cta scl-header-cta--red" data-open-showcase-modal href="#contact">
           <span class="material-symbols-outlined text-[18px]">calendar_today</span>
           <span>Book Now</span>
           <span aria-hidden="true" class="hidden sm:inline">→</span>
@@ -226,76 +236,64 @@
         </div>
 
         <nav aria-label="Mobile Navigation Links" class="scl-mobile-nav-list px-0">
-          <a class="scl-mobile-nav-link is-active" data-nav-target="home">
+          <a class="scl-mobile-nav-link is-active" data-nav-target="home" href="#home">
             <span>Home</span>
             <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link">
-            <span>Domestic Cleaning Page</span>
-            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £19.50/hr</span>
-          </a>
-          <a class="scl-mobile-nav-link">
-            <span>Professional &amp; End of Tenancy</span>
-            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £160</span>
-          </a>
-          <a class="scl-mobile-nav-link">
-            <span>Commercial Office Cleaning Page</span>
+          <a class="scl-mobile-nav-link" data-nav-target="services" href="#services">
+            <span>Services</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link">
-            <span>Carpet &amp; Upholstery Care</span>
-            <span class="text-xs font-semibold text-secondary bg-secondary-fixed/60 px-2 py-0.5 rounded-full">From £35</span>
-          </a>
-          <a class="scl-mobile-nav-link">
-            <span>Services &amp; Tariff Guide (Prices)</span>
+          <a class="scl-mobile-nav-link" data-nav-target="faq" href="#faq">
+            <span>FAQ</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link">
-            <span>London Areas We Cover</span>
+          <a class="scl-mobile-nav-link" data-nav-target="about-us" href="#about-us">
+            <span>About Us</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
-          <a class="scl-mobile-nav-link" data-nav-target="about-us">
-            <span>About Us &amp; Our Team</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="reviews">
-            <span>Verified Client Reviews</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="faq">
-            <span>Frequently Asked Questions</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link">
-            <span>Contact &amp; Free Quote Page</span>
+          <a class="scl-mobile-nav-link" data-nav-target="contact" href="#contact">
+            <span>Contact</span>
             <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
           </a>
         </nav>
       </div>
 
-      <!-- Mobile Drawer Bottom Quick Actions -->
+      <!-- Mobile Drawer Bottom Quick Actions with Red CTA & Both WhatsApps -->
       <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-3">
         <a
-          class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md shadow-md hover:bg-primary-container transition-colors"
+          class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl btn-primary-red font-label-md text-label-md shadow-md transition-colors"
           data-open-showcase-modal
+          href="#contact"
         >
           <span class="material-symbols-outlined text-[20px]">calendar_today</span>
           <span>Book Your Clean Online →</span>
         </a>
-        <div class="grid grid-cols-2 gap-2.5">
+        <a
+          class="inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-surface-container-low text-primary font-label-sm text-label-sm font-bold hover:bg-secondary-fixed transition-colors border border-outline-variant/40"
+          href="tel:02036649304"
+        >
+          <span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+          <span>Call 020 3664 9304</span>
+        </a>
+        <div class="grid grid-cols-2 gap-2">
           <a
-            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container-low text-primary font-label-sm text-label-sm font-bold hover:bg-secondary-fixed transition-colors"
-          >
-            <span class="material-symbols-outlined text-secondary text-[18px]">call</span>
-            <span>020 3664 9304</span>
-          </a>
-          <a
-            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600 text-on-primary font-label-sm text-label-sm font-bold hover:bg-emerald-700 transition-colors"
+            class="inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600 text-white font-label-sm text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
+            href="https://wa.me/447786282887"
             rel="noopener"
             target="_blank"
           >
-            <span class="material-symbols-outlined text-[18px]">chat</span>
-            <span>WhatsApp Us</span>
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>07786 282887</span>
+          </a>
+          <a
+            class="inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600 text-white font-label-sm text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
+            href="https://wa.me/44750700167"
+            rel="noopener"
+            target="_blank"
+          >
+            <span class="material-symbols-outlined text-[16px]">chat</span>
+            <span>07507 00167</span>
           </a>
         </div>
       </div>
@@ -321,18 +319,34 @@
         <span class="material-symbols-outlined text-[20px]">call</span>
       </a>
     </div>
-    <!-- WhatsApp Chat -->
+    <!-- WhatsApp 1 -->
     <div class="relative group flex items-center justify-end">
       <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-emerald-700 text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        WhatsApp Concierge
+        WhatsApp: 07786 282887
       </span>
       <a
-        aria-label="Chat on WhatsApp"
+        aria-label="Chat on WhatsApp 07786 282887"
         class="w-10 h-10 rounded-full bg-emerald-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
         href="https://wa.me/447786282887"
         rel="noopener"
         target="_blank"
-        title="WhatsApp Chat"
+        title="WhatsApp 07786 282887"
+      >
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+      </a>
+    </div>
+    <!-- WhatsApp 2 -->
+    <div class="relative group flex items-center justify-end">
+      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-emerald-800 text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
+        WhatsApp: 07507 00167
+      </span>
+      <a
+        aria-label="Chat on WhatsApp 07507 00167"
+        class="w-10 h-10 rounded-full bg-teal-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        href="https://wa.me/44750700167"
+        rel="noopener"
+        target="_blank"
+        title="WhatsApp 07507 00167"
       >
         <span class="material-symbols-outlined text-[20px]">chat</span>
       </a>
@@ -351,20 +365,6 @@
         <span class="material-symbols-outlined text-[20px]">photo_camera</span>
       </a>
     </div>
-    <!-- Facebook -->
-    <div class="relative group flex items-center justify-end">
-      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        Facebook Page
-      </span>
-      <a
-        aria-label="Visit Super Cleaners London on Facebook"
-        class="w-10 h-10 rounded-full bg-blue-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
-        href="#contact"
-        title="Facebook"
-      >
-        <span class="material-symbols-outlined text-[20px]">public</span>
-      </a>
-    </div>
     <!-- Email Us -->
     <div class="relative group flex items-center justify-end">
       <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
@@ -372,7 +372,7 @@
       </span>
       <a
         aria-label="Email Super Cleaners London"
-        class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
+        class="w-10 h-10 rounded-full bg-secondary text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm"
         href="mailto:info@supercleanerslondon.co.uk"
         title="Send Email"
       >
@@ -384,185 +384,112 @@
   <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
     <div class="flex flex-col w-full">
 
-      <!-- =====================================================================
-           VERSION 2 HERO SECTION: LIGHT EDITORIAL SPLIT-LAYOUT SHOWCASE
+            <!-- =====================================================================
+           CLIENT-APPROVED HOMEPAGE HERO: CINEMATIC VIDEO BACKGROUND WITH LIGHT-BLUE OVERLAY
+           Combines Version 1 Video Concept with Version 2 Visual Identity & Centered Layout
            ===================================================================== -->
       <section
-        class="relative w-full overflow-hidden bg-gradient-to-b from-surface via-surface to-surface-container-low py-12 sm:py-16 lg:py-24"
+        class="relative w-full overflow-hidden min-h-[640px] lg:min-h-[720px] flex items-center justify-center py-14 sm:py-20 lg:py-24 text-white"
         id="home"
       >
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        <!-- Full-Bleed Background Video with Light Blue Tint Overlay (Keeping Cleaning Activity Clearly Visible) -->
+        <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none">
+          <img
+            alt="Super Cleaners London professional cleaners delivering spotless spaces"
+            class="w-full h-full object-cover object-center hero-bg-pan"
+            src="https://images.pexels.com/videos/4238760/pexels-photo-4238760.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920"
+          />
+          <video
+            aria-hidden="true"
+            autoplay
+            class="absolute inset-0 w-full h-full object-cover object-center hero-bg-pan"
+            loop
+            muted
+            playsinline
+            poster="https://images.pexels.com/videos/4238760/pexels-photo-4238760.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920"
+            preload="metadata"
+          >
+            <source src="https://videos.pexels.com/video-files/4238760/4238760-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          </video>
+          <!-- Light-Blue Overlay: Enhances Video Appearance Without Looking Dark or Black -->
+          <div class="absolute inset-0 hero-v2-video-overlay"></div>
+        </div>
 
-            <!-- Left Column: Hero Copy, CTAs & Trust Badges -->
-            <div class="lg:col-span-6 flex flex-col gap-5 z-10" data-animate="fade-left">
-              <!-- Rating Badge -->
-              <div class="inline-flex items-center gap-2 bg-surface-container-lowest px-4 py-1.5 rounded-full shadow-sm border border-outline-variant/35 w-fit">
-                <div aria-label="5 out of 5 stars" class="flex text-amber-500">
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                </div>
-                <span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">
-                  Trusted Since 2006 • <span class="counter-num" data-target="20">20</span> Years Experience
-                </span>
-              </div>
+        <!-- Hero Content Container (Centered Layout as Requested) -->
+        <div class="relative z-10 max-w-[1060px] mx-auto px-margin-mobile lg:px-margin text-center flex flex-col items-center gap-5 sm:gap-6 my-auto">
 
-              <!-- Hero Headline (Responsive scale across mobile, tablet & desktop) -->
-              <h1 class="font-display-hero text-[34px] sm:text-[44px] lg:text-[52px] xl:text-[56px] text-primary tracking-tight leading-[1.12] text-balance">
-                Experienced Cleaning Specialists <span class="italic text-secondary font-headline-lg">Across London</span>
-              </h1>
-
-              <!-- Hero Subheadline -->
-              <p class="font-body-lg text-[16px] sm:text-body-lg text-on-surface-variant max-w-xl leading-relaxed text-pretty">
-                Cleaner homes, healthier spaces, happier lives. Discrete, meticulous residential housekeeping and commercial deep care trusted across Chelsea, Kensington, and Westminster.
-              </p>
-
-              <!-- Primary & Secondary CTAs -->
-              <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3.5 pt-1">
-                <a
-                  class="group inline-flex items-center justify-center gap-2 btn-primary-royal px-7 py-3.5 rounded-full font-label-md text-label-md"
-                >
-                  <span class="font-bold">Book Your Clean Today</span>
-                  <span class="material-symbols-outlined text-[18px] scl-icon-shift">arrow_forward</span>
-                </a>
-
-                <a
-                  class="inline-flex items-center justify-center gap-2 bg-surface-container-lowest text-primary border border-outline-variant/45 px-5 py-3.5 rounded-full font-label-md text-label-md hover:bg-surface-container-low hover:border-secondary/40 transition-all shadow-sm"
-                >
-                  <span class="material-symbols-outlined text-secondary text-[20px]">call</span>
-                  <span class="font-bold">020 3664 9304</span>
-                </a>
-              </div>
-
-              <!-- Trust Badges Row -->
-              <div class="flex flex-wrap items-center gap-x-6 gap-y-2.5 pt-3 border-t border-outline-variant/25 text-on-surface-variant">
-                <div class="flex items-center gap-1.5 py-1">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
-                  <span class="font-label-sm text-label-sm font-semibold text-primary">
-                    <span class="counter-num" data-target="100">100</span>% DBS Vetted
-                  </span>
-                </div>
-                <div class="flex items-center gap-1.5 py-1">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">security</span>
-                  <span class="font-label-sm text-label-sm font-semibold text-primary">
-                    £<span class="counter-num" data-target="10">10</span>M Public Liability
-                  </span>
-                </div>
-                <div class="flex items-center gap-1.5 py-1">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">thumb_up</span>
-                  <span class="font-label-sm text-label-sm font-semibold text-primary">Satisfaction Guaranteed</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column: Hero Media Showcase & Floating Interactive Badges -->
-            <div class="lg:col-span-6 relative pb-4 sm:pb-6 lg:pb-0" data-animate="fade-right">
-              <div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-lowest border border-outline-variant/35 aspect-[4/3] group" data-tilt-card data-tilt-max="2.5">
-                <img
-                  alt="Professional Super Cleaners London housekeeping crew in a sunlit Kensington living room"
-                  class="w-full h-full object-cover scl-img-zoom"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGp5dgI8mLrGG0-CKRZnc57pmwd4vx-oedJDxjWpqi7nPLlT9q72H1yLll08Sq98wcv8ZH1p81HVzfYbqIZyHO38jsOhNbWEamhdBVm1ERb4lpOJy6Ah-H8NhJbkhBQ7Q2hCmaZmftncuJqWemfu8zfBVq6A-CJqivPb8-VPq8eJFez2ZrbjEyQdq_dfSsf3SwwAr_TYucGt1W1VtL94oCmIzW7AIU4YjVK3RRpEGssrt3tk_8U0n1mQ"
-                />
-                <video
-                  aria-label="Cleaner demonstrating professional bathroom cleaning"
-                  class="absolute inset-0 w-full h-full object-cover"
-                  hidden
-                  id="hero-team-video"
-                  loop
-                  muted
-                  playsinline
-                  poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDGp5dgI8mLrGG0-CKRZnc57pmwd4vx-oedJDxjWpqi7nPLlT9q72H1yLll08Sq98wcv8ZH1p81HVzfYbqIZyHO38jsOhNbWEamhdBVm1ERb4lpOJy6Ah-H8NhJbkhBQ7Q2hCmaZmftncuJqWemfu8zfBVq6A-CJqivPb8-VPq8eJFez2ZrbjEyQdq_dfSsf3SwwAr_TYucGt1W1VtL94oCmIzW7AIU4YjVK3RRpEGssrt3tk_8U0n1mQ"
-                  preload="none"
-                >
-                  <source src="https://videos.pexels.com/video-files/4238760/4238760-hd_1920_1080_30fps.mp4" type="video/mp4" />
-                </video>
-                <!-- Video Play Overlay -->
-                <div class="absolute inset-0 z-10 bg-gradient-to-t from-primary/55 via-primary/20 to-primary/10 flex flex-col items-center justify-center gap-3 text-on-primary" id="hero-video-overlay">
-                  <button
-                    aria-label="Watch Our Team in Action Video"
-                    class="w-20 h-20 rounded-full bg-surface-container-lowest/95 text-secondary flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer pulse-glow"
-                    id="video-play-btn"
-                    type="button"
-                  >
-                    <span class="material-symbols-outlined text-[42px] ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
-                  </button>
-                  <span class="font-label-md text-label-md font-bold tracking-wide uppercase bg-primary/75 px-4 py-1.5 rounded-full backdrop-blur-md border border-white/20 shadow-sm">
-                    Watch Our Team in Action
-                  </span>
-                </div>
-              </div>
-
-              <!-- Top-Right Interactive Floating Eco-Care Badge (Scroll & Mouse Parallax) -->
-              <div
-                class="hidden sm:block absolute -top-4 right-4 z-20 scl-hero-parallax-wrap"
-                data-hero-parallax
-                data-mouse-factor="-14"
-                data-scroll-rot="0.015"
-                data-scroll-speed-x="-0.03"
-                data-scroll-speed-y="-0.18"
-              >
-                <div class="scl-float-orbital-right">
-                  <div
-                    aria-expanded="false"
-                    class="scl-hero-badge scl-hero-badge--emerald px-4 py-3 rounded-2xl text-left w-[240px] group"
-                    role="button"
-                    tabindex="0"
-                  >
-                    <div class="flex items-center gap-2.5">
-                      <div class="scl-hero-badge-icon w-10 h-10 rounded-xl bg-emerald-400/20 border border-emerald-300/45 flex items-center justify-center text-emerald-300 shrink-0">
-                        <span class="material-symbols-outlined text-[22px]">eco</span>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <p class="font-label-caps text-[10px] uppercase tracking-wider text-emerald-200/90 font-bold">Eco-Friendly Care</p>
-                        <p class="font-label-md text-xs font-bold text-white truncate">Safe for Pets &amp; Kids</p>
-                      </div>
-                    </div>
-                    <div class="scl-hero-badge-details text-xs text-surface-container-highest/95 space-y-1">
-                      <p>• Non-toxic botanical formulas</p>
-                      <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-300" data-badge-jump="#service-domestic">
-                        <span>Inspect Eco Protocol</span>
-                        <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bottom-Left Decorative Floating Excellence Card (Responsive placement + Scroll/Mouse Parallax & Hover Lift) -->
-              <div
-                class="mt-4 sm:mt-0 sm:absolute sm:-bottom-5 sm:-left-5 z-20 scl-hero-parallax-wrap"
-                data-hero-parallax
-                data-mouse-factor="12"
-                data-scroll-rot="-0.012"
-                data-scroll-speed-x="0.03"
-                data-scroll-speed-y="-0.14"
-              >
-                <a
-                  class="scl-card-interactive bg-surface-container-lowest p-4 rounded-2xl shadow-lg border border-outline-variant/35 flex flex-col float-slow group"
-                >
-                  <div class="flex items-center gap-3.5">
-                    <div class="scl-badge-icon w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
-                      <span class="material-symbols-outlined text-[26px]">cleaning_services</span>
-                    </div>
-                    <div>
-                      <p class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Standard of Excellence</p>
-                      <p class="font-headline-sm text-headline-sm text-primary font-bold flex items-center gap-1">
-                        <span><span class="counter-num" data-target="18500">18,500</span>+ Homes Cleaned</span>
-                        <span class="material-symbols-outlined text-secondary text-[16px] scl-icon-shift">arrow_forward</span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="scl-expand-drawer text-xs font-semibold text-secondary">
-                    ★ 5.0 Rated by 1,400+ Verified London Clients
-                  </div>
-                </a>
-              </div>
-            </div>
-
+          <!-- Centered Diamond SC Brand Logo -->
+          <div class="flex justify-center" data-animate="fade-scale">
+            <img
+              src="images/logo.png"
+              alt="Super Cleaners London — Residential &amp; Commercial"
+              class="h-24 sm:h-28 md:h-36 w-auto object-contain drop-shadow-[0_4px_24px_rgba(0,18,41,0.65)] transition-transform hover:scale-105 duration-300"
+            />
           </div>
+
+          <!-- Trust & 20 Years Experience Rating Badge -->
+          <div class="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 shadow-md" data-animate="fade-up">
+            <div aria-label="5 out of 5 stars" class="flex text-amber-400">
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <span class="font-label-caps text-label-caps uppercase tracking-wider text-white font-bold">
+              Trusted Since 2006 • <span class="counter-num font-bold" data-target="20">20</span> Years Experience
+            </span>
+          </div>
+
+          <!-- Hero H1 Headline -->
+          <h1
+            class="font-display-hero text-[34px] sm:text-[46px] lg:text-[56px] text-white tracking-tight leading-[1.14] text-balance drop-shadow-[0_2px_14px_rgba(0,18,41,0.65)]"
+            data-animate="fade-up"
+          >
+            Experienced Cleaning Specialists <span class="italic text-sky-200 font-headline-lg font-semibold">Across London</span>
+          </h1>
+
+          <!-- Hero Subheadline -->
+          <p
+            class="font-body-lg text-[16px] sm:text-[18px] lg:text-[20px] text-white/95 max-w-2xl leading-relaxed text-pretty drop-shadow-[0_2px_8px_rgba(0,18,41,0.6)]"
+            data-animate="fade-up"
+          >
+            Professional residential and commercial cleaning services, delivered with care, attention to detail and flexible bookings to suit your needs.
+          </p>
+
+          <!-- Centered Action Buttons with Standout Red Booking CTA -->
+          <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3.5 pt-2" data-animate="fade-up">
+            <!-- Standout Red Primary CTA -->
+            <a
+              href="#contact"
+              class="group inline-flex items-center justify-center gap-2 btn-primary-red px-8 py-4 rounded-full font-label-md text-label-md shadow-lg"
+              data-open-showcase-modal
+            >
+              <span class="font-bold text-base">Book Your Clean Today</span>
+              <span class="material-symbols-outlined text-[20px] scl-icon-shift">arrow_forward</span>
+            </a>
+
+            <!-- Call Dispatch Button -->
+            <a
+              href="tel:02036649304"
+              class="inline-flex items-center justify-center gap-2 bg-white/95 text-primary border border-white/40 px-6 py-4 rounded-full font-label-md text-label-md hover:bg-white hover:text-secondary transition-all shadow-md backdrop-blur-sm"
+            >
+              <span class="material-symbols-outlined text-secondary text-[20px]">call</span>
+              <span class="font-bold text-base">020 3664 9304</span>
+            </a>
+
+            <!-- WhatsApp Concierge Button -->
+            <a
+              href="https://wa.me/447786282887"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center justify-center gap-2 bg-emerald-600/90 hover:bg-emerald-600 text-white border border-emerald-400/40 px-6 py-4 rounded-full font-label-md text-label-md transition-all shadow-md backdrop-blur-sm"
+            >
+              <span class="material-symbols-outlined text-[20px]">chat</span>
+              <span class="font-bold text-base">WhatsApp Concierge</span>
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -577,7 +504,7 @@
             </p>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger-group data-stagger-step="90">
-            <!-- Prop 1 -->
+            <!-- Prop 1: Trusted & Professional Team -->
             <div data-float-rot="-0.8" data-float-y="-12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
@@ -585,14 +512,14 @@
                 </div>
                 <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Trusted &amp; Professional Team</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Experienced, respectful cleaners vetted carefully for complete security in your home.
+                  Experienced cleaners you can trust in your home.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ Enhanced DBS &amp; 2-Reference Vetted
+                  ✓ Experienced Cleaners You Can Trust
                 </div>
               </div>
             </div>
-            <!-- Prop 2 -->
+            <!-- Prop 2: Fully Trained & Insured -->
             <div data-float-rot="0.8" data-float-y="12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
@@ -600,14 +527,14 @@
                 </div>
                 <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Fully Trained &amp; Insured</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Trained to rigorous five-star hotel hygiene protocols, uniformed, and comprehensively insured.
+                  Professional cleaners who are fully trained, uniformed and supervised.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ £10,000,000 Public Liability Cover
+                  ✓ Trained, Uniformed &amp; Supervised
                 </div>
               </div>
             </div>
-            <!-- Prop 3 -->
+            <!-- Prop 3: Flexible, Quick Bookings -->
             <div data-float-rot="-0.8" data-float-y="-12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
@@ -615,25 +542,25 @@
                 </div>
                 <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Flexible, Quick Bookings</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Same-day turnaround or recurring slots arranged effortlessly via WhatsApp or online.
+                  Bookings tailored to your needs, with fast booking by WhatsApp or online.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-emerald-700 w-full">
-                  ✓ Same-Day &amp; Weekend Slots Open
+                  ✓ Fast Booking by WhatsApp or Online
                 </div>
               </div>
             </div>
-            <!-- Prop 4 -->
+            <!-- Prop 4: Flexible & Simple Cleaning / Clear Pricing -->
             <div data-float-rot="0.8" data-float-y="12" data-scroll-float>
               <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
                 <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
                   <span class="material-symbols-outlined text-[28px]">assignment_turned_in</span>
                 </div>
-                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">No Complicated Contracts</h2>
+                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Clear Pricing, No Hidden Fees</h2>
                 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Transparent hourly or fixed tariffs with zero hidden cancellation fees or long lock-ins.
+                  Straightforward cleaning services with clear pricing and no hidden fees.
                 </p>
                 <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ Pause or Reschedule with 24h Notice
+                  ✓ Clear Pricing • No Hidden Fees
                 </div>
               </div>
             </div>
@@ -675,7 +602,7 @@
                 <div class="absolute bottom-3 left-3 z-10" data-float-y="-14" data-scroll-float>
                   <div class="scl-section-badge scl-float-gentle bg-primary/90 text-on-primary backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md flex items-center gap-1.5 text-xs font-bold">
                     <span class="material-symbols-outlined text-emerald-400 text-[16px]">verified_user</span>
-                    <span>Dedicated Maid Guarantee</span>
+                    <span>Dedicated Domestic Cleaners</span>
                   </div>
                 </div>
               </div>
@@ -687,13 +614,13 @@
                   <div>
                     <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Domestic Cleaning &amp; Housekeeping</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Regular weekly, bi-weekly, or daily upkeep designed around your household rhythms. Vacuuming, bed changing, kitchen sanitisation, and ironing managed with discreet elegance.
+                      Regular domestic cleaning services tailored to your household requirements, with flexible weekly, fortnightly and daily cleaning schedules to suit your needs.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Kitchen &amp; Appliances</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Sanitary Ware</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Fine Dusting</span>
-                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Eco Detergents</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Quality Detergents</span>
                     </div>
                   </div>
                 </div>
@@ -727,7 +654,7 @@
                 <div class="absolute bottom-3 left-3 z-10" data-float-y="-14" data-scroll-float>
                   <div class="scl-section-badge scl-float-gentle-delayed bg-primary/90 text-on-primary backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md flex items-center gap-1.5 text-xs font-bold">
                     <span class="material-symbols-outlined text-amber-400 text-[16px]">workspace_premium</span>
-                    <span>100% Deposit Return Guarantee</span>
+                    <span>High Standards Guarantee</span>
                   </div>
                 </div>
               </div>
@@ -737,13 +664,13 @@
                     <span class="material-symbols-outlined text-[26px]">auto_awesome</span>
                   </div>
                   <div>
-                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Professional Deep &amp; End of Tenancy</h3>
+                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Professional Cleaning Services</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Intensive top-to-bottom remediation. Guaranteed deposit-return cleans following inventory standards, post-renovation builder dust clearance, and seasonal deep restorations.
+                      Professional cleaning services delivered with precision, care and attention to detail. Our experienced team provides exceptional results, tailored to your business needs and finished to the highest standards.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">100% Deposit Guarantee</span>
-                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Full Oven Valeting</span>
+                      <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Oven Cleaning (Separate Item)</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Limescale Extraction</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Inventory Approved</span>
                     </div>
@@ -787,9 +714,9 @@
                     <span class="material-symbols-outlined text-[26px]">corporate_fare</span>
                   </div>
                   <div>
-                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Commercial &amp; Office Cleaning</h3>
+                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Commercial Cleaning Services</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Discreet out-of-hours commercial upkeep for boutique law firms, design studios, and corporate headquarters. Waste management, IT peripheral sanitisation, and reception lustre.
+                      Tailored commercial cleaning solutions across London for offices, clinics, salons, retail stores, gyms, warehouses, and workshops.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Bespoke Keyholder Access</span>
@@ -841,7 +768,7 @@
                   <div>
                     <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Carpet &amp; Upholstery Cleaning</h3>
                     <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Advanced steam hot-water extraction, stain lifting, and delicate upholstery revival. Safe on wool, silk, velvets, and pet-friendly spaces.
+                      Professional carpet and upholstery steam cleaning services restoring carpets, rugs, sofas, and fabrics across London.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Hot Water Extraction</span>
@@ -938,7 +865,7 @@
                       Founded in 2006, <strong class="text-primary font-semibold">Super Cleaners London</strong> has grown from an attentive neighbourhood cleaning service into London's premier residential housekeeping and commercial deep care specialist.
                     </p>
                     <p class="leading-relaxed">
-                      We take tremendous pride in our close-knit, meticulously vetted team and personal approach. Whether handling delicate heritage residences in Chelsea or modern corporate suites in the City, our commitment remains uncompromising: delivering effortless peace of mind and pristine cleanliness.
+                      We take tremendous pride in our close-knit, highly experienced team and personal approach. Whether handling delicate heritage residences in Chelsea or modern corporate suites in the City, our commitment remains uncompromising: delivering effortless peace of mind and pristine cleanliness.
                     </p>
                   </div>
 
@@ -953,7 +880,7 @@
                     </div>
                     <div class="inline-flex items-center gap-1.5 bg-surface-container px-3.5 py-1.5 rounded-full font-label-caps text-[11px] font-bold text-primary tracking-wide">
                       <span class="material-symbols-outlined text-secondary text-[16px]">security</span>
-                      <span>Enhanced DBS Vetted</span>
+                      <span>Fully Trained &amp; Insured</span>
                     </div>
                   </div>
                 </div>
@@ -967,7 +894,7 @@
                       <span class="material-symbols-outlined text-[24px]">verified_user</span>
                     </div>
                     <h3 class="font-headline-sm text-[18px] text-primary font-bold">Trusted Since 2006</h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant">Nearly two decades of five-star reputation across prime central London.</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Nearly two decades of trusted service across London.</p>
                   </div>
                 </div>
                 <div data-float-y="12" data-scroll-float>
@@ -976,7 +903,7 @@
                       <span class="material-symbols-outlined text-[24px]">groups</span>
                     </div>
                     <h3 class="font-headline-sm text-[18px] text-primary font-bold">Experienced Team</h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant">Trained to luxury hotel standards with ongoing hygiene certification.</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">Experienced, uniformed cleaners who are fully trained and supervised.</p>
                   </div>
                 </div>
                 <div data-float-y="-12" data-scroll-float>
@@ -985,7 +912,7 @@
                       <span class="material-symbols-outlined text-[24px]">clean_hands</span>
                     </div>
                     <h3 class="font-headline-sm text-[18px] text-primary font-bold">High Cleaning Standards</h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant">Hospital-grade and eco-safe formulations tailored to fine materials.</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">High quality cleaning products tailored to care for your home and workplace.</p>
                   </div>
                 </div>
                 <div data-float-y="12" data-scroll-float>
@@ -993,8 +920,8 @@
                     <div class="w-12 h-12 rounded-xl bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm">
                       <span class="material-symbols-outlined text-[24px]">task_alt</span>
                     </div>
-                    <h3 class="font-headline-sm text-[18px] text-primary font-bold">No Complicated Contracts</h3>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant">Clear tariffs, flexible slots, and complete freedom with zero lock-in.</p>
+                    <h3 class="font-headline-sm text-[18px] text-primary font-bold">Clear Pricing, No Hidden Fees</h3>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant">We clean from top to bottom, with additional services such as oven cleaning charged separately per item.</p>
                   </div>
                 </div>
               </div>
@@ -1342,70 +1269,84 @@
       </section>
 
 
-      <!-- =====================================================================
-           MEET OUR TEAM SECTION
+            <!-- =====================================================================
+           MEET OUR TEAM SECTION (FEATURING SUPER CLEANERS LONDON TEAM PHOTO)
            ===================================================================== -->
       <section class="w-full bg-surface-container-low py-16 lg:py-24 border-t border-outline-variant/25" id="team">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
           <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4" data-animate="fade-up">
             <div>
               <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Our People</span>
-              <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Meet Our Team ♥</h2>
-              <p class="font-body-md text-body-md text-on-surface-variant">A dedicated, warm, and highly vetted team here for your sanctuary.</p>
+              <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Meet Our Team</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">Experienced, uniformed, and dedicated cleaners ready to care for your London home and business.</p>
             </div>
             <p class="font-headline-md text-[24px] sm:text-headline-md italic text-secondary self-start sm:self-auto" data-scroll-float="-10" data-scroll-rot="-1.5">
-              The Team Behind the Shine ♥
+              The Team Behind the Shine
             </p>
           </div>
 
-          <!-- Team Gallery Grid -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-5" data-stagger-group data-stagger-step="90">
-            <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/30 group" data-animate="fade-up" data-scroll-float="14" data-scroll-rot="-1" data-tilt-card>
-              <div class="rounded-xl overflow-hidden aspect-square mb-3">
-                <img
-                  alt="Myriam — Operations Lead"
-                  class="w-full h-full object-cover scl-img-zoom"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlMXwqTleHDQJ59YBdLIZ5fRiveVBATbdmpOiRv7d-4zyL-NRAaAA1rGxgPZzCVsMy1R84puGF5KvF8mYrTaY9DfnZ-Kd5dYD2GX09KoASxiZNp-DAYJ9igEuadyIj1sTNOaDeuddPbTKhYyxphP0DGmUrIXzQQlSbKLBT0AY6PMlFXrzy6Kk22Znale4FDSKQlS7fc12kNaJkvJRJAHxhEwK6t1WTg80n1a_HLUXNt6CDlc_g_P8ZGw"
-                />
+          <!-- Team Showcase Layout: Main Team Photo + Key Pillars -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Left: Showcase Photo of Team in branded uniforms -->
+            <div class="lg:col-span-7" data-animate="fade-left">
+              <div class="scl-card-interactive bg-surface-container-lowest p-3 sm:p-4 rounded-3xl shadow-md border border-outline-variant/35 overflow-hidden group">
+                <div class="rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] relative">
+                  <img
+                    alt="Super Cleaners London Professional Cleaning Team in branded uniforms"
+                    class="w-full h-full object-cover object-center scl-img-zoom"
+                    src="images/team.jpg"
+                  />
+                  <div class="absolute bottom-3 left-3 right-3 sm:left-4 sm:right-auto z-10">
+                    <div class="bg-primary/90 text-on-primary backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 shadow-lg inline-flex items-center gap-2 text-xs sm:text-sm font-semibold">
+                      <span class="material-symbols-outlined text-amber-300 text-[18px]">verified</span>
+                      <span>Super Cleaners London Dedicated Team</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p class="font-label-md text-label-md font-bold text-primary text-center">Myriam</p>
-              <p class="font-label-sm text-label-sm text-on-surface-variant text-center">Operations Lead</p>
             </div>
 
-            <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/30 group" data-animate="fade-up" data-scroll-float="-12" data-scroll-rot="1" data-tilt-card>
-              <div class="rounded-xl overflow-hidden aspect-square mb-3">
-                <img
-                  alt="Elena — Domestic Specialist"
-                  class="w-full h-full object-cover scl-img-zoom"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRxiIZXT_sDqdVyNQli-QEKxykUA8DxlMtc7qsrq4skD0JMq3V2LcmtuTDS5Do9FB5sxRbE-Rx7N504XzmaoE-lyJIgZbdfsOEuPnGYnYpeBxx-N8wYCVUzM2EwVL4gda8fYRfNTb-8ZMIifbTjqJmhiCRUbWgV6yS5K-1fY_VWz-dPzF4_TShNZmFEKw-KAIeqQqn4W97Rj3PEZ5JcMSbVfsa3jQBPUD0VfBj-ZEbX-SOD4Y3K5q8hw"
-                />
+            <!-- Right: 4 Team Credibility Pillars -->
+            <div class="lg:col-span-5 flex flex-col gap-4" data-animate="fade-right">
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">badge</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Fully Trained &amp; Supervised</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Every specialist undergoes thorough in-house training with regular quality supervision.</p>
+                </div>
               </div>
-              <p class="font-label-md text-label-md font-bold text-primary text-center">Elena</p>
-              <p class="font-label-sm text-label-sm text-on-surface-variant text-center">Domestic Specialist</p>
-            </div>
 
-            <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/30 group" data-animate="fade-up" data-scroll-float="14" data-scroll-rot="-1" data-tilt-card>
-              <div class="rounded-xl overflow-hidden aspect-square mb-3">
-                <img
-                  alt="Sofia — Deep Clean Senior"
-                  class="w-full h-full object-cover scl-img-zoom"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuApuyKfNA9zBGbfUsXrvpqRRlbCl8eBQCEYCtZNkDGErd-WftRVfDgk4jd8-zEsOimlaJbKsB_0Qx4yszf-Igc4QS_iGmM61UdG71hkd1uTcm64Rss6dZDPzKyA-REPE_Zt4PK-WG62fl-mXtpuvlb1nm01kmHWs_2n9qvGm26lh4N8tTYIrBc8zNlF183sN0m0CCM_6mQrh63WkYs1Cm6WU6zr9bLbSQ_MZc84jLMx9rXyl0fEkiEzUg"
-                />
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">sentiment_satisfied</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Friendly &amp; Respectful</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Punctual, discreet, and courteous professionals you can feel comfortable having in your space.</p>
+                </div>
               </div>
-              <p class="font-label-md text-label-md font-bold text-primary text-center">Sofia</p>
-              <p class="font-label-sm text-label-sm text-on-surface-variant text-center">Deep Clean Senior</p>
-            </div>
 
-            <div class="scl-card-interactive bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/30 group" data-animate="fade-up" data-scroll-float="-12" data-scroll-rot="1" data-tilt-card>
-              <div class="rounded-xl overflow-hidden aspect-square mb-3">
-                <img
-                  alt="Equipment &amp; Care — Professional Grade"
-                  class="w-full h-full object-cover scl-img-zoom"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBKLBsrlq78EybeCaINanspNukymTVjqx37bLuac-9IOmn7oicv2znEWNbyXaI1Pnprqu-yMyCY9UulUyVHux-G2YMsnl-xpz2yO9vxS4QxBM-IYyM9Pqj_afDgg1nWMq3mJ8poUGnIUPzABKoQtUVlTlWGf6y3TuSwUJ69sO1Sr4gCJwmO1bYACJT9ssjOq0Jr8YCT-PuI4F6qaJjP3yFl24U7mHzoMbsdMZFLXaA9q3R7KKfqSMUEQ"
-                />
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">security</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Fully Insured</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Full public liability insurance coverage for complete peace of mind on every visit.</p>
+                </div>
               </div>
-              <p class="font-label-md text-label-md font-bold text-primary text-center">Equipment &amp; Care</p>
-              <p class="font-label-sm text-label-sm text-on-surface-variant text-center">Professional Grade</p>
+
+              <div class="scl-card-interactive bg-surface-container-lowest p-5 rounded-2xl shadow-sm border border-outline-variant/30 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[26px]">support_agent</span>
+                </div>
+                <div>
+                  <h3 class="font-headline-sm text-base font-bold text-primary">Direct WhatsApp Support</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Quick communication directly with our London coordination desk on 07786 282887 or 07507 00167.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1536,7 +1477,7 @@
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
               <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
-                No, over 70% of our clients provide key access or use our secure keyholding protocol. Our staff are fully insured and DBS vetted, giving you total peace of mind while you work or enjoy your day.
+                No, many of our clients provide key access or use our secure keyholding service. Our staff are fully insured, trustworthy, and respectful, giving you total peace of mind while you work or enjoy your day.
               </p>
             </details>
 
@@ -1555,24 +1496,37 @@
             <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="8">
               <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
                 <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
+                  How does your pricing work, and is oven cleaning included?
+                </span>
+                <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
+              </summary>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
+                We clean from top to bottom with clear pricing and no hidden fees. Additional specialist services such as oven cleaning are charged separately per item, allowing you to tailor your booking exactly to your requirements.
+              </p>
+            </details>
+
+
+            <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="8">
+              <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
+                <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
                   Are cleaning materials and equipment provided?
                 </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
               <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
-                Yes, for one-off deep cleans, end of tenancy, and specialist services we bring all commercial-grade eco-friendly chemicals and Prochem/Henry vacuums. For regular domestic visits, we can use your preferred supplies or provide our luxury eco kit.
+                Yes, for one-off deep cleans, end of tenancy, and specialist services we bring all commercial-grade, high-quality cleaning equipment and professional products. For regular domestic visits, we can use your preferred supplies or provide our professional kit.
               </p>
             </details>
 
             <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="-6">
               <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
                 <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
-                  Are your cleaners insured and vetted?
+                  Are your cleaners fully trained and insured?
                 </span>
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
               <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
-                All Super Cleaners London cleaners undergo strict background checks, enhanced DBS checks, in-person interviews, and continuous hotel-grade training. We hold £10,000,000 in public liability insurance for complete homeowner protection.
+                All Super Cleaners London cleaners undergo thorough background checks, in-person interviews, and continuous professional training and supervision. We hold £10,000,000 in comprehensive public liability insurance for complete homeowner and business protection.
               </p>
             </details>
 
@@ -1596,7 +1550,7 @@
                 <span class="material-symbols-outlined text-secondary transition-transform duration-300 group-open:rotate-180 shrink-0">expand_more</span>
               </summary>
               <p class="font-body-md text-body-md text-on-surface-variant mt-3.5 pt-3.5 border-t border-outline-variant/25 leading-relaxed">
-                You can click 'Book Now', send us photos via WhatsApp, or call our London desk directly at 020 3664 9304 for an instant estimate.
+                You can click 'Book Now', message us on WhatsApp (07786 282887 or 07507 00167), or call our London desk directly at 020 3664 9304 for an instant estimate.
               </p>
             </details>
           </div>
@@ -1671,7 +1625,7 @@
               <img
                 alt="Super Cleaners London"
                 class="h-16 w-auto object-contain"
-                src="https://lh3.googleusercontent.com/aida/AEtjO1VtWWkrQ19v_qe7WEpV-TI2BGrvv-yLXB8mdzM_rWVniMlLlPi0hx3HWREIateS2Wps3HhciKWvvlKC-ZgDhnLjuH0NWcp7uNWXDlYx9zgpsd1QZ7p2ab18pIQIGt5SogVyGjwYpmCWtKWuhDekACFD5ZpFCN6yU0qeiIL3ZwCu2EDaznD5lV5ATcZxrXulwd71xYyqXkQJhgJx_NAACYlR5CFyR39DEGy0MNgHN_dztT9MQOQ6NKrbX9j69ksykiXXHTc9FT6yAQ"
+                src="images/logo.png"
               />
             </a>
           </div>
@@ -1680,7 +1634,7 @@
           </p>
           <div class="flex items-center gap-1.5 font-label-caps text-label-caps text-secondary-fixed-dim">
             <span class="material-symbols-outlined text-[16px]">verified_user</span>
-            <span>DBS Vetted &amp; Fully Insured</span>
+            <span>Fully Trained &amp; Insured</span>
           </div>
         </div>
 
@@ -1716,9 +1670,13 @@
               <span class="material-symbols-outlined text-secondary-fixed text-[18px]">call</span>
               <span>020 3664 9304</span>
             </a>
-            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" rel="noopener" target="_blank">
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/447786282887" rel="noopener" target="_blank">
               <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
               <span>WhatsApp: 07786 282887</span>
+            </a>
+            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/44750700167" rel="noopener" target="_blank">
+              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
+              <span>WhatsApp: 07507 00167</span>
             </a>
             <a class="flex items-center gap-2 hover:text-on-primary transition-colors">
               <span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>
@@ -1784,10 +1742,10 @@
           <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex flex-col justify-end p-4 text-white">
             <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-300 mb-1">
               <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              5-Star Hotel Hygiene Protocol
+              High Quality Standards
             </span>
             <p class="text-sm font-medium">
-              Every team member is directly employed, Enhanced DBS vetted, and covered by £10M public liability insurance.
+              Every team member is directly employed, fully trained, uniformed, and covered by comprehensive public liability insurance.
             </p>
           </div>
         </div>
