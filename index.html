@@ -398,6 +398,7 @@
             src="https://images.pexels.com/videos/4238760/pexels-photo-4238760.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920"
           />
           <video
+            id="hero-bg-video"
             aria-hidden="true"
             autoplay
             class="absolute inset-0 w-full h-full object-cover object-center hero-bg-pan"
@@ -453,16 +454,18 @@
             </div>
           </div>
 
-          <!-- Central Video Play Button Matching Image 1 -->
-          <div class="my-2" data-animate="fade-scale">
+          <!-- Functional Hero Background Video Play / Pause Control Button -->
+          <div class="my-2 flex flex-col items-center gap-1.5" data-animate="fade-scale">
             <button
-              aria-label="Watch video showcase"
-              class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md border border-white/45 text-white flex items-center justify-center transition-all hover:scale-110 shadow-2xl cursor-pointer"
+              aria-label="Pause background video"
+              class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md border border-white/45 text-white flex items-center justify-center transition-all hover:scale-110 shadow-2xl cursor-pointer group"
               id="video-play-btn"
+              title="Click to pause or play background video"
               type="button"
             >
-              <span class="material-symbols-outlined text-[36px] sm:text-[42px] ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+              <span class="material-symbols-outlined text-[36px] sm:text-[42px] transition-transform duration-200 group-hover:scale-110" id="video-btn-icon" style="font-variation-settings: 'FILL' 1;">pause</span>
             </button>
+            <span class="text-[11px] sm:text-xs font-semibold tracking-wider text-white/80 uppercase select-none" id="video-btn-status">Pause Video</span>
           </div>
 
           <!-- Centered Action Buttons with Standout Red Booking CTA -->
@@ -1307,7 +1310,7 @@
               <div class="scl-card-interactive bg-surface-container-lowest p-3 sm:p-4 rounded-3xl shadow-md border border-outline-variant/35 overflow-hidden group">
                 <div class="rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[16/10] relative">
                   <img
-                    alt="Super Cleaners London Professional Cleaning Team in branded uniforms"
+                    alt="Professional Uniformed London Cleaning Specialists with Cleaning Equipment"
                     class="w-full h-full object-cover object-center scl-img-zoom"
                     src="images/team.jpg"
                   />

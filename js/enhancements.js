@@ -529,46 +529,46 @@
       });
     });
 
-    const heroVideo = document.getElementById("hero-team-video");
-    const heroVideoOverlay = document.getElementById("hero-video-overlay");
+    /* Hero Background Video Play / Pause Toggle Controller */
+    const heroBgVideo = document.getElementById("hero-bg-video") || document.querySelector("#home video");
     const heroVideoPlayBtn = document.getElementById("video-play-btn");
+    const videoBtnIcon = document.getElementById("video-btn-icon");
+    const videoBtnStatus = document.getElementById("video-btn-status");
 
-    if (heroVideo && heroVideoOverlay && heroVideoPlayBtn) {
-      heroVideo.controls = false;
-      let ignorePlayUntil = 0;
-
-      heroVideoPlayBtn.addEventListener("click", () => {
-        if (Date.now() < ignorePlayUntil) return;
-        heroVideo.hidden = false;
-        heroVideo.play().catch((error) => {
-          console.error("Unable to play the hero video:", error);
-          heroVideo.hidden = true;
-          heroVideoOverlay.hidden = false;
-        });
-      });
-
-      heroVideo.addEventListener("click", () => {
-        if (!heroVideo.paused) {
-          ignorePlayUntil = Date.now() + 400;
-          heroVideo.pause();
+    if (heroVideoPlayBtn) {
+      const updateButtonUI = (isPaused) => {
+        if (videoBtnIcon) {
+          videoBtnIcon.textContent = isPaused ? "play_arrow" : "pause";
         }
-      });
+        if (videoBtnStatus) {
+          videoBtnStatus.textContent = isPaused ? "Play Video" : "Pause Video";
+        }
+        heroVideoPlayBtn.setAttribute("aria-label", isPaused ? "Play background video" : "Pause background video");
+        heroVideoPlayBtn.setAttribute("title", isPaused ? "Click to resume background video" : "Click to pause background video");
+      };
 
-      heroVideo.addEventListener("play", () => {
-        heroVideoOverlay.hidden = true;
-      });
+      if (heroBgVideo) {
+        // Initial state sync
+        updateButtonUI(heroBgVideo.paused);
 
-      heroVideo.addEventListener("pause", () => {
-        heroVideo.currentTime = 0;
-        heroVideo.hidden = true;
-        heroVideoOverlay.hidden = false;
-      });
+        heroVideoPlayBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (heroBgVideo.paused) {
+            heroBgVideo.play().then(() => updateButtonUI(false)).catch(() => {});
+          } else {
+            heroBgVideo.pause();
+            updateButtonUI(true);
+          }
+        });
 
-      heroVideo.addEventListener("ended", () => {
-        heroVideo.currentTime = 0;
-        heroVideo.hidden = true;
-        heroVideoOverlay.hidden = false;
-      });
+        heroBgVideo.addEventListener("play", () => updateButtonUI(false));
+        heroBgVideo.addEventListener("pause", () => updateButtonUI(true));
+      } else {
+        heroVideoPlayBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          openShowcaseModal(heroVideoPlayBtn);
+        });
+      }
     }
 
     if (modalOverlay) {
