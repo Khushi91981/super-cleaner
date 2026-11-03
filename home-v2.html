@@ -165,39 +165,37 @@
         />
       </a>
 
-      <!-- Desktop Navigation (Clean client-approved links: Home, Services, FAQ, About Us, Contact) -->
+      <!-- Desktop Navigation as per Client Mockup: Home, Services, FAQ, About Us -->
       <nav aria-label="Primary Navigation" class="scl-desktop-nav">
-        <a aria-current="page" class="scl-nav-link is-active" data-nav-target="home" href="#home">Home</a>
-        <a class="scl-nav-link" data-nav-target="services" href="#services">Services</a>
-        <a class="scl-nav-link" data-nav-target="faq" href="#faq">FAQ</a>
-        <a class="scl-nav-link" data-nav-target="about-us" href="#about-us">About Us</a>
-        <a class="scl-nav-link" data-nav-target="contact" href="#contact">Contact</a>
+        <a aria-current="page" class="scl-nav-link is-active border-b-2 border-primary pb-1 font-semibold text-primary" data-nav-target="home" href="#home">Home</a>
+        <a class="scl-nav-link font-medium hover:text-primary transition-colors" data-nav-target="services" href="#services">Services</a>
+        <a class="scl-nav-link font-medium hover:text-primary transition-colors" data-nav-target="faq" href="#faq">FAQ</a>
+        <a class="scl-nav-link font-medium hover:text-primary transition-colors" data-nav-target="about-us" href="#about-us">About Us</a>
       </nav>
 
-      <!-- Header Right Actions: Phone, WhatsApp Contacts & Visible Red Book Now CTA -->
+      <!-- Header Right Actions: Red Phone, Dual Green WhatsApp Contacts & Visible Red Book Now CTA -->
       <div class="scl-header-actions">
-        <a class="scl-header-phone" href="tel:02036649304" title="Call our London team">
-          <span class="material-symbols-outlined text-secondary text-[20px]">call</span>
-          <span class="font-semibold">020 3664 9304</span>
+        <a class="scl-header-phone flex items-center gap-1.5 font-bold text-primary hover:text-error transition-colors" href="tel:02036649304" title="Call 020 3664 9304">
+          <span class="material-symbols-outlined text-error text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span>
+          <span>020 3664 9304</span>
         </a>
 
-        <!-- Quick WhatsApp contacts for desktop -->
-        <div class="hidden xl:flex items-center gap-1.5">
-          <a class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 transition-colors text-xs font-semibold" href="https://wa.me/447786282887" rel="noopener" target="_blank" title="WhatsApp 07786 282887">
-            <span class="material-symbols-outlined text-emerald-600 text-[16px]">chat</span>
+        <!-- Dual WhatsApp contacts matching mockup header -->
+        <div class="hidden lg:flex items-center gap-2">
+          <a class="inline-flex items-center gap-1 font-bold text-primary hover:text-emerald-700 transition-colors text-sm" href="https://wa.me/447786282887" rel="noopener" target="_blank" title="WhatsApp 07786 282887">
+            <span class="material-symbols-outlined text-emerald-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>
             <span>07786 282887</span>
           </a>
-          <a class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200 transition-colors text-xs font-semibold" href="https://wa.me/44750700167" rel="noopener" target="_blank" title="WhatsApp 07507 00167">
-            <span class="material-symbols-outlined text-emerald-600 text-[16px]">chat</span>
+          <a class="inline-flex items-center gap-1 font-bold text-primary hover:text-emerald-700 transition-colors text-sm" href="https://wa.me/44750700167" rel="noopener" target="_blank" title="WhatsApp 07507 00167">
+            <span class="material-symbols-outlined text-emerald-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>
             <span>07507 00167</span>
           </a>
         </div>
 
         <!-- Visible Red CTA Button -->
-        <a class="scl-header-cta scl-header-cta--red" data-open-showcase-modal href="#contact">
-          <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+        <a class="scl-header-cta scl-header-cta--red font-bold px-4 py-2 rounded-full" data-open-showcase-modal href="#contact">
           <span>Book Now</span>
-          <span aria-hidden="true" class="hidden sm:inline">→</span>
+          <span aria-hidden="true">→</span>
         </a>
 
         <!-- Accessible Tablet & Mobile Hamburger Button -->
@@ -427,35 +425,43 @@
             />
           </div>
 
-          <!-- Trust & 20 Years Experience Rating Badge -->
-          <div class="inline-flex items-center gap-2 bg-slate-900/50 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/25 shadow-md" data-animate="fade-up">
-            <div aria-label="5 out of 5 stars" class="flex text-amber-400">
-              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-            </div>
-            <span class="font-label-caps text-label-caps uppercase tracking-wider text-white font-bold">
-              Trusted Since 2006 • <span class="counter-num font-bold" data-target="20">20</span> Years Experience
-            </span>
-          </div>
 
-          <!-- Hero H1 Headline -->
+
+          <!-- Hero H1 Headline (Exact matching Image 1: Experienced (italic) / Cleaning Specialists) -->
           <h1
-            class="font-display-hero text-[34px] sm:text-[46px] lg:text-[56px] text-white tracking-tight leading-[1.14] text-balance drop-shadow-[0_2px_14px_rgba(0,18,41,0.65)]"
+            class="font-display-hero text-[40px] sm:text-[56px] lg:text-[68px] text-white tracking-tight leading-[1.08] text-balance drop-shadow-[0_3px_16px_rgba(0,18,41,0.7)]"
             data-animate="fade-up"
           >
-            Experienced Cleaning Specialists <span class="italic text-sky-200 font-headline-lg font-semibold">Across London</span>
+            <span class="italic font-normal block font-display-hero">Experienced</span>
+            <span class="font-bold">Cleaning Specialists</span>
           </h1>
 
-          <!-- Hero Subheadline -->
-          <p
-            class="font-body-lg text-[16px] sm:text-[18px] lg:text-[20px] text-white/95 max-w-2xl leading-relaxed text-pretty drop-shadow-[0_2px_8px_rgba(0,18,41,0.6)]"
-            data-animate="fade-up"
-          >
-            Professional residential and commercial cleaning services, delivered with care, attention to detail and flexible bookings to suit your needs.
-          </p>
+          <!-- 5 Gold Stars & Trust Text Matching Image 1 -->
+          <div class="flex flex-col items-center gap-1.5 my-1" data-animate="fade-up">
+            <div aria-label="5 out of 5 stars" class="flex items-center gap-1 text-amber-400 drop-shadow-md">
+              <span class="material-symbols-outlined text-[24px] sm:text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[24px] sm:text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[24px] sm:text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[24px] sm:text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[24px] sm:text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <div class="text-center font-label-caps uppercase tracking-[0.18em] text-white font-semibold text-xs sm:text-sm drop-shadow-md leading-relaxed">
+              <p>TRUSTED COMPANY SINCE 2006.</p>
+              <p>20 YEARS OF EXPERIENCE.</p>
+            </div>
+          </div>
+
+          <!-- Central Video Play Button Matching Image 1 -->
+          <div class="my-2" data-animate="fade-scale">
+            <button
+              aria-label="Watch video showcase"
+              class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 hover:bg-white/35 backdrop-blur-md border border-white/45 text-white flex items-center justify-center transition-all hover:scale-110 shadow-2xl cursor-pointer"
+              id="video-play-btn"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-[36px] sm:text-[42px] ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+            </button>
+          </div>
 
           <!-- Centered Action Buttons with Standout Red Booking CTA -->
           <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3.5 pt-2" data-animate="fade-up">
@@ -494,76 +500,74 @@
       </section>
 
       <!-- =====================================================================
-           VALUE PROPOSITION STRIP
+           VALUE PROPOSITION SECTION (MATCHING EXACT CLIENT MOCKUP IMAGE 1)
            ===================================================================== -->
-      <section class="w-full bg-surface-container-low py-14 lg:py-16 border-y border-outline-variant/25">
+      <section class="w-full bg-[#f8fbff] py-14 lg:py-18 border-y border-outline-variant/30">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
-          <div class="text-center pb-8" data-animate="fade-up" data-float-y="-8" data-scroll-float>
-            <p class="font-headline-md text-[24px] sm:text-headline-md italic text-secondary">
+          <!-- Script Heading Matching Image 1 -->
+          <div class="text-center pb-10" data-animate="fade-up">
+            <p class="font-headline-md text-[28px] sm:text-[38px] lg:text-[42px] italic text-[#1E3A8A] font-medium">
               A team you can trust, quality you can see.
             </p>
+            <div class="w-36 h-1 bg-gradient-to-r from-sky-400 to-indigo-600 mx-auto rounded-full mt-2.5 opacity-80"></div>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" data-stagger-group data-stagger-step="90">
-            <!-- Prop 1: Trusted & Professional Team -->
-            <div data-float-rot="-0.8" data-float-y="-12" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-                  <span class="material-symbols-outlined text-[28px]">groups</span>
-                </div>
-                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Trusted &amp; Professional Team</h2>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Experienced cleaners you can trust in your home.
-                </p>
-                <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ Experienced Cleaners You Can Trust
-                </div>
+
+          <!-- 4 Distinct Columns with Dividing Borders Matching Mockup -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 lg:divide-x lg:divide-outline-variant/40" data-stagger-group data-stagger-step="90">
+            
+            <!-- Card 1: Trusted & Professional Team -->
+            <div class="flex flex-col items-center text-center px-4 lg:px-6" data-animate="fade-up">
+              <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#1E3A8A] mb-4 shadow-sm border border-blue-100">
+                <span class="material-symbols-outlined text-[34px]" style="font-variation-settings: 'FILL' 1;">groups</span>
               </div>
+              <h2 class="font-headline-sm text-[20px] lg:text-[21px] text-[#1E3A8A] font-bold mb-2.5">
+                Trusted &amp; Professional Team
+              </h2>
+              <p class="font-body-md text-[15px] text-on-surface-variant leading-relaxed max-w-xs">
+                Experienced, vetted cleaners you can trust in your home.
+              </p>
             </div>
-            <!-- Prop 2: Fully Trained & Insured -->
-            <div data-float-rot="0.8" data-float-y="12" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-                  <span class="material-symbols-outlined text-[28px]">badge</span>
-                </div>
-                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Fully Trained &amp; Insured</h2>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Professional cleaners who are fully trained, uniformed and supervised.
-                </p>
-                <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ Trained, Uniformed &amp; Supervised
-                </div>
+
+            <!-- Card 2: Fully Trained, Uniformed & Insured -->
+            <div class="flex flex-col items-center text-center px-4 lg:px-6" data-animate="fade-up">
+              <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#1E3A8A] mb-4 shadow-sm border border-blue-100">
+                <span class="material-symbols-outlined text-[34px]" style="font-variation-settings: 'FILL' 1;">badge</span>
               </div>
+              <h2 class="font-headline-sm text-[20px] lg:text-[21px] text-[#1E3A8A] font-bold mb-2.5">
+                Fully Trained, Uniformed &amp; Insured
+              </h2>
+              <p class="font-body-md text-[15px] text-on-surface-variant leading-relaxed max-w-xs">
+                Our professional cleaners are supervised and monitored.
+              </p>
             </div>
-            <!-- Prop 3: Flexible, Quick Bookings -->
-            <div data-float-rot="-0.8" data-float-y="-12" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-                  <span class="material-symbols-outlined text-[28px]">calendar_month</span>
-                </div>
-                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Flexible, Quick Bookings</h2>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Bookings tailored to your needs, with fast booking by WhatsApp or online.
-                </p>
-                <div class="scl-expand-drawer text-xs font-semibold text-emerald-700 w-full">
-                  ✓ Fast Booking by WhatsApp or Online
-                </div>
+
+            <!-- Card 3: Flexible, Quick Bookings -->
+            <div class="flex flex-col items-center text-center px-4 lg:px-6" data-animate="fade-up">
+              <div class="w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center gap-1 text-emerald-600 mb-4 shadow-sm border border-emerald-100">
+                <span class="material-symbols-outlined text-[24px] text-emerald-600" style="font-variation-settings: 'FILL' 1;">chat</span>
+                <span class="material-symbols-outlined text-[22px] text-red-600" style="font-variation-settings: 'FILL' 1;">call</span>
               </div>
+              <h2 class="font-headline-sm text-[20px] lg:text-[21px] text-[#1E3A8A] font-bold mb-2.5">
+                Flexible, Quick Bookings
+              </h2>
+              <p class="font-body-md text-[15px] text-on-surface-variant leading-relaxed max-w-xs">
+                Bookings tailored to your needs. Fast bookings by WhatsApp or phone.
+              </p>
             </div>
-            <!-- Prop 4: Flexible & Simple Cleaning / Clear Pricing -->
-            <div data-float-rot="0.8" data-float-y="12" data-scroll-float>
-              <div class="scl-card-interactive bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col items-center text-center group h-full" data-animate="fade-scale" data-tilt-card data-tilt-max="4">
-                <div class="scl-badge-icon w-14 h-14 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
-                  <span class="material-symbols-outlined text-[28px]">assignment_turned_in</span>
-                </div>
-                <h2 class="font-headline-sm text-headline-sm text-primary font-bold mb-1.5">Clear Pricing, No Hidden Fees</h2>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Straightforward cleaning services with clear pricing and no hidden fees.
-                </p>
-                <div class="scl-expand-drawer text-xs font-semibold text-secondary w-full">
-                  ✓ Clear Pricing • No Hidden Fees
-                </div>
+
+            <!-- Card 4: Flexible & Simple Contracts -->
+            <div class="flex flex-col items-center text-center px-4 lg:px-6" data-animate="fade-up">
+              <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#1E3A8A] mb-4 shadow-sm border border-blue-100">
+                <span class="material-symbols-outlined text-[34px]" style="font-variation-settings: 'FILL' 1;">description</span>
               </div>
+              <h2 class="font-headline-sm text-[20px] lg:text-[21px] text-[#1E3A8A] font-bold mb-2.5">
+                Flexible &amp; Simple Contracts
+              </h2>
+              <p class="font-body-md text-[15px] text-on-surface-variant leading-relaxed max-w-xs">
+                Top-to-bottom home cleaning, charged by the hour. No hidden fees.
+              </p>
             </div>
+
           </div>
         </div>
       </section>
@@ -573,14 +577,31 @@
            ===================================================================== -->
       <section class="w-full bg-surface py-16 lg:py-24" id="services">
         <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10 lg:gap-12">
-          <!-- Section Header -->
-          <div class="text-center max-w-2xl mx-auto flex flex-col gap-2" data-animate="fade-up" data-float-y="-10" data-scroll-float>
-            <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Tailored Solutions</span>
-            <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Our Cleaning Services</h2>
-            <div class="w-16 h-1 bg-error mx-auto rounded-full mt-1 mb-2"></div>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              Whether it is your family residence, luxury penthouse, or corporate headquarters, we deliver immaculately restored interiors.
+          <!-- Section Header (Matching Image 2 Flyer/Banner Style) -->
+          <div class="text-center max-w-3xl mx-auto flex flex-col items-center gap-3" data-animate="fade-up">
+            <div class="inline-flex items-center gap-2 bg-blue-50 text-[#1E3A8A] px-4 py-1.5 rounded-full border border-blue-200 text-xs font-bold uppercase tracking-wider">
+              <span>20 YEARS OF EXPERIENCE</span>
+            </div>
+            <h2 class="font-display-hero text-[30px] sm:text-[42px] lg:text-[46px] text-primary font-bold tracking-tight leading-tight">
+              <span class="italic font-normal block sm:inline">Professional Cleaning Services</span> <span class="italic text-secondary font-headline-lg">Across London</span>
+            </h2>
+            <p class="font-body-md text-base sm:text-lg text-on-surface-variant max-w-xl">
+              High quality cleaning solutions to get a cleaner, healthier and more welcoming space.
             </p>
+            <div class="flex items-center justify-center gap-1 text-amber-500 my-1">
+              <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+
+            <div class="pt-4">
+              <h3 class="font-display-hero text-[32px] sm:text-[38px] text-[#001229] font-bold italic tracking-tight">
+                Our Cleaning Services
+              </h3>
+              <div class="w-24 h-1 bg-error mx-auto rounded-full mt-2"></div>
+            </div>
           </div>
 
           <!-- 4 Split Landscape Service Rows -->
@@ -613,9 +634,7 @@
                   </div>
                   <div>
                     <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Domestic Cleaning &amp; Housekeeping</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Regular domestic cleaning services tailored to your household requirements, with flexible weekly, fortnightly and daily cleaning schedules to suit your needs.
-                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Regular domestic cleaning tailored to your household, with flexible weekly, fortnightly or daily visits to suit your needs.</p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Kitchen &amp; Appliances</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Sanitary Ware</span>
@@ -665,9 +684,7 @@
                   </div>
                   <div>
                     <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Professional Cleaning Services</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Professional cleaning services delivered with precision, care and attention to detail. Our experienced team provides exceptional results, tailored to your business needs and finished to the highest standards.
-                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Professional cleaning for homes, delivered with care and attention to detail. We provide one-off, deep, end-of-tenancy, after-builders and move-in/move-out cleaning, with same-day carpet steam cleaning available alongside end-of-tenancy cleans.</p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">100% Deposit Guarantee</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Oven Cleaning (Separate Item)</span>
@@ -715,9 +732,7 @@
                   </div>
                   <div>
                     <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Commercial Cleaning Services</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Tailored commercial cleaning solutions across London for offices, clinics, salons, retail stores, gyms, warehouses, and workshops.
-                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Reliable commercial cleaning for offices, corporate spaces, beauty clinics, salons, gyms, retail premises, warehouses and mechanical workshops. Daily and weekly cleaning schedules tailored to your business. Regular contracts can include carpet spot cleaning for tea stains and everyday spills. Professional commercial cleaning delivered to a high standard.</p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Bespoke Keyholder Access</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Daily &amp; Evening Slots</span>
@@ -767,9 +782,7 @@
                   </div>
                   <div>
                     <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Carpet &amp; Upholstery Cleaning</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
-                      Professional carpet and upholstery steam cleaning services restoring carpets, rugs, sofas, and fabrics across London.
-                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Professional steam cleaning and sanitising for carpets and upholstery in London homes and businesses, delivered by our specialist team.</p>
                     <div class="flex flex-wrap gap-2 mt-4">
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Hot Water Extraction</span>
                       <span class="bg-surface-container px-3 py-1 rounded-full font-label-sm text-label-sm text-primary font-medium">Pet Stain Neutralisation</span>
