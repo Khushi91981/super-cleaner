@@ -1143,59 +1143,146 @@
       </section>
 
       <!-- =====================================================================
-           CLEANING JOURNAL
+           CLEANING JOURNAL & BLOG SECTION (REDESIGNED EDITORIAL MAGAZINE LAYOUT)
            ===================================================================== -->
-      <section class="w-full bg-primary py-16 lg:py-24 relative overflow-hidden" id="cleaning-journal">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
-          <div class="text-center max-w-2xl mx-auto flex flex-col gap-2" data-animate="fade-up" data-scroll-float="-8">
-            <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">The Housekeeping Edit</span>
-            <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-on-primary font-bold tracking-tight">Notes for a Better-kept Home</h2>
-            <div class="w-16 h-1 bg-amber-400 mx-auto rounded-full mt-1 mb-2"></div>
-            <p class="font-body-md text-body-md text-surface-container-highest">Thoughtful advice from our London cleaning team for considered everyday care.</p>
+      <section class="w-full bg-gradient-to-b from-[#F7FAFD] via-surface to-[#F2F6FA] py-18 lg:py-24 border-y border-outline-variant/30 relative overflow-hidden" id="cleaning-journal">
+        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-12">
+          
+          <!-- Editorial Section Header -->
+          <div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-3" data-animate="fade-up">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-widest font-label-caps border border-secondary/15">
+              <span class="material-symbols-outlined text-[15px]">auto_stories</span>
+              The Housekeeping Edit
+            </span>
+            <h2 class="font-headline-lg text-[32px] sm:text-[40px] lg:text-[44px] text-primary font-bold tracking-tight">
+              Notes for a Better-Kept Home
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-secondary to-indigo-600 rounded-full"></div>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Thoughtful advice, seasonal routines, and practical checklists from our experienced London cleaning specialists.
+            </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
-            <article class="scl-card-interactive bg-primary-container rounded-2xl overflow-hidden shadow-lg border border-white/10 flex flex-col" data-animate="fade-up" data-scroll-float="8" data-tilt-card>
-              <div class="h-36 bg-gradient-to-br from-blue-400/30 via-secondary/25 to-primary-container flex items-center justify-center border-b border-white/10">
-                <span class="material-symbols-outlined text-[54px] text-secondary-fixed">calendar_month</span>
+          <!-- Magazine-Style 3-Column Blog Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            
+            <!-- Blog Card 1: Deep Cleaning Frequency -->
+            <article class="group scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-outline-variant/30 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
+              <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                <img
+                  src="images/blog-deep-cleaning.jpg"
+                  alt="How Often Should You Deep Clean Your Home"
+                  class="w-full h-full object-cover scl-img-zoom transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-3.5 left-3.5 px-3 py-1 bg-surface-container-lowest/95 backdrop-blur-md text-primary text-[11px] font-bold rounded-lg uppercase tracking-wider font-label-caps shadow-sm border border-outline-variant/20">
+                  Home Care
+                </span>
+                <span class="absolute bottom-3.5 right-3.5 px-2.5 py-1 bg-primary/85 backdrop-blur-md text-white text-[11px] font-medium rounded-md shadow-sm">
+                  5 min read
+                </span>
               </div>
-              <div class="p-6 sm:p-7 flex flex-col gap-2">
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">Home Care · 5 min read</span>
-                <h3 class="font-headline-sm text-[21px] text-on-primary font-bold">How Often Should You Deep Clean Your Home?</h3>
-                <p class="font-body-sm text-body-sm text-surface-container-highest leading-relaxed">A room-by-room guide to building a deep-cleaning routine that keeps busy London homes feeling fresh.</p>
+              <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between gap-5">
+                <div class="flex flex-col gap-2.5">
+                  <div class="flex items-center gap-2 text-xs text-on-surface-variant/75 font-medium">
+                    <span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
+                    <span>London Housekeeping Advice</span>
+                  </div>
+                  <h3 class="font-headline-sm text-[21px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
+                    How Often Should You Deep Clean Your Home?
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    A room-by-room guide to establishing an effective deep-cleaning routine that keeps busy London homes feeling fresh throughout every season.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/25 flex items-center justify-between text-secondary font-bold text-xs font-label-caps uppercase tracking-wider">
+                  <span>Read Article</span>
+                  <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                  </span>
+                </div>
               </div>
-              <span class="mt-auto px-6 sm:px-7 pb-6 sm:pb-7 inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary-fixed">
-                Cleaning advice <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
-              </span>
             </article>
 
-            <article class="scl-card-interactive bg-primary-container rounded-2xl overflow-hidden shadow-lg border border-white/10 flex flex-col" data-animate="fade-up" data-scroll-float="-6" data-tilt-card>
-              <div class="h-36 bg-gradient-to-br from-rose-400/30 via-purple-500/20 to-primary-container flex items-center justify-center border-b border-white/10">
-                <span class="material-symbols-outlined text-[54px] text-rose-200">checklist</span>
+            <!-- Blog Card 2: End of Tenancy Checklist -->
+            <article class="group scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-outline-variant/30 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
+              <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                <img
+                  src="images/blog-end-of-tenancy.jpg"
+                  alt="A Stress-Free End-of-Tenancy Checklist"
+                  class="w-full h-full object-cover scl-img-zoom transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-3.5 left-3.5 px-3 py-1 bg-surface-container-lowest/95 backdrop-blur-md text-primary text-[11px] font-bold rounded-lg uppercase tracking-wider font-label-caps shadow-sm border border-outline-variant/20">
+                  Tenancy Guide
+                </span>
+                <span class="absolute bottom-3.5 right-3.5 px-2.5 py-1 bg-primary/85 backdrop-blur-md text-white text-[11px] font-medium rounded-md shadow-sm">
+                  4 min read
+                </span>
               </div>
-              <div class="p-6 sm:p-7 flex flex-col gap-2">
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">Moving Home · 4 min read</span>
-                <h3 class="font-headline-sm text-[21px] text-on-primary font-bold">A Stress-Free End-of-Tenancy Checklist</h3>
-                <p class="font-body-sm text-body-sm text-surface-container-highest leading-relaxed">The details tenants and landlords often overlook before a final inventory inspection.</p>
+              <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between gap-5">
+                <div class="flex flex-col gap-2.5">
+                  <div class="flex items-center gap-2 text-xs text-on-surface-variant/75 font-medium">
+                    <span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+                    <span>Move-Out Guidance</span>
+                  </div>
+                  <h3 class="font-headline-sm text-[21px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
+                    A Stress-Free End-of-Tenancy Checklist
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Essential areas and hidden fixtures that landlords and inventory clerks inspect most thoroughly before signing off on full deposit returns.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/25 flex items-center justify-between text-secondary font-bold text-xs font-label-caps uppercase tracking-wider">
+                  <span>Read Article</span>
+                  <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                  </span>
+                </div>
               </div>
-              <span class="mt-auto px-6 sm:px-7 pb-6 sm:pb-7 inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary-fixed">
-                Moving guidance <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
-              </span>
             </article>
 
-            <article class="scl-card-interactive bg-primary-container rounded-2xl overflow-hidden shadow-lg border border-white/10 flex flex-col" data-animate="fade-up" data-scroll-float="8" data-tilt-card>
-              <div class="h-36 bg-gradient-to-br from-emerald-400/30 via-teal-500/20 to-primary-container flex items-center justify-center border-b border-white/10">
-                <span class="material-symbols-outlined text-[54px] text-emerald-200">eco</span>
+            <!-- Blog Card 3: Floor Care & Maintenance -->
+            <article class="group scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-outline-variant/30 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
+              <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                <img
+                  src="images/blog-floor-care.jpg"
+                  alt="Caring for Hardwood and Natural Stone Floors"
+                  class="w-full h-full object-cover scl-img-zoom transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-3.5 left-3.5 px-3 py-1 bg-surface-container-lowest/95 backdrop-blur-md text-primary text-[11px] font-bold rounded-lg uppercase tracking-wider font-label-caps shadow-sm border border-outline-variant/20">
+                  Surface Care
+                </span>
+                <span class="absolute bottom-3.5 right-3.5 px-2.5 py-1 bg-primary/85 backdrop-blur-md text-white text-[11px] font-medium rounded-md shadow-sm">
+                  6 min read
+                </span>
               </div>
-              <div class="p-6 sm:p-7 flex flex-col gap-2">
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary-fixed font-bold">Healthy Home · 6 min read</span>
-                <h3 class="font-headline-sm text-[21px] text-on-primary font-bold">Choosing Cleaning Products for Pets &amp; Children</h3>
-                <p class="font-body-sm text-body-sm text-surface-container-highest leading-relaxed">Simple ways to reduce harsh residues while keeping kitchens, floors and family spaces clean.</p>
+              <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between gap-5">
+                <div class="flex flex-col gap-2.5">
+                  <div class="flex items-center gap-2 text-xs text-on-surface-variant/75 font-medium">
+                    <span class="material-symbols-outlined text-[15px] text-secondary">brush</span>
+                    <span>Specialist Care Tips</span>
+                  </div>
+                  <h3 class="font-headline-sm text-[21px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
+                    Caring for Hardwood &amp; Natural Stone Floors
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                    Specialist techniques for protecting delicate parquet finishes, polished marble countertops, and limestone tiles from daily London foot traffic.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-outline-variant/25 flex items-center justify-between text-secondary font-bold text-xs font-label-caps uppercase tracking-wider">
+                  <span>Read Article</span>
+                  <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
+                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                  </span>
+                </div>
               </div>
-              <span class="mt-auto px-6 sm:px-7 pb-6 sm:pb-7 inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-secondary-fixed">
-                Healthy home tips <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
-              </span>
             </article>
+
           </div>
         </div>
       </section>
