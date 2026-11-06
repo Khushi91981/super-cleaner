@@ -535,6 +535,12 @@
     const videoBtnIcon = document.getElementById("video-btn-icon");
     const videoBtnStatus = document.getElementById("video-btn-status");
 
+    if (heroBgVideo) {
+      heroBgVideo.addEventListener("error", () => {
+        heroBgVideo.style.opacity = "0";
+      });
+    }
+
     if (heroVideoPlayBtn) {
       const updateButtonUI = (isPaused) => {
         if (videoBtnIcon) {
