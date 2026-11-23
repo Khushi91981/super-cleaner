@@ -20,7 +20,6 @@ Following client feedback:
 ## Pages
 
 - [`index.html`](./index.html) — Primary client-approved production homepage deployed to GitHub Pages root.
-- [`home-v2.html`](./home-v2.html) — Client-approved Version 2 homepage kept fully in sync.
 
 ## Assets
 

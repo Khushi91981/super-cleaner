@@ -291,12 +291,22 @@
       fulham: {
         pin: "pin-fulham",
         postcode: "SW6",
-        label: "Fulham & Parsons Green",
+        label: "Fulham",
+      },
+      "sands-end": {
+        pin: "pin-sands-end",
+        postcode: "SW6",
+        label: "Sands End",
+      },
+      "imperial-wharf": {
+        pin: "pin-imperial-wharf",
+        postcode: "SW6",
+        label: "Imperial Wharf",
       },
       chelsea: {
         pin: "pin-chelsea",
         postcode: "SW3 / SW10",
-        label: "Chelsea & King's Road",
+        label: "Chelsea",
       },
       hammersmith: {
         pin: "pin-hammersmith",
@@ -313,15 +323,25 @@
         postcode: "SW15",
         label: "Putney",
       },
+      "earls-court": {
+        pin: "pin-earls-court",
+        postcode: "SW5",
+        label: "Earls Court",
+      },
+      earlsfield: {
+        pin: "pin-earlsfield",
+        postcode: "SW18",
+        label: "Earlsfield",
+      },
       "south-kensington": {
         pin: "pin-south-kensington",
         postcode: "SW7",
         label: "South Kensington",
       },
       kensington: {
-        pin: "pin-south-kensington",
-        postcode: "W8 / SW7",
-        label: "Kensington & South Kensington",
+        pin: "pin-kensington",
+        postcode: "W8",
+        label: "Kensington",
       },
       battersea: {
         pin: "pin-battersea",
@@ -926,6 +946,83 @@
           );
         } else {
           window.calculateAndConfirm();
+        }
+      });
+    });
+
+    /* =========================================================================
+       10. Smooth Open & Close Animation for All FAQ <details> Accordions
+       ========================================================================= */
+    document.querySelectorAll("details").forEach((detailsEl) => {
+      const summary = detailsEl.querySelector("summary");
+      if (!summary) return;
+
+      let currentAnimation = null;
+      let isClosing = false;
+      let isExpanding = false;
+
+      const onAnimationFinish = (open) => {
+        detailsEl.open = open;
+        currentAnimation = null;
+        isClosing = false;
+        isExpanding = false;
+        detailsEl.classList.remove("is-closing");
+        detailsEl.style.height = "";
+        detailsEl.style.overflow = "";
+      };
+
+      const shrink = () => {
+        isClosing = true;
+        detailsEl.classList.add("is-closing");
+        const style = window.getComputedStyle(detailsEl);
+        const padTop = parseFloat(style.paddingTop) || 0;
+        const padBottom = parseFloat(style.paddingBottom) || 0;
+        const borderY =
+          (parseFloat(style.borderTopWidth) || 0) +
+          (parseFloat(style.borderBottomWidth) || 0);
+        const startHeight = `${detailsEl.offsetHeight}px`;
+        const endHeight = `${summary.offsetHeight + padTop + padBottom + borderY}px`;
+
+        if (currentAnimation) currentAnimation.cancel();
+        detailsEl.style.overflow = "hidden";
+        currentAnimation = detailsEl.animate(
+          { height: [startHeight, endHeight] },
+          { duration: 280, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
+        );
+        currentAnimation.onfinish = () => onAnimationFinish(false);
+        currentAnimation.oncancel = () => {
+          isClosing = false;
+          detailsEl.classList.remove("is-closing");
+        };
+      };
+
+      const expand = () => {
+        isExpanding = true;
+        const startHeight = `${detailsEl.offsetHeight}px`;
+        detailsEl.style.overflow = "hidden";
+        detailsEl.style.height = startHeight;
+        detailsEl.open = true;
+
+        window.requestAnimationFrame(() => {
+          const endHeight = `${detailsEl.scrollHeight}px`;
+          if (currentAnimation) currentAnimation.cancel();
+          currentAnimation = detailsEl.animate(
+            { height: [startHeight, endHeight] },
+            { duration: 320, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
+          );
+          currentAnimation.onfinish = () => onAnimationFinish(true);
+          currentAnimation.oncancel = () => {
+            isExpanding = false;
+          };
+        });
+      };
+
+      summary.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (isClosing || !detailsEl.open) {
+          expand();
+        } else if (isExpanding || detailsEl.open) {
+          shrink();
         }
       });
     });

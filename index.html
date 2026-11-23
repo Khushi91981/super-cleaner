@@ -7,7 +7,7 @@
   <title>Super Cleaners London — Experienced Cleaning Specialists Across London</title>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600;1,700;1,800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
@@ -79,7 +79,7 @@
             "space-2xl": "4rem",
             "gutter": "1.5rem",
             "gutter-mobile": "1rem",
-            "margin": "3rem",
+            "margin": "2.5rem",
             "margin-mobile": "1.25rem"
           },
           fontFamily: {
@@ -153,243 +153,8 @@
   <!-- SCROLL PROGRESS INDICATOR BAR -->
   <div aria-hidden="true" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-secondary via-error to-emerald-500 z-[100] transition-all duration-75 w-0" id="scroll-progress-bar"></div>
 
-  <!-- RESPONSIVE STICKY HEADER -->
-  <header class="scl-header" id="site-header">
-    <div class="scl-header-inner">
-      <!-- Brand Logo -->
-      <a aria-label="Super Cleaners London Home" class="scl-logo-link" href="#home">
-        <img
-          alt="Super Cleaners London"
-          class="scl-logo-img h-12 sm:h-14 w-auto object-contain"
-          src="images/logo.png"
-        />
-      </a>
-
-      <!-- Desktop Navigation: Premium Executive Interactive States -->
-      <nav aria-label="Primary Navigation" class="scl-desktop-nav">
-        <a aria-current="page" class="scl-nav-link is-active" data-nav-target="home" href="#home">Home</a>
-        <a class="scl-nav-link" data-nav-target="services" href="#services">Services</a>
-        <a class="scl-nav-link" data-nav-target="faq" href="#faq">FAQ</a>
-        <a class="scl-nav-link" data-nav-target="about-us" href="#about-us">About Us</a>
-      </nav>
-
-      <!-- Header Right Actions: Red Phone, Dual Green WhatsApp Contacts & Visible Red Book Now CTA -->
-      <div class="scl-header-actions">
-        <a class="scl-header-phone flex items-center gap-1.5 font-bold text-primary hover:text-error transition-colors" href="tel:02036649304" title="Call 020 3664 9304">
-          <span class="material-symbols-outlined text-error text-[20px]" style="font-variation-settings: 'FILL' 1;">call</span>
-          <span>020 3664 9304</span>
-        </a>
-
-        <!-- Dual WhatsApp contacts matching mockup header -->
-        <div class="hidden lg:flex items-center gap-2">
-          <a class="inline-flex items-center gap-1 font-bold text-primary hover:text-emerald-700 transition-colors text-sm" href="https://wa.me/447786282887" rel="noopener" target="_blank" title="WhatsApp 07786 282887">
-            <span class="material-symbols-outlined text-emerald-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>
-            <span>07786 282887</span>
-          </a>
-          <a class="inline-flex items-center gap-1 font-bold text-primary hover:text-emerald-700 transition-colors text-sm" href="https://wa.me/44750700167" rel="noopener" target="_blank" title="WhatsApp 07507 00167">
-            <span class="material-symbols-outlined text-emerald-600 text-[18px]" style="font-variation-settings: 'FILL' 1;">chat</span>
-            <span>07507 00167</span>
-          </a>
-        </div>
-
-        <!-- Visible Red CTA Button -->
-        <a class="scl-header-cta scl-header-cta--red font-bold px-4 py-2 rounded-full" data-open-showcase-modal href="#contact">
-          <span>Book Now</span>
-          <span aria-hidden="true">→</span>
-        </a>
-
-        <!-- Accessible Tablet & Mobile Hamburger Button -->
-        <button
-          aria-controls="mobile-nav-drawer"
-          aria-expanded="false"
-          aria-label="Open navigation menu"
-          class="scl-menu-toggle"
-          id="mobile-menu-toggle"
-          type="button"
-        >
-          <span class="material-symbols-outlined text-[24px]" id="mobile-menu-icon">menu</span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- MOBILE & TABLET NAVIGATION BACKDROP & DRAWER -->
-  <div aria-hidden="true" class="scl-mobile-backdrop" id="mobile-nav-backdrop"></div>
-  <aside
-    aria-hidden="true"
-    aria-label="Mobile Navigation Menu"
-    class="scl-mobile-drawer"
-    id="mobile-nav-drawer"
-  >
-    <div class="p-5 flex flex-col justify-between min-h-full gap-6">
-      <div>
-        <div class="flex items-center justify-between pb-3 mb-2 border-b border-outline-variant/30">
-          <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">
-            Navigation Menu
-          </span>
-          <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            Open 7 Days
-          </span>
-        </div>
-
-        <nav aria-label="Mobile Navigation Links" class="scl-mobile-nav-list px-0">
-          <a class="scl-mobile-nav-link is-active" data-nav-target="home" href="#home">
-            <span>Home</span>
-            <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="services" href="#services">
-            <span>Services</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="faq" href="#faq">
-            <span>FAQ</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="about-us" href="#about-us">
-            <span>About Us</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-          <a class="scl-mobile-nav-link" data-nav-target="contact" href="#contact">
-            <span>Contact</span>
-            <span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
-          </a>
-        </nav>
-      </div>
-
-      <!-- Mobile Drawer Bottom Quick Actions with Red CTA & Both WhatsApps -->
-      <div class="pt-4 border-t border-outline-variant/30 flex flex-col gap-3">
-        <a
-          class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl btn-primary-red font-label-md text-label-md shadow-md transition-colors"
-          data-open-showcase-modal
-          href="#contact"
-        >
-          <span class="material-symbols-outlined text-[20px]">calendar_today</span>
-          <span>Book Your Clean Online →</span>
-        </a>
-        <a
-          class="inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-surface-container-low text-primary font-label-sm text-label-sm font-bold hover:bg-secondary-fixed transition-colors border border-outline-variant/40"
-          href="tel:02036649304"
-        >
-          <span class="material-symbols-outlined text-secondary text-[18px]">call</span>
-          <span>Call 020 3664 9304</span>
-        </a>
-        <div class="grid grid-cols-2 gap-2">
-          <a
-            class="inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600 text-white font-label-sm text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
-            href="https://wa.me/447786282887"
-            rel="noopener"
-            target="_blank"
-          >
-            <span class="material-symbols-outlined text-[16px]">chat</span>
-            <span>07786 282887</span>
-          </a>
-          <a
-            class="inline-flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl bg-emerald-600 text-white font-label-sm text-xs font-bold hover:bg-emerald-700 transition-colors shadow-sm"
-            href="https://wa.me/44750700167"
-            rel="noopener"
-            target="_blank"
-          >
-            <span class="material-symbols-outlined text-[16px]">chat</span>
-            <span>07507 00167</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </aside>
-
-  <!-- INTERACTIVE FLOATING CONTACT DOCK WITH EXPANDING LABELS -->
-  <aside
-    aria-label="Quick Contact Toolbar"
-    class="scl-floating-dock fixed right-3 sm:right-4 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2.5 shadow-[0_16px_36px_-6px_rgba(15,39,68,0.22)] p-2 rounded-full bg-surface-container-lowest/95 backdrop-blur-md border border-outline-variant/40"
-  >
-    <!-- Facebook -->
-    <div class="relative group flex items-center justify-end">
-      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        Facebook Page
-      </span>
-      <a
-        aria-label="Follow Super Cleaners London on Facebook"
-        class="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm hover:brightness-105"
-        href="#contact"
-        title="Facebook"
-      >
-        <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Instagram -->
-    <div class="relative group flex items-center justify-end">
-      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        Follow @SuperCleaners
-      </span>
-      <a
-        aria-label="Follow Super Cleaners London on Instagram"
-        class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm hover:brightness-105"
-        href="#contact"
-        title="Instagram"
-      >
-        <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- WhatsApp 1 -->
-    <div class="relative group flex items-center justify-end">
-      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-emerald-700 text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        WhatsApp: 07786 282887
-      </span>
-      <a
-        aria-label="Chat on WhatsApp 07786 282887"
-        class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm hover:brightness-105"
-        href="https://wa.me/447786282887"
-        rel="noopener"
-        target="_blank"
-        title="WhatsApp: 07786 282887"
-      >
-        <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- WhatsApp 2 -->
-    <div class="relative group flex items-center justify-end">
-      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-teal-800 text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        WhatsApp: 07507 00167
-      </span>
-      <a
-        aria-label="Chat on WhatsApp 07507 00167"
-        class="w-10 h-10 rounded-full bg-[#128C7E] text-white flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm hover:brightness-105"
-        href="https://wa.me/44750700167"
-        rel="noopener"
-        target="_blank"
-        title="WhatsApp: 07507 00167"
-      >
-        <svg aria-hidden="true" class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-      </a>
-    </div>
-
-    <!-- Email Us -->
-    <div class="relative group flex items-center justify-end">
-      <span class="pointer-events-none hidden sm:block absolute right-12 px-3 py-1.5 bg-primary text-on-primary text-xs font-label-sm rounded-lg opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200 whitespace-nowrap shadow-md">
-        Email Support Desk
-      </span>
-      <a
-        aria-label="Email Super Cleaners London"
-        class="w-10 h-10 rounded-full bg-secondary text-on-primary flex items-center justify-center transition-all duration-200 group-hover:scale-110 shadow-sm hover:brightness-110"
-        href="mailto:info@supercleanerslondon.co.uk"
-        title="Send Email"
-      >
-        <span class="material-symbols-outlined text-[20px]">mail</span>
-      </a>
-    </div>
-  </aside>
+  <!-- GLOBAL HEADER, MOBILE DRAWER & FLOATING SOCIAL DOCK -->
+  <div id="scl-global-header"></div>
 
   <main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]">
     <div class="flex flex-col w-full">
@@ -435,7 +200,7 @@
               <img
                 src="images/logo.png"
                 alt="Super Cleaners London — Residential &amp; Commercial"
-                class="h-20 sm:h-24 md:h-28 w-auto object-contain rounded-xl drop-shadow-sm"
+                class="h-24 sm:h-28 md:h-32 w-auto object-contain rounded-xl drop-shadow-sm"
               />
             </div>
           </div>
@@ -509,13 +274,13 @@
            VALUE PROPOSITION SECTION (MATCHING EXACT CLIENT MOCKUP IMAGE 1)
            ===================================================================== -->
       <section class="w-full bg-[#f8fbff] py-14 lg:py-18 border-y border-outline-variant/30">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin">
           <!-- Script Heading Matching Image 1 -->
           <div class="text-center pb-10" data-animate="fade-up">
-            <p class="font-headline-md text-[28px] sm:text-[38px] lg:text-[42px] italic text-[#1E3A8A] font-medium">
+            <p class="font-headline-md text-[30px] sm:text-[40px] lg:text-[46px] italic font-bold text-secondary tracking-tight">
               A team you can trust, quality you can see.
             </p>
-            <div class="w-36 h-1 bg-gradient-to-r from-sky-400 to-indigo-600 mx-auto rounded-full mt-2.5 opacity-80"></div>
+            <div class="w-40 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] mx-auto rounded-full mt-3"></div>
           </div>
 
           <!-- 4 Distinct Columns with Dividing Borders Matching Mockup -->
@@ -561,13 +326,13 @@
               </p>
             </div>
 
-            <!-- Card 4: Flexible & Simple Contracts -->
+            <!-- Card 4: Tailored & Simple Contracts -->
             <div class="flex flex-col items-center text-center px-4 lg:px-6" data-animate="fade-up">
               <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#1E3A8A] mb-4 shadow-sm border border-blue-100">
-                <span class="material-symbols-outlined text-[34px]" style="font-variation-settings: 'FILL' 1;">description</span>
+                <span class="material-symbols-outlined text-[34px]" style="font-variation-settings: 'FILL' 1;">edit_document</span>
               </div>
               <h2 class="font-headline-sm text-[20px] lg:text-[21px] text-[#1E3A8A] font-bold mb-2.5">
-                Flexible &amp; Simple Contracts
+                Tailored &amp; Simple Contracts
               </h2>
               <p class="font-body-md text-[15px] text-on-surface-variant leading-relaxed max-w-xs">
                 Top-to-bottom home cleaning, charged by the hour. No hidden fees.
@@ -582,7 +347,7 @@
            OUR CLEANING SERVICES (VERSION 2 SPLIT-COLUMN LANDSCAPE ROWS)
            ===================================================================== -->
       <section class="w-full bg-surface py-16 lg:py-24" id="services">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10 lg:gap-12">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10 lg:gap-12">
           <!-- Section Header (Matching Image 2 Flyer/Banner Style) -->
           <div class="text-center max-w-3xl mx-auto flex flex-col items-center gap-3" data-animate="fade-up">
             <div class="inline-flex items-center gap-2 bg-blue-50 text-[#1E3A8A] px-4 py-1.5 rounded-full border border-blue-200 text-xs font-bold uppercase tracking-wider">
@@ -591,6 +356,7 @@
             <h2 class="font-display-hero text-[30px] sm:text-[42px] lg:text-[46px] text-primary font-bold tracking-tight leading-tight">
               <span class="italic font-normal block sm:inline">Professional Cleaning Services</span> <span class="italic text-secondary font-headline-lg">Across London</span>
             </h2>
+            <div class="w-40 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] mx-auto rounded-full mt-1"></div>
             <p class="font-body-md text-base sm:text-lg text-on-surface-variant max-w-xl">
               High quality cleaning solutions to get a cleaner, healthier and more welcoming space.
             </p>
@@ -624,23 +390,33 @@
                 <img
                   alt="Domestic Cleaning &amp; Housekeeping in London"
                   class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
-                  src="images/domestic-cleaning.jpg"
+                  src="images/domestic-cleaning.png"
                 />
               </div>
               <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
-                <div class="flex flex-col sm:flex-row items-start gap-4">
-                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-rose-100 text-error flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[26px]">cottage</span>
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <div class="scl-badge-icon w-12 h-12 rounded-full bg-rose-100 text-error flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[26px]">cottage</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Domestic Cleaning Services</h3>
+                      <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Friendly, hardworking and flexible domestic cleaning delivered by a professionally trained and vetted uniformed team — quality-monitored via WhatsApp groups across Fulham, Chelsea and South West London.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Domestic Cleaning &amp; Housekeeping</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Regular domestic cleaning tailored to your household, with flexible weekly, fortnightly or daily visits to suit your needs.</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Regular House Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Housekeeping &amp; Ironing</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">One-Off House Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Deep Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Airbnb Cleaning</span>
                   </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <div class="flex flex-wrap items-center gap-2">
                     <a
                       class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
+                      href="domestic-cleaning.html"
                     >
                       <span>View Domestic Services</span>
                       <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
@@ -662,22 +438,36 @@
                 <img
                   alt="Professional Deep &amp; End of Tenancy Cleaning London"
                   class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
-                  src="images/professional-cleaning.jpg"
+                  src="images/professional-cleaning.png"
                 />
               </div>
               <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
-                <div class="flex flex-col sm:flex-row items-start gap-4">
-                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-cyan-100 text-teal-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[26px]">auto_awesome</span>
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <div class="scl-badge-icon w-12 h-12 rounded-full bg-cyan-100 text-teal-700 flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[26px]">auto_awesome</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Professional Cleaning Services</h3>
+                      <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">High-quality, in-depth cleaning for homes and properties that need extra care and attention — helping you prepare, refresh or hand over your property in the best condition across Fulham, Chelsea and surrounding areas.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Professional Cleaning Services</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Professional cleaning for homes, delivered with care and attention to detail. We provide one-off, deep, end-of-tenancy, after-builders and move-in/move-out cleaning, with same-day carpet steam cleaning available alongside end-of-tenancy cleans.</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">One-Off Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Deep Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">End-of-Tenancy Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">After-Builders Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Move-In / Move-Out Cleaning</span>
+                  </div>
+                  <div class="flex items-center gap-2 bg-[#eef5ff] border border-secondary/15 rounded-xl px-3.5 py-2 text-[13.5px] text-primary">
+                    <span class="material-symbols-outlined text-secondary text-[19px] shrink-0">layers</span>
+                    <span><strong class="font-bold text-secondary">Same-Day Carpet Steam Cleaning</strong> — Available alongside End-of-Tenancy Cleans.</span>
                   </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <a
                     class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
+                    href="professional-cleaning.html"
                   >
                     <span>View Professional Services</span>
                     <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
@@ -698,23 +488,33 @@
                 <img
                   alt="Commercial &amp; Office Cleaning London"
                   class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
-                  src="images/commercial-cleaning.jpg"
+                  src="images/commercial-cleaning.png"
                 />
               </div>
               <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
-                <div class="flex flex-col sm:flex-row items-start gap-4">
-                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[26px]">corporate_fare</span>
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <div class="scl-badge-icon w-12 h-12 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[26px]">corporate_fare</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Commercial Cleaning Services</h3>
+                      <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Reliable, professional cleaning for offices, workplaces and business premises. Our vetted, trained and regularly monitored cleaners keep your working environment clean, welcoming and presentable — early mornings or after working hours.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Commercial Cleaning Services</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Reliable commercial cleaning for offices, corporate spaces, beauty clinics, salons, gyms, retail premises, warehouses and mechanical workshops. Daily and weekly cleaning schedules tailored to your business. Regular contracts can include carpet spot cleaning for tea stains and everyday spills. Professional commercial cleaning delivered to a high standard.</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Office &amp; Workplace Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Flexible Schedules</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Vetted &amp; Monitored Team</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Sanitising &amp; Detailed Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Carpet &amp; Upholstery Add-On</span>
                   </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <div class="flex flex-wrap items-center gap-2">
                     <a
                       class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
+                      href="commercial-cleaning.html"
                     >
                       <span>View Commercial Services</span>
                       <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
@@ -736,22 +536,32 @@
                 <img
                   alt="Carpet &amp; Upholstery Cleaning London"
                   class="w-full h-full object-cover absolute inset-0 scl-img-zoom"
-                  src="images/carpet-upholstery-cleaning.jpg"
+                  src="images/carpet-upholstery-cleaning.png"
                 />
               </div>
               <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between gap-5">
-                <div class="flex flex-col sm:flex-row items-start gap-4">
-                  <div class="scl-badge-icon w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-[26px]">water_drop</span>
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <div class="scl-badge-icon w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                      <span class="material-symbols-outlined text-[26px]">water_drop</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Carpet &amp; Upholstery Cleaning</h3>
+                      <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Professional steam cleaning and sanitising for carpets, rugs, sofas and upholstery in London homes and businesses — removing embedded dirt, allergens, everyday spills and stubborn stains.</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="font-headline-md text-[26px] sm:text-headline-md text-primary font-bold">Carpet &amp; Upholstery Cleaning</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">Professional steam cleaning and sanitising for carpets and upholstery in London homes and businesses, delivered by our specialist team.</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Carpet Steam Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Sofa &amp; Upholstery Cleaning</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Rug &amp; Mattress Sanitising</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Stain &amp; Odour Removal</span>
+                    <span class="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-secondary-fixed/50 border border-secondary/15 px-3 py-1 rounded-full">Same-Day End-of-Tenancy Add-On</span>
                   </div>
                 </div>
                 <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-outline-variant/25 mt-auto">
                   <a
                     class="inline-flex items-center gap-1.5 bg-primary text-on-primary px-5 py-2.5 rounded-xl font-label-md text-label-md hover:bg-secondary transition-colors shadow-sm"
+                    href="carpet-upholstery-cleaning.html"
                   >
                     <span>View Carpet Services</span>
                     <span class="material-symbols-outlined text-[16px] scl-icon-shift">arrow_forward</span>
@@ -766,52 +576,54 @@
       <!-- =====================================================================
            ABOUT SECTION & FOUNDER (VERSION 2 EDITORIAL SHOWCASE CARD)
            ===================================================================== -->
-      <section class="w-full bg-surface py-12 lg:py-20 relative overflow-hidden" id="about-us">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
-          <div class="relative rounded-3xl bg-surface-container-lowest border border-outline-variant/35 shadow-xl overflow-hidden p-6 sm:p-8 lg:p-10">
+      <section class="w-full bg-surface py-8 lg:py-12 relative overflow-hidden scroll-mt-20" id="about-us">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="relative rounded-3xl bg-surface-container-lowest border border-outline-variant/35 shadow-xl overflow-hidden p-5 sm:p-6 lg:p-8">
             <!-- Ambient Soft Blur Accents -->
             <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-secondary-fixed/40 pointer-events-none blur-3xl"></div>
             <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-rose-100/60 pointer-events-none blur-3xl"></div>
 
-            <div class="relative z-10 flex flex-col gap-10">
+            <div class="relative z-10 flex flex-col gap-6">
               <!-- About Header Bar -->
-              <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-outline-variant/25 pb-6" data-animate="fade-up">
-                <div class="flex flex-col gap-2">
+              <div class="flex flex-col md:flex-row md:items-end justify-between gap-3 border-b border-outline-variant/25 pb-4" data-animate="fade-up">
+                <div class="flex flex-col gap-1.5">
                   <div class="inline-flex items-center gap-1.5 bg-secondary-fixed/50 px-3.5 py-1 rounded-full w-fit">
-                    <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                    <span class="material-symbols-outlined text-secondary text-[17px]">home</span>
                     <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Heritage &amp; Care • Est. 2006</span>
                   </div>
-                  <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">
+                  <h2 class="font-headline-lg text-[30px] sm:text-[36px] text-primary font-bold tracking-tight leading-tight">
                     About <span class="text-secondary italic">Super Cleaners London</span>
                   </h2>
+                  <div class="w-36 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] rounded-full mt-1"></div>
                 </div>
-                <div class="scl-section-badge scl-float-gentle inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 px-4 py-2 rounded-2xl w-fit" data-float-y="-10" data-scroll-float>
-                  <span class="material-symbols-outlined text-error text-[22px]">favorite</span>
-                  <p class="font-headline-md text-[19px] sm:text-[20px] text-secondary italic font-semibold leading-tight">
-                    A family-run business, with a personal touch ♥
+                <div class="scl-section-badge inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 px-4 py-2 rounded-full w-fit">
+                  <span class="material-symbols-outlined text-error text-[19px]">favorite</span>
+                  <p class="font-headline-md text-[17px] sm:text-[18px] text-secondary italic font-semibold leading-tight">
+                    A family-run business, with a personal touch
                   </p>
+                  <span class="text-secondary text-[17px] leading-none" aria-hidden="true">♥</span>
                 </div>
               </div>
 
               <!-- Founder Portrait & Story Split -->
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-                <div class="lg:col-span-5 flex flex-col items-center" data-animate="fade-left" data-float-rot="-1.2" data-float-y="-16" data-scroll-float>
-                  <div class="relative w-full max-w-sm rounded-2xl bg-surface-container-low p-3 shadow-lg border border-outline-variant/30 group" data-tilt-card data-tilt-max="3">
-                    <div class="relative rounded-xl overflow-hidden aspect-[4/5] bg-surface-container">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                <div class="lg:col-span-4 flex justify-center" data-animate="fade-left">
+                  <div class="relative w-full max-w-md lg:max-w-none rounded-2xl bg-surface-container-low p-2.5 shadow-lg border border-outline-variant/30 group" data-tilt-card data-tilt-max="3">
+                    <div class="relative rounded-xl overflow-hidden w-full bg-surface-container">
                       <img
-                        alt="Portrait of founder Myriam Campbell wearing royal blue Super Cleaners London uniform apron smiling warmly"
-                        class="w-full h-full object-cover scl-img-zoom"
+                        alt="Portrait of founder Myriam Andrade, Founder &amp; CEO of Super Cleaners London"
+                        class="w-full h-auto block scl-img-zoom"
                         src="images/founder-img.png"
                       />
-                      <div class="scl-section-badge scl-float-gentle absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
-                        <span class="material-symbols-outlined text-amber-400 text-[16px]">hotel_class</span>
-                        <span class="font-label-caps text-[11px] text-on-primary font-bold uppercase tracking-wider">Founder &amp; Director</span>
+                      <div class="scl-section-badge absolute top-3 left-3 bg-primary/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+                        <span class="material-symbols-outlined text-amber-400 text-[15px]">star</span>
+                        <span class="font-label-caps text-[11px] text-on-primary font-bold uppercase tracking-wider">Founder &amp; CEO</span>
                       </div>
-                      <div class="scl-section-badge absolute bottom-3 left-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md p-3 rounded-xl shadow-md border border-outline-variant/30">
-                        <div class="flex items-center justify-between">
+                      <div class="scl-section-badge absolute bottom-3 left-3 right-3 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-2.5 rounded-xl shadow-md border border-outline-variant/30">
+                        <div class="flex items-center justify-between gap-2">
                           <div class="flex flex-col">
-                            <span class="font-headline-sm text-[18px] font-bold text-primary leading-tight">Myriam Campbell</span>
-                            <span class="font-label-sm text-label-sm text-secondary font-medium">Founder &amp; Director, Super Cleaners London</span>
+                            <span class="font-headline-sm text-[19px] italic font-bold text-primary leading-tight">Myriam Andrade</span>
+                            <span class="font-label-sm text-label-sm text-primary/80 font-semibold">Founder &amp; CEO</span>
                           </div>
                           <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
                         </div>
@@ -820,40 +632,71 @@
                   </div>
                 </div>
 
-                <div class="lg:col-span-7 flex flex-col gap-5" data-animate="fade-right">
-                  <div class="relative bg-surface-container-low/75 border border-outline-variant/25 rounded-2xl p-5 lg:p-6 shadow-sm" data-float-y="10" data-scroll-float>
-                    <span class="font-display-hero text-[56px] leading-none text-secondary/35 font-bold absolute -top-3 left-4 pointer-events-none">“</span>
-                    <blockquote class="font-headline-md text-[24px] sm:text-headline-md italic text-primary leading-snug pl-6 relative z-10">
-                      Our mission is to make your home or workplace a cleaner, healthier and happier place.”
+                <div class="lg:col-span-8 flex flex-col justify-between gap-4" data-animate="fade-right">
+                  <div class="relative bg-secondary-fixed/35 border border-secondary/15 rounded-2xl p-4 lg:p-5 shadow-sm">
+                    <span class="font-display-hero text-[50px] leading-none text-secondary/45 font-bold absolute -top-2 left-3.5 pointer-events-none">“</span>
+                    <blockquote class="font-headline-md text-[19px] sm:text-[21px] font-bold italic text-primary leading-snug pl-7 relative z-10">
+                      A trusted, family-run cleaning company, dedicated to exceptional service, high standards and long-term customer care.
                     </blockquote>
-                    <p class="font-label-sm text-label-sm text-on-surface-variant pl-6 pt-2 font-semibold uppercase tracking-wider">
-                      — Myriam Campbell • Founder &amp; Managing Director
-                    </p>
                   </div>
 
-                  <div class="flex flex-col gap-3 text-on-surface-variant font-body-md">
-                    <p class="leading-relaxed">
-                      Founded in 2006, <strong class="text-primary font-semibold">Super Cleaners London</strong> has grown from an attentive neighbourhood cleaning service into London's premier residential housekeeping and commercial deep care specialist.
+                  <div class="flex flex-col gap-2.5 text-on-surface-variant font-body-md text-[14px] sm:text-[14.5px]">
+                    <p class="leading-[1.55]">
+                      Super Cleaners London was <strong class="text-secondary font-semibold">founded in 2006</strong> by <strong class="text-primary font-bold">Myriam Andrade</strong>, a Peruvian Latina, with a passion for cleaning and a clear goal: to provide a reliable, personal and high-quality service for homes and businesses across London.
                     </p>
-                    <p class="leading-relaxed">
-                      We take tremendous pride in our close-knit, highly experienced team and personal approach. Whether handling delicate heritage residences in Chelsea or modern corporate suites in the City, our commitment remains uncompromising: delivering effortless peace of mind and pristine cleanliness.
+                    <p class="leading-[1.55]">
+                      We are a <strong class="text-secondary font-semibold">family-run company</strong> with a dedicated team of <strong class="text-primary font-bold">Latina women</strong>. We provide a complete range of cleaning services, including <strong class="text-secondary font-semibold">Domestic Cleaning Services</strong> for homes, <strong class="text-secondary font-semibold">Commercial</strong> and other <strong class="text-secondary font-semibold">Professional Cleaning Services</strong> for businesses and offices, and specialist <strong class="text-secondary font-semibold">Carpet and Upholstery Cleaning Services</strong> to keep your spaces fresh, clean and well maintained.
+                    </p>
+                    <p class="leading-[1.55]">
+                      We may not have millions of customers, but we do have <strong class="text-secondary font-semibold">hundreds of happy, loyal customers</strong> who trust us and value our work. We keep in touch with them to ensure our high standards are consistently maintained.
+                    </p>
+                    <p class="leading-[1.55]">
+                      We believe in simple, friendly and straightforward communication — no complicated contracts. We are <strong class="text-secondary font-semibold">flexible</strong> and happy to adjust and adapt to each customer's individual needs, whether it's a regular service or a one-off clean.
+                    </p>
+                    <p class="leading-[1.55]">
+                      Myriam, our Founder and CEO, personally handles all customer service enquiries and is always <strong class="text-secondary font-semibold">available and happy to help and assist.</strong> We take great pride in what we do, and our goal is to continue delivering a professional, reliable and caring service, with <strong class="text-secondary font-semibold">outstanding results every time.</strong>
                     </p>
                   </div>
+                </div>
+              </div>
 
-                  <div class="flex flex-wrap items-center gap-2.5 pt-1">
-                    <div class="inline-flex items-center gap-1.5 bg-secondary-fixed px-3.5 py-1.5 rounded-full font-label-caps text-[11px] font-bold text-primary tracking-wide">
-                      <span class="material-symbols-outlined text-secondary text-[16px]">event_available</span>
-                      <span>Est. 2006 in London</span>
-                    </div>
-                    <div class="inline-flex items-center gap-1.5 bg-surface-container px-3.5 py-1.5 rounded-full font-label-caps text-[11px] font-bold text-primary tracking-wide">
-                      <span class="material-symbols-outlined text-secondary text-[16px]">family_restroom</span>
-                      <span>100% Family-Owned</span>
-                    </div>
-                    <div class="inline-flex items-center gap-1.5 bg-surface-container px-3.5 py-1.5 rounded-full font-label-caps text-[11px] font-bold text-primary tracking-wide">
-                      <span class="material-symbols-outlined text-secondary text-[16px]">security</span>
-                      <span>Fully Trained &amp; Insured</span>
-                    </div>
-                  </div>
+              <!-- 6 Trust & Heritage Highlights Strip -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-nowrap items-stretch gap-2.5 pt-1" data-animate="fade-up">
+                <div class="scl-about-pill lg:flex-1 flex items-center gap-2.5 bg-surface-container-low/90 border border-secondary/15 px-3 py-2.5 rounded-2xl">
+                  <span class="scl-about-pill-icon w-9 h-9 rounded-xl bg-secondary-fixed/75 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+                  </span>
+                  <span class="font-label-sm text-[12.5px] font-bold text-primary leading-tight">Est. 2006 in London</span>
+                </div>
+                <div class="scl-about-pill lg:flex-1 flex items-center gap-2.5 bg-surface-container-low/90 border border-secondary/15 px-3 py-2.5 rounded-2xl">
+                  <span class="scl-about-pill-icon w-9 h-9 rounded-xl bg-secondary-fixed/75 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">groups</span>
+                  </span>
+                  <span class="font-label-sm text-[12.5px] font-bold text-primary leading-tight">Family-Run Business</span>
+                </div>
+                <div class="scl-about-pill lg:flex-1 flex items-center gap-2.5 bg-surface-container-low/90 border border-secondary/15 px-3 py-2.5 rounded-2xl">
+                  <span class="scl-about-pill-icon w-9 h-9 rounded-xl bg-secondary-fixed/75 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">diversity_3</span>
+                  </span>
+                  <span class="font-label-sm text-[12.5px] font-bold text-primary leading-tight">Team of Latina Women</span>
+                </div>
+                <div class="scl-about-pill lg:flex-[1.35] flex items-center gap-2.5 bg-surface-container-low/90 border border-secondary/15 px-3 py-2.5 rounded-2xl">
+                  <span class="scl-about-pill-icon w-9 h-9 rounded-xl bg-secondary-fixed/75 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">forum</span>
+                  </span>
+                  <span class="font-label-sm text-[12.5px] font-bold text-primary leading-tight">We Speak English, Spanish &amp; Portuguese</span>
+                </div>
+                <div class="scl-about-pill lg:flex-[1.1] flex items-center gap-2.5 bg-surface-container-low/90 border border-secondary/15 px-3 py-2.5 rounded-2xl">
+                  <span class="scl-about-pill-icon w-9 h-9 rounded-xl bg-secondary-fixed/75 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">handshake</span>
+                  </span>
+                  <span class="font-label-sm text-[12.5px] font-bold text-primary leading-tight">Flexible &amp; Customer Focused</span>
+                </div>
+                <div class="scl-about-pill lg:flex-[1.1] flex items-center gap-2.5 bg-surface-container-low/90 border border-secondary/15 px-3 py-2.5 rounded-2xl">
+                  <span class="scl-about-pill-icon w-9 h-9 rounded-xl bg-secondary-fixed/75 text-secondary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">verified_user</span>
+                  </span>
+                  <span class="font-label-sm text-[12.5px] font-bold text-primary leading-tight">High Standards &amp; Trusted Service</span>
                 </div>
               </div>
 
@@ -866,125 +709,164 @@
       <!-- =====================================================================
            COVERAGE MAP & INTERACTIVE POSTCODE CHECKER SECTION
            ===================================================================== -->
-      <section class="w-full bg-surface-container-low py-16 lg:py-24 relative overflow-hidden" id="coverage-areas">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin relative z-10 flex flex-col gap-10">
+      <section class="w-full bg-gradient-to-b from-[#eaf4ff] via-[#eef6ff] to-[#e6f1fe] py-12 lg:py-16 relative overflow-hidden scroll-mt-20" id="coverage-areas">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin relative z-10 flex flex-col gap-7">
 
-          <!-- Section Header with Flyer Accent -->
-          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-outline-variant/30 pb-6" data-animate="fade-up">
-            <div class="flex flex-col gap-2 max-w-2xl">
-              <div class="inline-flex items-center gap-1.5 bg-secondary-fixed/50 px-3.5 py-1 rounded-full w-fit">
-                <span class="material-symbols-outlined text-secondary text-[18px]">location_on</span>
-                <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">London &amp; Surrounding Areas</span>
-              </div>
-              <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">
+          <!-- Section Header -->
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5 pb-2" data-animate="fade-up">
+            <div class="flex flex-col gap-2">
+              <h2 class="font-headline-lg text-[32px] sm:text-[40px] text-primary font-bold tracking-tight leading-tight">
                 Areas We <span class="text-secondary italic">Cover</span>
               </h2>
-              <p class="font-body-lg text-[16px] sm:text-body-lg text-on-surface-variant">
-                Professional cleaning across London and surrounding areas with trusted, local housekeepers and technicians.
-              </p>
+              <div class="w-36 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] rounded-full"></div>
+              <div class="inline-flex items-center gap-2 bg-gradient-to-r from-[#1c4c96] via-secondary to-[#2e6dc4] text-white px-4 py-1.5 rounded-r-full rounded-tl-md w-fit shadow-sm mt-1">
+                <span class="material-symbols-outlined text-[18px]">location_on</span>
+                <span class="font-headline-sm text-[15px] sm:text-[16px] italic font-semibold tracking-wide">Our Cleaning Service Areas</span>
+              </div>
             </div>
 
-            <!-- Flyer-style Badge & Handwritten Script Tagline -->
-            <div class="scl-section-badge scl-float-gentle flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/35" data-scroll-float="-14" data-scroll-rot="1.5">
-              <div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shrink-0 shadow-sm">
-                <span class="material-symbols-outlined text-[28px]">location_city</span>
+            <!-- Right Tagline Badge -->
+            <div class="scl-section-badge flex items-center gap-3.5 bg-surface-container-lowest px-5 py-3.5 rounded-2xl shadow-md border border-secondary/15 w-fit">
+              <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-[#1d4d96] to-[#12336b] text-white flex items-center justify-center shrink-0 shadow-sm">
+                <span class="material-symbols-outlined text-[24px]">location_city</span>
               </div>
               <div>
-                <p class="font-headline-md text-[20px] text-secondary italic font-semibold leading-tight flex items-center gap-1">
-                  Local • Reliable • Trusted <span class="text-error text-[18px] inline-block">♥</span>
+                <p class="font-headline-md text-[19px] sm:text-[20px] text-secondary italic font-bold leading-tight flex items-center gap-1.5">
+                  Local • Reliable • Trusted <span class="text-[#DC2626] text-[18px] inline-block">♥</span>
                 </p>
-                <div class="flex items-center gap-2 mt-1">
-                  <span class="font-label-caps text-label-caps tracking-widest bg-secondary-fixed text-primary px-2 py-0.5 rounded font-bold uppercase">
-                    Cleaning London Since 2006 ♥
-                  </span>
-                </div>
+                <p class="font-label-caps text-[11px] tracking-wider text-primary font-extrabold uppercase mt-0.5">
+                  Cleaning London Since 2006 <span class="text-primary">♥</span>
+                </p>
               </div>
             </div>
           </div>
 
-          <!-- Two-column split: Interactive Boroughs List + Stylized London Map -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          <!-- Two-column split: Areas & Postcode Checker + Interactive London Coverage Map -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
-            <!-- Column 1: Boroughs Grid & Coverage Check -->
-            <div class="lg:col-span-6 flex flex-col gap-5" data-animate="fade-left" data-scroll-float="12">
-              <div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/35 flex flex-col gap-4" data-tilt-card>
-                <div class="flex items-center justify-between gap-2">
-                  <div class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-secondary text-[24px]">near_me</span>
-                    <h3 class="font-headline-sm text-headline-sm text-primary font-bold">London Boroughs We Serve</h3>
+            <!-- Column 1: Areas List, Notices & Postcode Checker -->
+            <div class="lg:col-span-6 flex" data-animate="fade-left">
+              <div class="w-full bg-surface-container-lowest p-5 sm:p-6 rounded-2xl shadow-md border border-secondary/15 flex flex-col justify-between gap-4">
+                <div class="flex flex-col gap-4">
+                  <!-- Card Header -->
+                  <div class="flex items-center justify-between gap-2 pb-2 border-b border-outline-variant/20">
+                    <div class="flex items-center gap-2">
+                      <span class="material-symbols-outlined text-secondary text-[22px]">near_me</span>
+                      <h3 class="font-headline-sm text-[18px] sm:text-[19px] italic text-primary font-bold leading-snug">
+                        Areas for Regular and Housekeeping Services
+                      </h3>
+                    </div>
+                    <span class="font-label-sm text-[11px] text-on-surface-variant font-semibold bg-surface-container px-2.5 py-1 rounded-full shrink-0">
+                      Click to Inspect
+                    </span>
                   </div>
-                  <span class="font-label-sm text-label-sm text-on-surface-variant font-medium bg-surface-container px-2.5 py-1 rounded-full">
-                    Click to Inspect
-                  </span>
+
+                  <!-- 15 London Areas Grid (3 Columns matching client layout) -->
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-1 gap-x-2" id="boroughs-grid">
+                    <!-- Row 1 -->
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="fulham" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Fulham</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="putney" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Putney</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="clapham" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Clapham</span>
+                    </button>
+                    <!-- Row 2 -->
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="parsons-green" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Parsons Green</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="earls-court" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Earls Court</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="hammersmith" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Hammersmith</span>
+                    </button>
+                    <!-- Row 3 -->
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="sands-end" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Sands End</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="earlsfield" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Earlsfield</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="south-kensington" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">South Kensington</span>
+                    </button>
+                    <!-- Row 4 -->
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="imperial-wharf" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Imperial Wharf</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="wandsworth" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Wandsworth</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="battersea" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Battersea</span>
+                    </button>
+                    <!-- Row 5 -->
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="chelsea" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Chelsea</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="west-brompton" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">West Brompton</span>
+                    </button>
+                    <button class="borough-btn flex items-center gap-1.5 text-left px-2 py-1.5 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="chiswick" type="button">
+                      <span class="material-symbols-outlined text-secondary text-[16px] shrink-0">location_on</span>
+                      <span class="font-body-md text-[14px] text-primary font-semibold">Chiswick</span>
+                    </button>
+                  </div>
+
+                  <!-- Minimum 3 Hours Soft Rose Notice -->
+                  <div class="flex items-start gap-3 bg-rose-50/90 border border-rose-200/75 rounded-xl px-3.5 py-3">
+                    <span class="material-symbols-outlined text-[#DC2626] text-[26px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                    <p class="font-body-sm text-[13.5px] text-primary leading-snug">
+                      We also cover other areas across <strong class="font-bold">London</strong> and are always happy to discuss your cleaning needs. Our services start from a <strong class="text-[#DC2626] font-bold">minimum of 3 hours.</strong>
+                    </p>
+                  </div>
+
+                  <!-- Professional Cleaning All London Box -->
+                  <div class="bg-[#eef5ff] border border-secondary/20 rounded-xl p-3.5 flex flex-col gap-2">
+                    <div class="flex items-center gap-2.5">
+                      <span class="material-symbols-outlined text-secondary text-[24px] shrink-0">location_city</span>
+                      <p class="font-headline-sm text-[15px] italic font-bold text-primary leading-snug">
+                        For professional cleaning services, we cover all areas across London.
+                      </p>
+                    </div>
+                    <p class="font-body-sm text-[13px] text-on-surface-variant leading-relaxed">
+                      We offer end-of-tenancy cleaning, after-builders cleaning, move-in/out cleaning, deep cleaning and carpet &amp; upholstery cleaning. We can also provide cleaning products, tools and equipment if needed, or you're welcome to supply your own.
+                    </p>
+                  </div>
                 </div>
 
-                <!-- London Boroughs Grid -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-2.5 gap-x-2 pt-1" id="boroughs-grid">
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="fulham" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Fulham</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="chelsea" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Chelsea</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="hammersmith" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Hammersmith</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="parsons-green" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Parsons Green</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="putney" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Putney</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="south-kensington" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">South Kensington</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="battersea" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Battersea</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="clapham" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Clapham</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="chiswick" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Chiswick</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="west-brompton" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">West Brompton</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="wandsworth" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Wandsworth</span>
-                  </button>
-                  <button class="borough-btn flex items-center gap-2 text-left p-2 rounded-lg hover:bg-secondary-fixed/50 transition-colors cursor-pointer" data-borough="bromley" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[18px] shrink-0">location_on</span>
-                    <span class="font-body-md text-body-sm sm:text-body-md text-primary font-medium">Bromley</span>
-                  </button>
-                </div>
-
-                <!-- Postcode Quick Checker Input -->
-                <div class="pt-3 border-t border-outline-variant/30 flex flex-col gap-2.5">
-                  <label class="font-label-sm text-label-sm text-on-surface-variant font-semibold flex items-center gap-1.5" for="postcode-input">
-                    <span class="material-symbols-outlined text-secondary text-[16px]">search</span>
+                <!-- Postcode Quick Checker Input + Red CTA -->
+                <div class="flex flex-col gap-3 pt-2 border-t border-outline-variant/25">
+                  <label class="font-label-sm text-[13px] text-primary font-semibold flex items-center gap-1.5" for="postcode-input">
+                    <span class="material-symbols-outlined text-secondary text-[17px]">search</span>
                     <span>Enter London Postcode or Area:</span>
                   </label>
                   <div class="flex items-center gap-2">
                     <input
-                      class="w-full px-3.5 py-2.5 text-body-sm rounded-xl bg-surface border border-outline-variant/45 focus:outline-none focus:border-secondary"
+                      class="w-full px-3.5 py-2.5 text-[14px] rounded-xl bg-[#f3f8ff] border border-secondary/25 focus:outline-none focus:border-secondary text-primary"
                       id="postcode-input"
                       placeholder="e.g. SW3, SW6, W8, Putney"
                       type="text"
                     />
                     <button
-                      class="btn-primary-royal px-5 py-2.5 rounded-xl font-label-md text-label-md shrink-0"
+                      class="btn-primary-royal px-6 py-2.5 rounded-xl font-label-md text-[14px] font-bold shrink-0"
                       id="check-postcode-btn"
                       type="button"
                     >
@@ -992,153 +874,198 @@
                     </button>
                   </div>
                   <div aria-live="polite" class="hidden" id="postcode-status"></div>
-                </div>
 
-                <!-- CTA Button -->
-                <div class="pt-1">
                   <a
-                    class="w-full inline-flex items-center justify-center gap-2 btn-primary-royal px-6 py-3.5 rounded-xl font-label-md text-label-md"
+                    class="w-full inline-flex items-center justify-center gap-2 btn-primary-red px-6 py-3 rounded-full font-label-md text-[15px] font-bold cursor-pointer"
+                    data-open-showcase-modal
+                    href="#contact"
                   >
-                    <span class="material-symbols-outlined text-[20px]">travel_explore</span>
+                    <span class="material-symbols-outlined text-[20px]">search</span>
                     <span>Book for Your Postcode →</span>
                   </a>
                 </div>
               </div>
-
-              <!-- Service Extension Van Notice -->
-              <div class="scl-section-badge scl-float-gentle-delayed bg-secondary-fixed/40 p-4 rounded-2xl flex items-center gap-4 border border-secondary-fixed-dim/50 shadow-sm" data-scroll-float="-8">
-                <div class="w-12 h-12 rounded-xl bg-surface-container-lowest text-secondary flex items-center justify-center shrink-0 shadow-sm">
-                  <span class="material-symbols-outlined text-[28px]">local_shipping</span>
-                </div>
-                <p class="font-body-sm text-body-sm text-primary leading-snug">
-                  <strong class="font-bold">We also cover all other London postcodes!</strong> Get in touch with our friendly dispatch desk to confirm instant slot availability.
-                </p>
-              </div>
             </div>
 
-            <!-- Column 2: Stylized London Thames Coverage Map Graphic -->
-            <div class="lg:col-span-6 relative" data-animate="fade-right" data-scroll-float="-14" data-scroll-rot="0.7">
-              <div class="scl-card-interactive bg-surface-container-lowest rounded-2xl p-5 sm:p-6 border border-outline-variant/35 shadow-md relative overflow-hidden flex flex-col justify-between min-h-[460px]" data-tilt-card>
+            <!-- Column 2: Interactive London Coverage Map Card -->
+            <div class="lg:col-span-6 flex" data-animate="fade-right">
+              <div class="w-full bg-surface-container-lowest rounded-2xl p-5 sm:p-6 border border-secondary/15 shadow-md relative overflow-hidden flex flex-col justify-between gap-4">
 
                 <!-- Map Header Info -->
                 <div class="flex items-center justify-between pb-3 border-b border-outline-variant/20 z-10">
                   <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
-                    <span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Active Live Coverage Map</span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="font-label-caps text-[12px] uppercase tracking-wider text-primary font-extrabold">Active Live Coverage Map</span>
                   </div>
-                  <div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
-                    <span class="material-symbols-outlined text-secondary text-[18px]">hub</span>
+                  <div class="flex items-center gap-1.5 text-primary font-label-sm text-[13px] font-semibold">
+                    <span class="material-symbols-outlined text-secondary text-[18px]">share</span>
                     <span>Greater London Hubs</span>
                   </div>
                 </div>
 
-                <!-- Interactive Vector Styled London Map Canvas -->
-                <div class="relative w-full h-[360px] rounded-xl bg-gradient-to-br from-surface to-surface-container-low overflow-hidden my-2 flex items-center justify-center border border-outline-variant/20">
+                <!-- Interactive Styled London Map Canvas -->
+                <div class="relative w-full flex-1 min-h-[380px] sm:min-h-[430px] rounded-xl bg-[#f7f5ee] overflow-hidden border border-outline-variant/25">
 
-                  <!-- Stylized River Thames SVG Path -->
-                  <svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="50" x2="50" y1="0" y2="360"></line>
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="150" x2="150" y1="0" y2="360"></line>
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="250" x2="250" y1="0" y2="360"></line>
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="350" x2="350" y1="0" y2="360"></line>
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="450" x2="450" y1="0" y2="360"></line>
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="0" x2="500" y1="90" y2="90"></line>
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="0" x2="500" y1="180" y2="180"></line>
-                    <line stroke="rgba(116, 119, 126, 0.08)" stroke-dasharray="4 4" x1="0" x2="500" y1="270" y2="270"></line>
+                  <!-- Stylized Google-Maps-Inspired London Geography SVG -->
+                  <svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" preserveAspectRatio="none" viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Soft Parks (Holland Park & Hyde Park) -->
+                    <path d="M 165 0 L 260 0 L 252 68 L 178 72 Z" fill="#d9efd1" opacity="0.85"></path>
+                    <path d="M 310 0 L 455 0 L 448 82 L 325 76 Z" fill="#d4eccb" opacity="0.9"></path>
+                    <path d="M 0 280 L 95 270 L 110 380 L 0 410 Z" fill="#e2f2da" opacity="0.7"></path>
+                    <path d="M 465 250 L 585 245 L 600 340 L 480 355 Z" fill="#e2f2da" opacity="0.65"></path>
 
-                    <!-- London Landmark Watermark -->
-                    <path d="M 420 80 L 420 50 L 425 45 L 430 50 L 430 80 Z M 418 80 L 432 80 M 425 35 L 425 45" fill="none" stroke="rgba(41, 94, 168, 0.25)" stroke-width="1.5"></path>
-                    <circle cx="450" cy="65" fill="none" r="18" stroke="rgba(41, 94, 168, 0.25)" stroke-dasharray="2 2" stroke-width="1.5"></circle>
-                    <line stroke="rgba(41, 94, 168, 0.25)" stroke-width="1.5" x1="450" x2="445" y1="65" y2="90"></line>
-                    <line stroke="rgba(41, 94, 168, 0.25)" stroke-width="1.5" x1="450" x2="455" y1="65" y2="90"></line>
+                    <!-- Subtle Road Grid -->
+                    <path d="M 0 115 L 600 105" stroke="#ffffff" stroke-width="5"></path>
+                    <path d="M 0 210 L 600 195" stroke="#ffffff" stroke-width="4"></path>
+                    <path d="M 0 325 L 600 305" stroke="#ffffff" stroke-width="4"></path>
+                    <path d="M 125 0 L 165 440" stroke="#ffffff" stroke-width="4.5"></path>
+                    <path d="M 295 0 L 270 440" stroke="#ffffff" stroke-width="4.5"></path>
+                    <path d="M 455 0 L 495 440" stroke="#ffffff" stroke-width="4.5"></path>
+                    <path d="M 40 60 Q 250 140 560 90" stroke="#f6e3a1" stroke-width="4" opacity="0.7"></path>
+                    <path d="M 90 420 Q 310 370 570 395" stroke="#f6e3a1" stroke-width="4" opacity="0.7"></path>
+
+                    <!-- Main Coverage Dashed Blue Oval Zone -->
+                    <ellipse cx="290" cy="235" rx="225" ry="155" fill="rgba(96, 165, 250, 0.22)" stroke="#295ea8" stroke-dasharray="6 5" stroke-width="1.8"></ellipse>
 
                     <!-- River Thames Curved Ribbon -->
-                    <path d="M 0 170 C 70 180, 110 240, 160 230 C 220 215, 240 130, 310 145 C 370 160, 420 120, 500 135" opacity="0.45" stroke="#80aefe" stroke-linecap="round" stroke-width="18"></path>
-                    <path d="M 0 170 C 70 180, 110 240, 160 230 C 220 215, 240 130, 310 145 C 370 160, 420 120, 500 135" opacity="0.7" stroke="#295ea8" stroke-linecap="round" stroke-width="6"></path>
+                    <path d="M 0 225 C 55 245, 78 308, 125 302 C 175 296, 200 225, 265 238 C 320 250, 345 318, 415 310 C 485 302, 520 210, 600 195" stroke="#93c5fd" stroke-linecap="round" stroke-width="18" opacity="0.75"></path>
+                    <path d="M 0 225 C 55 245, 78 308, 125 302 C 175 296, 200 225, 265 238 C 320 250, 345 318, 415 310 C 485 302, 520 210, 600 195" stroke="#60a5fa" stroke-linecap="round" stroke-width="7" opacity="0.55"></path>
                   </svg>
 
-                  <!-- Central London Diamond Badge -->
-                  <div class="absolute top-[18%] left-[54%] -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center">
-                    <button class="map-pin bg-primary text-on-primary px-2.5 py-1 rounded-full shadow-md flex items-center gap-1 border border-secondary-fixed/50 hover:scale-105 transition-transform" data-borough="westminster" id="pin-central-london" type="button">
-                      <span class="material-symbols-outlined text-secondary-fixed text-[14px]">hotel_class</span>
-                      <span class="font-label-caps text-[10px] font-bold tracking-wider uppercase">Central London</span>
-                    </button>
+                  <!-- Park & Landmark Labels -->
+                  <span class="pointer-events-none absolute top-[5%] left-[29%] text-[10px] sm:text-[11px] font-semibold text-emerald-700/80">Holland Park</span>
+                  <span class="pointer-events-none absolute top-[5%] left-[57%] text-[10px] sm:text-[11px] font-semibold text-emerald-700/80">Hyde Park</span>
+                  <span class="pointer-events-none absolute top-[12%] right-[5%] text-[15px] sm:text-[17px] font-extrabold text-primary tracking-tight">London</span>
+                  <span class="pointer-events-none absolute top-[32%] right-[6%] text-[10px] sm:text-[11px] font-semibold text-on-surface-variant">Victoria</span>
+                  <span class="pointer-events-none absolute bottom-[12%] right-[5%] text-[10px] sm:text-[11px] font-semibold text-on-surface-variant">Brixton</span>
+
+                  <!-- Green Highway Route Shields -->
+                  <span class="pointer-events-none absolute top-[4%] left-[14%] bg-emerald-600/85 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">A3220</span>
+                  <span class="pointer-events-none absolute top-[30%] left-[2%] bg-emerald-600/85 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">A308</span>
+                  <span class="pointer-events-none absolute top-[34%] right-[20%] bg-emerald-600/85 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">A308</span>
+                  <span class="pointer-events-none absolute bottom-[8%] left-[55%] bg-emerald-600/85 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">A205</span>
+                  <span class="pointer-events-none absolute bottom-[2%] right-[16%] bg-emerald-600/85 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">A214</span>
+
+                  <!-- Map Controls Decorative Badges -->
+                  <div class="pointer-events-none absolute top-3 right-3 w-8 h-8 rounded-full bg-white/95 shadow border border-outline-variant/30 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[18px]">layers</span>
+                  </div>
+                  <div class="pointer-events-none absolute bottom-10 right-3 w-8 h-8 rounded-full bg-white/95 shadow border border-outline-variant/30 flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[18px]">my_location</span>
                   </div>
 
-                  <!-- Floating Borough Pin Badges -->
-                  <button class="map-pin absolute top-[32%] left-[8%] sm:left-[10%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="chiswick" id="pin-chiswick" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Chiswick</span>
+                  <!-- Interactive Area Pins Matching Mockup Positions -->
+                  <button class="map-pin absolute top-[18%] left-[12%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="hammersmith" id="pin-hammersmith" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Hammersmith</span>
                   </button>
 
-                  <button class="map-pin absolute top-[28%] left-[26%] sm:left-[28%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="hammersmith" id="pin-hammersmith" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Hammersmith</span>
+                  <button class="map-pin absolute top-[18%] left-[41%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="kensington" id="pin-kensington" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Kensington</span>
                   </button>
 
-                  <button class="map-pin absolute top-[26%] left-[48%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="south-kensington" id="pin-south-kensington" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">South Kensington</span>
+                  <button class="map-pin absolute top-[24%] right-[14%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="south-kensington" id="pin-south-kensington" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">South Kensington</span>
                   </button>
 
-                  <button class="map-pin absolute top-[42%] left-[52%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-md border-2 border-secondary hover:scale-105 transition-all cursor-pointer" data-borough="chelsea" id="pin-chelsea" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[14px]">star</span>
-                    <span class="font-label-caps text-[11px] text-secondary font-bold">Chelsea</span>
+                  <button class="map-pin absolute top-[34%] left-[7%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="chiswick" id="pin-chiswick" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Chiswick</span>
                   </button>
 
-                  <button class="map-pin absolute top-[46%] left-[28%] sm:left-[30%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-md border-2 border-secondary hover:scale-105 transition-all cursor-pointer" data-borough="fulham" id="pin-fulham" type="button">
-                    <span class="material-symbols-outlined text-secondary text-[14px]">star</span>
-                    <span class="font-label-caps text-[11px] text-secondary font-bold">Fulham</span>
+                  <button class="map-pin absolute top-[31%] left-[25%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="west-brompton" id="pin-west-brompton" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">West Brompton</span>
                   </button>
 
-                  <button class="map-pin absolute top-[38%] left-[36%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="west-brompton" id="pin-west-brompton" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">West Brompton</span>
+                  <button class="map-pin absolute top-[37%] left-[47%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="earls-court" id="pin-earls-court" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Earls Court</span>
                   </button>
 
-                  <button class="map-pin absolute top-[58%] left-[22%] sm:left-[26%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="parsons-green" id="pin-parsons-green" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Parsons Green</span>
+                  <!-- Featured Fulham Hub Pin -->
+                  <button class="map-pin absolute top-[46%] left-[23%] z-30 flex items-center gap-1.5 bg-gradient-to-r from-[#1c4c96] to-secondary text-white px-3.5 py-1.5 rounded-full shadow-md border-2 border-white hover:scale-105 transition-all cursor-pointer" data-borough="fulham" id="pin-fulham" type="button">
+                    <span class="material-symbols-outlined text-white text-[16px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                    <span class="text-[13px] font-bold tracking-wide">Fulham</span>
                   </button>
 
-                  <button class="map-pin absolute top-[70%] left-[18%] sm:left-[20%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="putney" id="pin-putney" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Putney</span>
+                  <button class="map-pin absolute top-[47%] right-[22%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="chelsea" id="pin-chelsea" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Chelsea</span>
                   </button>
 
-                  <button class="map-pin absolute top-[55%] left-[50%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="battersea" id="pin-battersea" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Battersea</span>
+                  <button class="map-pin absolute top-[53%] left-[5%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="sands-end" id="pin-sands-end" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Sands End</span>
                   </button>
 
-                  <button class="map-pin absolute top-[75%] left-[40%] sm:left-[42%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="wandsworth" id="pin-wandsworth" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Wandsworth</span>
+                  <button class="map-pin absolute top-[61%] left-[24%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="parsons-green" id="pin-parsons-green" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Parsons Green</span>
                   </button>
 
-                  <button class="map-pin absolute top-[68%] left-[60%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="clapham" id="pin-clapham" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Clapham</span>
+                  <button class="map-pin absolute top-[58%] left-[48%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="imperial-wharf" id="pin-imperial-wharf" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Imperial Wharf</span>
                   </button>
 
-                  <button class="map-pin absolute top-[82%] left-[72%] sm:left-[76%] z-20 flex items-center gap-1 bg-surface-container-lowest/95 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm border border-outline-variant/30 hover:scale-105 transition-all cursor-pointer" data-borough="bromley" id="pin-bromley" type="button">
-                    <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
-                    <span class="font-label-caps text-[11px] text-primary font-bold">Bromley</span>
+                  <button class="map-pin absolute top-[60%] right-[8%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="battersea" id="pin-battersea" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Battersea</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[72%] left-[9%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="putney" id="pin-putney" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Putney</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[79%] left-[26%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="wandsworth" id="pin-wandsworth" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Wandsworth</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[73%] left-[52%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="earlsfield" id="pin-earlsfield" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Earlsfield</span>
+                  </button>
+
+                  <button class="map-pin absolute top-[81%] right-[13%] z-20 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-full shadow-sm border border-secondary/25 hover:scale-105 transition-all cursor-pointer" data-borough="clapham" id="pin-clapham" type="button">
+                    <span class="material-symbols-outlined text-secondary text-[14px]">location_on</span>
+                    <span class="text-[11px] text-primary font-bold">Clapham</span>
                   </button>
                 </div>
 
-                <!-- Map Footer Note -->
-                <div class="flex flex-wrap items-center justify-between gap-2 pt-2 text-on-surface-variant font-label-sm text-label-sm border-t border-outline-variant/20">
-                  <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-secondary-container inline-block"></span>
-                    <span>River Thames Corridor</span>
+                <!-- Map Footer Legend -->
+                <div class="flex flex-wrap items-center justify-between gap-3 pt-2 text-[12.5px] border-t border-outline-variant/20">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-5 h-5 rounded-full bg-secondary/15 border border-dashed border-secondary inline-block shrink-0"></span>
+                    <div class="leading-tight">
+                      <p class="font-bold text-primary">Our Main Coverage Area</p>
+                      <p class="text-[11.5px] text-on-surface-variant">(Fulham, Chelsea &amp; Surrounding Areas)</p>
+                    </div>
                   </div>
-                  <span class="font-medium text-secondary">South-West &amp; Central London Priority Hub</span>
+                  <div class="flex items-center gap-1.5 text-secondary font-bold italic">
+                    <span class="material-symbols-outlined text-secondary text-[18px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                    <span>South-West &amp; Greater London</span>
+                  </div>
                 </div>
               </div>
             </div>
 
           </div>
+
+          <!-- Full-Width Bottom Notice Strip -->
+          <div class="bg-surface-container-lowest/95 border border-secondary/20 rounded-2xl px-4 py-3.5 sm:px-5 sm:py-4 shadow-sm flex items-center gap-4" data-animate="fade-up">
+            <div class="w-11 h-11 rounded-xl bg-secondary-fixed/60 text-secondary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[25px]">local_shipping</span>
+            </div>
+            <p class="font-body-sm text-[14px] text-primary leading-snug">
+              <strong class="font-bold">We also cover all other London postcodes!</strong> Get in touch with our team or use our postcode checker to confirm instant availability.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -1146,7 +1073,7 @@
            CLEANING JOURNAL & BLOG SECTION (REDESIGNED EDITORIAL MAGAZINE LAYOUT)
            ===================================================================== -->
       <section class="w-full bg-gradient-to-b from-[#F7FAFD] via-surface to-[#F2F6FA] py-18 lg:py-24 border-y border-outline-variant/30 relative overflow-hidden" id="cleaning-journal">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-12">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-12">
           
           <!-- Editorial Section Header -->
           <div class="text-center max-w-2xl mx-auto flex flex-col items-center gap-3" data-animate="fade-up">
@@ -1157,132 +1084,112 @@
             <h2 class="font-headline-lg text-[32px] sm:text-[40px] lg:text-[44px] text-primary font-bold tracking-tight">
               Notes for a Better-Kept Home
             </h2>
-            <div class="w-20 h-1 bg-gradient-to-r from-secondary to-indigo-600 rounded-full"></div>
+            <div class="w-40 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] mx-auto rounded-full mt-1"></div>
             <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
               Thoughtful advice, seasonal routines, and practical checklists from our experienced London cleaning specialists.
             </p>
           </div>
 
-          <!-- Magazine-Style 3-Column Blog Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            
-            <!-- Blog Card 1: Deep Cleaning Frequency -->
-            <article class="group scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-outline-variant/30 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
-              <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                <img
-                  src="images/blog-deep-cleaning.jpg"
-                  alt="How Often Should You Deep Clean Your Home"
-                  class="w-full h-full object-cover scl-img-zoom transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span class="absolute top-3.5 left-3.5 px-3 py-1 bg-surface-container-lowest/95 backdrop-blur-md text-primary text-[11px] font-bold rounded-lg uppercase tracking-wider font-label-caps shadow-sm border border-outline-variant/20">
-                  Home Care
-                </span>
-                <span class="absolute bottom-3.5 right-3.5 px-2.5 py-1 bg-primary/85 backdrop-blur-md text-white text-[11px] font-medium rounded-md shadow-sm">
-                  5 min read
-                </span>
-              </div>
-              <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between gap-5">
-                <div class="flex flex-col gap-2.5">
-                  <div class="flex items-center gap-2 text-xs text-on-surface-variant/75 font-medium">
-                    <span class="material-symbols-outlined text-[15px] text-secondary">schedule</span>
-                    <span>London Housekeeping Advice</span>
+          <!-- Blog Cards Grid (Matching Blog Listing Page Layout) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="home-blog-grid">
+
+            <!-- Blog Card 1 -->
+            <article class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-secondary/15 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
+              <a class="relative aspect-[16/10] overflow-hidden bg-surface-container block" href="blog-detail.html?post=deep-cleaning-guide">
+                <img alt="How Often Should You Deep Clean Your Home?" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="images/blog-deep-cleaning.jpg" />
+                <span class="absolute top-3 left-3 bg-surface-container-lowest/95 backdrop-blur-sm text-secondary text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">Deep Cleaning</span>
+              </a>
+              <div class="p-6 flex flex-col justify-between flex-1 gap-4">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-3 text-[12px] text-on-surface-variant font-medium">
+                    <span>Updated 2026</span>
+                    <span>•</span>
+                    <span>4 min read</span>
                   </div>
-                  <h3 class="font-headline-sm text-[21px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
-                    How Often Should You Deep Clean Your Home?
+                  <h3 class="font-headline-md text-[22px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
+                    <a href="blog-detail.html?post=deep-cleaning-guide">How Often Should You Deep Clean Your Home?</a>
                   </h3>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                    A room-by-room guide to establishing an effective deep-cleaning routine that keeps busy London homes feeling fresh throughout every season.
+                  <p class="font-body-sm text-[14px] text-on-surface-variant leading-relaxed">
+                    Discover the ideal deep cleaning schedule for London homes — from seasonal resets to tackling limescale, kitchen grease and hard-to-reach corners.
                   </p>
                 </div>
-                <div class="pt-4 border-t border-outline-variant/25 flex items-center justify-between text-secondary font-bold text-xs font-label-caps uppercase tracking-wider">
-                  <span>Read Article</span>
-                  <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
-                  </span>
+                <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+                  <span class="text-[12.5px] font-semibold text-primary">By Myriam Andrade</span>
+                  <a class="inline-flex items-center gap-1 text-secondary font-bold text-[13.5px] group-hover:gap-2 transition-all" href="blog-detail.html?post=deep-cleaning-guide">
+                    <span>Read Article</span>
+                    <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+                  </a>
                 </div>
               </div>
             </article>
 
-            <!-- Blog Card 2: End of Tenancy Checklist -->
-            <article class="group scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-outline-variant/30 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
-              <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                <img
-                  src="images/blog-end-of-tenancy.jpg"
-                  alt="A Stress-Free End-of-Tenancy Checklist"
-                  class="w-full h-full object-cover scl-img-zoom transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span class="absolute top-3.5 left-3.5 px-3 py-1 bg-surface-container-lowest/95 backdrop-blur-md text-primary text-[11px] font-bold rounded-lg uppercase tracking-wider font-label-caps shadow-sm border border-outline-variant/20">
-                  Tenancy Guide
-                </span>
-                <span class="absolute bottom-3.5 right-3.5 px-2.5 py-1 bg-primary/85 backdrop-blur-md text-white text-[11px] font-medium rounded-md shadow-sm">
-                  4 min read
-                </span>
-              </div>
-              <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between gap-5">
-                <div class="flex flex-col gap-2.5">
-                  <div class="flex items-center gap-2 text-xs text-on-surface-variant/75 font-medium">
-                    <span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
-                    <span>Move-Out Guidance</span>
+            <!-- Blog Card 2 -->
+            <article class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-secondary/15 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
+              <a class="relative aspect-[16/10] overflow-hidden bg-surface-container block" href="blog-detail.html?post=end-of-tenancy-checklist">
+                <img alt="A Stress-Free End-of-Tenancy Checklist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="images/blog-end-of-tenancy.jpg" />
+                <span class="absolute top-3 left-3 bg-surface-container-lowest/95 backdrop-blur-sm text-secondary text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">Tenancy &amp; Moving</span>
+              </a>
+              <div class="p-6 flex flex-col justify-between flex-1 gap-4">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-3 text-[12px] text-on-surface-variant font-medium">
+                    <span>Updated 2026</span>
+                    <span>•</span>
+                    <span>5 min read</span>
                   </div>
-                  <h3 class="font-headline-sm text-[21px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
-                    A Stress-Free End-of-Tenancy Checklist
+                  <h3 class="font-headline-md text-[22px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
+                    <a href="blog-detail.html?post=end-of-tenancy-checklist">A Stress-Free End-of-Tenancy Checklist</a>
                   </h3>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                    Essential areas and hidden fixtures that landlords and inventory clerks inspect most thoroughly before signing off on full deposit returns.
+                  <p class="font-body-sm text-[14px] text-on-surface-variant leading-relaxed">
+                    Moving out of a London rental? Use our practical room-by-room guide to meet landlord and letting agent inventory standards with confidence.
                   </p>
                 </div>
-                <div class="pt-4 border-t border-outline-variant/25 flex items-center justify-between text-secondary font-bold text-xs font-label-caps uppercase tracking-wider">
-                  <span>Read Article</span>
-                  <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
-                  </span>
+                <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+                  <span class="text-[12.5px] font-semibold text-primary">By Myriam Andrade</span>
+                  <a class="inline-flex items-center gap-1 text-secondary font-bold text-[13.5px] group-hover:gap-2 transition-all" href="blog-detail.html?post=end-of-tenancy-checklist">
+                    <span>Read Article</span>
+                    <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+                  </a>
                 </div>
               </div>
             </article>
 
-            <!-- Blog Card 3: Floor Care & Maintenance -->
-            <article class="group scl-card-interactive bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-outline-variant/30 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
-              <div class="relative aspect-[16/10] overflow-hidden bg-surface-container">
-                <img
-                  src="images/blog-floor-care.jpg"
-                  alt="Caring for Hardwood and Natural Stone Floors"
-                  class="w-full h-full object-cover scl-img-zoom transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <span class="absolute top-3.5 left-3.5 px-3 py-1 bg-surface-container-lowest/95 backdrop-blur-md text-primary text-[11px] font-bold rounded-lg uppercase tracking-wider font-label-caps shadow-sm border border-outline-variant/20">
-                  Surface Care
-                </span>
-                <span class="absolute bottom-3.5 right-3.5 px-2.5 py-1 bg-primary/85 backdrop-blur-md text-white text-[11px] font-medium rounded-md shadow-sm">
-                  6 min read
-                </span>
-              </div>
-              <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between gap-5">
-                <div class="flex flex-col gap-2.5">
-                  <div class="flex items-center gap-2 text-xs text-on-surface-variant/75 font-medium">
-                    <span class="material-symbols-outlined text-[15px] text-secondary">brush</span>
-                    <span>Specialist Care Tips</span>
+            <!-- Blog Card 3 -->
+            <article class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-secondary/15 flex flex-col transition-all duration-300 hover:-translate-y-1" data-animate="fade-up">
+              <a class="relative aspect-[16/10] overflow-hidden bg-surface-container block" href="blog-detail.html?post=hardwood-stone-floor-care">
+                <img alt="Caring for Hardwood and Natural Stone Floors" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="images/blog-floor-care.jpg" />
+                <span class="absolute top-3 left-3 bg-surface-container-lowest/95 backdrop-blur-sm text-secondary text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">Surface &amp; Floor Care</span>
+              </a>
+              <div class="p-6 flex flex-col justify-between flex-1 gap-4">
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-3 text-[12px] text-on-surface-variant font-medium">
+                    <span>Updated 2026</span>
+                    <span>•</span>
+                    <span>4 min read</span>
                   </div>
-                  <h3 class="font-headline-sm text-[21px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
-                    Caring for Hardwood &amp; Natural Stone Floors
+                  <h3 class="font-headline-md text-[22px] text-primary font-bold leading-snug group-hover:text-secondary transition-colors">
+                    <a href="blog-detail.html?post=hardwood-stone-floor-care">Caring for Hardwood and Natural Stone Floors</a>
                   </h3>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                    Specialist techniques for protecting delicate parquet finishes, polished marble countertops, and limestone tiles from daily London foot traffic.
+                  <p class="font-body-sm text-[14px] text-on-surface-variant leading-relaxed">
+                    Protect your timber, parquet, marble and limestone floors from scratches, dullness and water damage with simple weekly care habits.
                   </p>
                 </div>
-                <div class="pt-4 border-t border-outline-variant/25 flex items-center justify-between text-secondary font-bold text-xs font-label-caps uppercase tracking-wider">
-                  <span>Read Article</span>
-                  <span class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
-                  </span>
+                <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between">
+                  <span class="text-[12.5px] font-semibold text-primary">By Myriam Andrade</span>
+                  <a class="inline-flex items-center gap-1 text-secondary font-bold text-[13.5px] group-hover:gap-2 transition-all" href="blog-detail.html?post=hardwood-stone-floor-care">
+                    <span>Read Article</span>
+                    <span class="material-symbols-outlined text-[17px]">arrow_forward</span>
+                  </a>
                 </div>
               </div>
             </article>
 
+          </div>
+
+          <div class="flex justify-center pt-2" data-animate="fade-up">
+            <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-full font-label-md text-[14px] font-bold hover:bg-secondary transition-colors shadow-sm" href="blog.html">
+              <span>View All Articles</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
           </div>
         </div>
       </section>
@@ -1292,11 +1199,12 @@
            MEET OUR TEAM SECTION (FEATURING SUPER CLEANERS LONDON TEAM PHOTO)
            ===================================================================== -->
       <section class="w-full bg-surface-container-low py-16 lg:py-24 border-t border-outline-variant/25" id="team">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
           <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4" data-animate="fade-up">
             <div>
               <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Our People</span>
               <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Meet Our Team</h2>
+              <div class="w-36 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] rounded-full mt-2 mb-2.5"></div>
               <p class="font-body-md text-body-md text-on-surface-variant">Experienced, uniformed, and dedicated cleaners ready to care for your London home and business.</p>
             </div>
             <p class="font-headline-md text-[24px] sm:text-headline-md italic text-secondary self-start sm:self-auto" data-scroll-float="-10" data-scroll-rot="-1.5">
@@ -1375,102 +1283,78 @@
            TESTIMONIALS / WHAT OUR CLIENTS SAY
            ===================================================================== -->
       <section class="w-full bg-surface py-16 lg:py-24" id="reviews">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-10">
           <!-- Reviews Header with Google Rating -->
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-5" data-animate="fade-up">
             <div>
               <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Verified Reviews</span>
               <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">What Our Clients Say ♥</h2>
+              <div class="w-36 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] rounded-full mt-2 mb-2.5"></div>
               <p class="font-body-md text-body-md text-on-surface-variant">Real London homeowners. Real homes. Real spotless results.</p>
             </div>
-            <div class="scl-section-badge scl-float-gentle flex items-center gap-4 bg-surface-container-lowest px-6 py-3.5 rounded-2xl shadow-sm border border-outline-variant/30 w-fit" data-scroll-float="-12" data-scroll-rot="1.2">
+            <a
+              class="scl-section-badge flex items-center gap-4 bg-surface-container-lowest px-6 py-3.5 rounded-2xl shadow-sm border border-secondary/20 hover:border-secondary hover:shadow-md transition-all w-fit"
+              href="https://www.google.com/search?q=Super+Cleaners+London+144+New+Kings+Rd+SW6+4LZ+reviews"
+              rel="noopener"
+              target="_blank"
+            >
               <div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center shadow-sm">
-                <span class="font-bold text-primary font-headline-sm">G</span>
+                <svg aria-hidden="true" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.79-.07-1.54-.19-2.27h-11.3v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+                  <path fill="#34A853" d="M12.255 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96h-3.98v3.09C3.515 21.3 7.565 24 12.255 24z"/>
+                  <path fill="#FBBC05" d="M5.525 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62h-3.98a11.86 11.86 0 0 0 0 10.76l3.98-3.09z"/>
+                  <path fill="#EA4335" d="M12.255 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C18.205 1.19 15.495 0 12.255 0c-4.69 0-8.74 2.7-10.71 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+                </svg>
               </div>
               <div>
                 <div class="flex items-center gap-1 text-amber-500">
-                  <span class="font-bold text-primary font-headline-sm mr-1">5.0</span>
+                  <span class="font-bold text-primary font-headline-sm mr-1" id="google-rating-value">4.9</span>
                   <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
                   <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
                   <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
                   <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
                   <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <p class="font-label-sm text-label-sm text-on-surface-variant">Rated by 1,400+ happy customers</p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant" id="google-rating-count">99 Verified Google Reviews →</p>
               </div>
-            </div>
+            </a>
           </div>
 
-          <!-- Testimonial Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-stagger-group data-stagger-step="100">
-            <!-- Review 1 -->
-            <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between" data-animate="fade-up" data-scroll-float="12" data-scroll-rot="-0.8" data-tilt-card>
-              <div class="flex flex-col gap-3">
-                <div class="flex text-amber-500">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
-                  “Super Cleaners London are fantastic! Always reliable, professional and the standard of cleaning is excellent. My home has never looked better!”
-                </p>
-              </div>
-              <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
-                <div>
-                  <p class="font-label-md text-label-md font-bold text-primary">Nayeli S.</p>
-                  <p class="font-label-sm text-label-sm text-on-surface-variant">Fulham Homeowner</p>
-                </div>
-                <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
-              </div>
-            </div>
+          <!-- Live Google Reviews Carousel (Populated via js/google-reviews.js) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="google-reviews-grid"></div>
 
-            <!-- Review 2 -->
-            <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between" data-animate="fade-up" data-scroll-float="-14" data-tilt-card>
-              <div class="flex flex-col gap-3">
-                <div class="flex text-amber-500">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
-                  “I booked a last minute clean and they were amazing. Friendly, efficient and very thorough. Highly recommend this company!”
-                </p>
-              </div>
-              <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
-                <div>
-                  <p class="font-label-md text-label-md font-bold text-primary">Rachel M.</p>
-                  <p class="font-label-sm text-label-sm text-on-surface-variant">Chelsea Resident</p>
-                </div>
-                <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
-              </div>
+          <!-- Carousel Controls & Google Link -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+            <div class="flex items-center gap-3">
+              <button
+                aria-label="Previous reviews"
+                class="w-10 h-10 rounded-full bg-surface-container-lowest border border-secondary/25 text-secondary hover:bg-secondary hover:text-white transition-all shadow-xs items-center justify-center cursor-pointer"
+                id="reviews-prev-btn"
+                style="display: none;"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+              </button>
+              <div class="flex items-center gap-2" id="reviews-dots"></div>
+              <button
+                aria-label="Next reviews"
+                class="w-10 h-10 rounded-full bg-surface-container-lowest border border-secondary/25 text-secondary hover:bg-secondary hover:text-white transition-all shadow-xs items-center justify-center cursor-pointer"
+                id="reviews-next-btn"
+                style="display: none;"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+              </button>
             </div>
-
-            <!-- Review 3 -->
-            <div class="scl-card-interactive bg-surface-container-lowest p-6 sm:p-7 rounded-2xl shadow-sm border border-outline-variant/30 flex flex-col justify-between" data-animate="fade-up" data-scroll-float="12" data-scroll-rot="0.8" data-tilt-card>
-              <div class="flex flex-col gap-3">
-                <div class="flex text-amber-500">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                </div>
-                <p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
-                  “The team did an outstanding job. Super reliable, great communication and my flat was spotless. I will definitely use them again!”
-                </p>
-              </div>
-              <div class="pt-5 mt-4 border-t border-outline-variant/20 flex items-center justify-between">
-                <div>
-                  <p class="font-label-md text-label-md font-bold text-primary">James T.</p>
-                  <p class="font-label-sm text-label-sm text-on-surface-variant">Battersea Property Owner</p>
-                </div>
-                <span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
-              </div>
-            </div>
+            <a
+              class="inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-full font-label-md text-[13.5px] font-bold hover:bg-secondary transition-colors shadow-sm"
+              href="https://www.google.com/search?q=Super+Cleaners+London+144+New+Kings+Rd+SW6+4LZ+reviews"
+              rel="noopener"
+              target="_blank"
+            >
+              <span>Write or View All Google Reviews</span>
+              <span class="material-symbols-outlined text-[17px]">open_in_new</span>
+            </a>
           </div>
         </div>
       </section>
@@ -1479,15 +1363,15 @@
            FREQUENTLY ASKED QUESTIONS SECTION
            ===================================================================== -->
       <section class="w-full bg-surface-container-low py-16 lg:py-24 border-t border-outline-variant/30" id="faq">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin">
           <div class="text-center max-w-2xl mx-auto flex flex-col gap-2 mb-10" data-animate="fade-up" data-scroll-float="-10">
             <span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold">Frequently Asked Questions</span>
             <h2 class="font-headline-lg text-[32px] sm:text-headline-lg text-primary font-bold tracking-tight">Got Questions? We’ve Got Answers</h2>
-            <div class="w-16 h-1 bg-error mx-auto rounded-full mt-1 mb-2"></div>
+            <div class="w-40 h-1.5 bg-gradient-to-r from-[#4b83cf] via-secondary to-[#1c447c] mx-auto rounded-full mt-1 mb-2"></div>
             <p class="font-body-md text-body-md text-on-surface-variant">Everything you need to know about our London cleaning services</p>
           </div>
 
-          <div class="max-w-3xl mx-auto flex flex-col gap-3.5" data-stagger-group data-stagger-step="70">
+          <div class="w-full flex flex-col gap-3.5" data-stagger-group data-stagger-step="70">
             <details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm border border-outline-variant/35 transition-all hover:border-secondary/50" data-animate="fade-up" data-scroll-float="8" open="">
               <summary class="flex items-center justify-between cursor-pointer list-none gap-4">
                 <span class="font-headline-sm text-[17px] sm:text-[18px] text-primary font-bold group-hover:text-secondary transition-colors">
@@ -1580,7 +1464,7 @@
            FAST QUOTE & BOOKING ACTION BAR
            ===================================================================== -->
       <section class="w-full bg-primary-container text-on-primary py-12 lg:py-16 border-b border-white/10" id="contact">
-        <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
+        <div class="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin">
           <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
             <!-- Quote Tagline -->
             <div class="flex items-center gap-4 text-center lg:text-left" data-animate="fade-left" data-scroll-float="10">
@@ -1616,7 +1500,7 @@
                 <span>Email Us</span>
               </a>
               <button
-                class="inline-flex items-center gap-2 bg-secondary text-on-secondary px-6 py-3 rounded-full font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-md"
+                class="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-full font-label-md text-label-md hover:bg-[#3570c4] hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-4px_rgba(53,112,196,0.55)] transition-all duration-200 shadow-md"
                 data-open-showcase-modal
                 type="button"
               >
@@ -1631,95 +1515,8 @@
     </div>
   </main>
 
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
-  <footer class="w-full bg-primary text-surface-variant pt-16 pb-12">
-    <div class="max-w-[1240px] mx-auto px-margin-mobile lg:px-margin">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10" data-stagger-group data-stagger-step="90">
-        <!-- Column 1: Brand -->
-        <div class="flex flex-col gap-4" data-animate="fade-up">
-          <div class="flex items-center gap-2">
-            <a class="bg-surface-container-lowest p-2 rounded-lg inline-flex items-center hover:scale-105 transition-transform duration-200">
-              <img
-                alt="Super Cleaners London"
-                class="h-16 w-auto object-contain"
-                src="images/logo.png"
-              />
-            </a>
-          </div>
-          <p class="font-body-sm text-body-sm text-surface-container-highest/80 leading-relaxed">
-            London cleaning since 2006. Over two decades of discrete, immaculate domestic and commercial cleaning services across Kensington, Chelsea, Westminster, and Greater London.
-          </p>
-          <div class="flex items-center gap-1.5 font-label-caps text-label-caps text-secondary-fixed-dim">
-            <span class="material-symbols-outlined text-[16px]">verified_user</span>
-            <span>Fully Trained &amp; Insured</span>
-          </div>
-        </div>
-
-        <!-- Column 2: Services -->
-        <div class="flex flex-col gap-4" data-animate="fade-up">
-          <h3 class="font-headline-sm text-headline-sm text-on-primary">Services</h3>
-          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
-            <li><a class="hover:text-on-primary transition-colors">Regular Domestic Cleaning</a></li>
-            <li><a class="hover:text-on-primary transition-colors">Deep &amp; Spring Cleaning</a></li>
-            <li><a class="hover:text-on-primary transition-colors">End of Tenancy Cleaning</a></li>
-            <li><a class="hover:text-on-primary transition-colors">Commercial Office Care</a></li>
-            <li><a class="hover:text-on-primary transition-colors">Specialist Carpet &amp; Upholstery</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Coverage Areas -->
-        <div class="flex flex-col gap-4" data-animate="fade-up">
-          <h3 class="font-headline-sm text-headline-sm text-on-primary">Coverage Areas</h3>
-          <ul class="flex flex-col gap-2.5 font-body-sm text-body-sm">
-            <li><a class="hover:text-on-primary transition-colors">Kensington &amp; Chelsea (SW3, SW7, W8)</a></li>
-            <li><a class="hover:text-on-primary transition-colors">Westminster &amp; Belgravia (SW1, W1)</a></li>
-            <li><a class="hover:text-on-primary transition-colors">Camden &amp; Hampstead (NW3, NW1)</a></li>
-            <li><a class="hover:text-on-primary transition-colors">Islington &amp; City (N1, EC1)</a></li>
-            <li><a class="hover:text-on-primary transition-colors">Richmond &amp; Wandsworth (SW11, TW9)</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Contact & Enquiries -->
-        <div class="flex flex-col gap-4" data-animate="fade-up">
-          <h3 class="font-headline-sm text-headline-sm text-on-primary">Contact &amp; Enquiries</h3>
-          <div class="flex flex-col gap-2.5 font-body-sm text-body-sm">
-            <a class="flex items-center gap-2 hover:text-on-primary transition-colors">
-              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">call</span>
-              <span>020 3664 9304</span>
-            </a>
-            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/447786282887" rel="noopener" target="_blank">
-              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
-              <span>WhatsApp: 07786 282887</span>
-            </a>
-            <a class="flex items-center gap-2 hover:text-on-primary transition-colors" href="https://wa.me/44750700167" rel="noopener" target="_blank">
-              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">chat</span>
-              <span>WhatsApp: 07507 00167</span>
-            </a>
-            <a class="flex items-center gap-2 hover:text-on-primary transition-colors">
-              <span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>
-              <span>info@supercleanerslondon.co.uk</span>
-            </a>
-            <div class="flex items-center gap-1.5 pt-1">
-              <span class="material-symbols-outlined text-amber-400 text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-              <span class="font-bold text-on-primary">4.9/5 Rating</span>
-              <span class="text-surface-container-highest/70 font-label-sm text-label-sm">(1,400+ London Reviews)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-surface-container-highest/60">
-        <p>© 2006–2026 Super Cleaners London Ltd. All rights reserved.</p>
-        <div class="flex items-center gap-6">
-          <a class="hover:text-on-primary transition-colors">Privacy Policy</a>
-          <a class="hover:text-on-primary transition-colors">Terms of Service</a>
-          <a class="hover:text-on-primary transition-colors">Cookies</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- GLOBAL FOOTER -->
+  <div id="scl-global-footer"></div>
 
   <!-- =========================================================================
        ACCESSIBLE SHOWCASE & QUICK BOOKING MODAL
@@ -1796,7 +1593,9 @@
     </div>
   </div>
 
-  <!-- SHARED ENHANCEMENTS SCRIPT -->
+  <!-- GLOBAL LAYOUT, LIVE GOOGLE REVIEWS & SHARED ENHANCEMENTS SCRIPTS -->
+  <script src="./js/global-layout.js?v=20261123"></script>
+  <script src="./js/google-reviews.js?v=20261123"></script>
   <script src="./js/enhancements.js?v=20261027-2013"></script>
 </body>
 </html>
